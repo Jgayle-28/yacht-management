@@ -1,11 +1,11 @@
 import React from 'react'
-import journeyDots from '../assets/images/sections/journey-dots.svg'
-import Carousel from './shared/Carousel'
+import journeyDots from '../../assets/images/sections/journey-dots.svg'
+import Carousel from '../shared/Carousel'
 
 const ChooseAYacht = () => {
   return (
     <section className='pt-48 px-4 md:px-16'>
-      <div className='container mx-auto'>
+      <div className='container mx-auto max-w-6xl'>
         {/* Dots intro */}
         <div className='flex items-start ml-48'>
           <img src={journeyDots} alt='dots to journey' className='mt-3 mr-5' />
@@ -22,7 +22,7 @@ const ChooseAYacht = () => {
         {/* Carousel header */}
         <div className='mt-24 mb-12'>
           <h2 className='text-3xl font-bold'>Select Your Yacht</h2>
-          <div className='w-32 h-[2px] bg-cyan-900 my-3'></div>
+          <div className='w-32 h-[2px] bg-brandPrimary my-3'></div>
           <p>
             Start your enchanting journey by selecting the yacht that perfectly
             suits your needs.

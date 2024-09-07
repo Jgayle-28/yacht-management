@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import compass from '../assets/images/sections/compass.svg'
-import Modal from './shared/Modal'
-import videoPreview from '../assets/images/sections/video-preview.webp'
-import yachtVideo from '../assets/videos/yacht.mp4'
+import compass from '../../assets/images/sections/compass.svg'
+import Modal from '../shared/Modal'
+import videoPreview from '../../assets/images/sections/video-preview.webp'
+import yachtVideo from '../../assets/videos/yacht.mp4'
 
 const IntroSection = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,7 +18,7 @@ const IntroSection = () => {
         </h2>
 
         {/* Centered Line */}
-        <div className='w-64 h-[2px] bg-cyan-900'></div>
+        <div className='w-64 h-[2px] bg-brandPrimary'></div>
 
         {/* Paragraph */}
         <p className='text-center max-w-lg pb-12'>
