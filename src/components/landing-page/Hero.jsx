@@ -46,7 +46,7 @@ const Hero = () => {
             <blockquote className='text-xl md:text-2xl italic'>
               "The best way to predict the future is to create it."
             </blockquote>
-            <button className='bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-700'>
+            <button className='px-6 py-3 border border-white text-white font-semibold rounded transition duration-300 ease-in-out hover:bg-white hover:text-black'>
               Get Started
             </button>
           </div>
