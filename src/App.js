@@ -6,6 +6,11 @@ import Hero from './components/landing-page/Hero'
 import ChooseAYacht from './components/landing-page/ChooseAYacht'
 import ChooseADestination from './components/landing-page/ChooseADestination'
 import AddToys from './components/landing-page/AddToys'
+import FoodSection from './components/landing-page/FoodSection'
+import WaterSection from './components/landing-page/WaterSection'
+import ExploreSection from './components/landing-page/ExploreSection'
+import BookingSection from './components/landing-page/BookingSection'
+import Footer from './components/footer/Footer'
 
 function App() {
   useEffect(() => {
@@ -26,6 +31,11 @@ function App() {
       <ChooseAYacht />
       <ChooseADestination />
       <AddToys />
+      <FoodSection />
+      <WaterSection />
+      <ExploreSection />
+      <BookingSection />
+      <Footer />
     </div>
   )
 }

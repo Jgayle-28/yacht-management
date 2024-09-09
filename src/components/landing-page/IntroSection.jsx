@@ -9,18 +9,11 @@ const IntroSection = () => {
   return (
     <>
       <section className='flex flex-col items-center justify-center px-4 pt-48 space-y-6'>
-        {/* Image */}
         <img src={compass} alt='Section Image' className='w-full h-24' />
-
-        {/* Tagline */}
         <h2 className='text-2xl font-bold text-center'>
           Bring your dream experience to life with us
         </h2>
-
-        {/* Centered Line */}
         <div className='w-64 h-[2px] bg-brandPrimary'></div>
-
-        {/* Paragraph */}
         <p className='text-center max-w-lg pb-12'>
           Uncover how you can embark on the indulgent adventure you've always
           desired. If you seek unique experiences and the ultimate in luxury,
