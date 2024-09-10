@@ -38,11 +38,26 @@ const Navigation = () => {
   })
 
   return (
-    <nav
+    <motion.nav
+      initial={{
+        y: -15,
+        opacity: 0,
+      }}
+      animate={{
+        y: 0,
+        opacity: 1,
+      }}
+      transition={{
+        duration: 0.75,
+        delay: 0.25,
+        ease: 'easeInOut',
+      }}
       className={`fixed top-0 z-50 w-full px-6 text-white 
       transition-all duration-300 ease-out lg:px-12
       ${
-        scrolled ? 'bg-zinc-900 py-3 shadow-xl' : 'bg-zinc-800 py-6 shadow-none'
+        scrolled
+          ? 'bg-zinc-900 py-3 shadow-xl'
+          : 'bg-transparent py-6 shadow-none'
       }`}
     >
       <div className='mx-auto flex max-w-7xl items-center justify-between'>
@@ -53,7 +68,7 @@ const Navigation = () => {
         </div>
         <MobileMenu />
       </div>
-    </nav>
+    </motion.nav>
   )
 }
 

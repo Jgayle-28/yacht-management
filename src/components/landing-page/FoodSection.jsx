@@ -3,6 +3,7 @@ import Carousel from '../shared/Carousel'
 import Modal from '../shared/Modal'
 import foodImage from '../../assets/images/sections/food.webp'
 import yachtVideo from '../../assets/videos/yacht.mp4'
+import { motion } from 'framer-motion'
 
 const FoodSection = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -11,7 +12,20 @@ const FoodSection = () => {
       <section className='pt-48 px-4 md:px-16'>
         <div className='container mx-auto max-w-6xl'>
           {/* Image Section */}
-          <div
+          <motion.div
+            initial={{
+              y: 10,
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.25,
+              ease: 'easeInOut',
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
             className='w-full mb-8 cursor-pointer'
             onClick={() => setIsOpen(true)}
           >
@@ -20,24 +34,59 @@ const FoodSection = () => {
               alt='Food Image'
               className='w-full h-[550px] object-cover rounded-sm shadow-lg'
             />
-          </div>
+          </motion.div>
 
           {/* Carousel Section */}
           <div className='w-full'>
             <Carousel />
           </div>
           <div className='w-full flex flex-col items-center my-24'>
-            <h2 className='text-2xl font-bold'>
+            <motion.h2
+              initial={{
+                y: 10,
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.25,
+                ease: 'easeInOut',
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              className='text-2xl font-bold text-center text-neutral-800'
+            >
               “Kali Orexi!” ( Enjoy Your Meal! )
-            </h2>
-            <div className='w-64 h-[2px] bg-brandPrimary mx-auto my-8'></div>
-            <p className='max-w-5xl pb-12 text-center'>
+            </motion.h2>
+            <motion.div
+              initial={{ width: '0%' }}
+              whileInView={{ width: 200 }}
+              transition={{ duration: 0.75, ease: 'easeInOut' }}
+              className='w-64 h-[2px] origin-center bg-blue-950 my-4'
+            />
+            <motion.p
+              initial={{
+                y: 10,
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.75,
+                ease: 'easeInOut',
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              className='max-w-5xl pb-12 text-center text-neutral-500'
+            >
               We take great pride in the exceptional quality of our local Greek
               produce. Our highly skilled onboard chefs are eager to prepare
               fresh, sumptuous, and mouth-watering culinary delights just for
               you. Paired with a selection of fine wines and beverages, you're
               guaranteed a true feast for your taste buds.
-            </p>
+            </motion.p>
           </div>
         </div>
       </section>

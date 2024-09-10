@@ -1,5 +1,6 @@
 import toysImage from '../../assets/images/sections/toys.svg'
 import toysScuba from '../../assets/images/sections/toys-scuba.svg'
+import { motion } from 'framer-motion'
 
 const AddToys = () => {
   return (
@@ -8,10 +9,47 @@ const AddToys = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
           {/* Left Section (Image) */}
           <div>
-            <h2 className='text-3xl font-bold'>Add Toys</h2>
-            <div className='w-32 h-[2px] bg-brandPrimary my-3'></div>
+            <motion.h2
+              initial={{
+                y: 10,
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.25,
+                ease: 'easeInOut',
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              className='text-3xl font-bold text-neutral-800'
+            >
+              Add Toys
+            </motion.h2>
+            <motion.div
+              initial={{ width: '0%' }}
+              whileInView={{ width: 120 }}
+              transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.5 }}
+              className='w-64 h-[2px] bg-blue-950 my-4'
+            />
             {/* Paragraph */}
-            <p className='mb-4 text-lg text-gray-700 mt-4'>
+            <motion.p
+              initial={{
+                y: 10,
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.5,
+                ease: 'easeInOut',
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              className='text-neutral-500 mb-3 text-neutral-500'
+            >
               To elevate your onboard experience, we highly recommend choosing
               one or more of the exciting toys from our exclusive collection.
               They're guaranteed to provide endless fun for all! Our selection
@@ -21,7 +59,7 @@ const AddToys = () => {
               for power and performance, and Kaabo high-speed electric scooters
               built for the ultimate on or off-road adventure. These top-rated
               toys offer something for everyone!
-            </p>
+            </motion.p>
 
             {/* Three Images Below Paragraph */}
             <div className='grid grid-cols-3 gap-4'>

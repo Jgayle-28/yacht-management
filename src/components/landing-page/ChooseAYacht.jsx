@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import journeyDots from '../../assets/images/sections/journey-dots.svg'
 import Carousel from '../shared/Carousel'
 
@@ -7,26 +8,130 @@ const ChooseAYacht = () => {
     <section className='pt-48 px-4 md:px-16'>
       <div className='container mx-auto max-w-6xl'>
         {/* Dots intro */}
+        {/* <div className='relative'>
+          <span className='absolute left-[1px] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-blue-950 transition-all duration-500 scale-100' />
+          <span className='absolute left-[1px] top-[1px] z-10 h-[2px] w-24 origin-left scale-0 bg-blue-950 transition-all duration-500 scale-100' />
+        </div> */}
         <div className='flex items-start ml-48'>
-          <img src={journeyDots} alt='dots to journey' className='mt-3 mr-5' />
+          <div className='relative mt-4 mr-32'>
+            <motion.span
+              initial={{
+                height: 0,
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.55,
+                ease: 'easeInOut',
+              }}
+              whileInView={{
+                height: 96,
+                opacity: 1,
+              }}
+              className='absolute left-[1px] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-blue-950 transition-all duration-500 scale-100'
+            />
+            <motion.span
+              initial={{
+                width: 0,
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.55,
+                ease: 'easeInOut',
+              }}
+              whileInView={{
+                width: 96,
+                opacity: 1,
+              }}
+              className='absolute left-[1px] top-[1px] z-10 h-[2px] w-24 origin-right scale-0 bg-blue-950 transition-all duration-500 scale-100'
+            />
+          </div>
           <div>
-            <h2 className='text-3xl font-bold text-center'>
+            <motion.h2
+              initial={{
+                y: 10,
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.25,
+                ease: 'easeInOut',
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              className='text-3xl font-bold text-center text-neutral-800'
+            >
               Your Adventure Awaits
-            </h2>
-            <p className='text-center max-w-lg mx-auto mt-4'>
+            </motion.h2>
+            <motion.p
+              initial={{
+                y: 10,
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.5,
+                ease: 'easeInOut',
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              className='text-center max-w-lg mx-auto mt-4 text-neutral-500'
+            >
               We understand that one size doesn’t fit all...
-            </p>
+            </motion.p>
           </div>
         </div>
 
         {/* Carousel header */}
         <div className='mt-24 mb-12'>
-          <h2 className='text-3xl font-bold'>Select Your Yacht</h2>
-          <div className='w-32 h-[2px] bg-brandPrimary my-3'></div>
-          <p>
+          <motion.h2
+            initial={{
+              y: 10,
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.25,
+              ease: 'easeInOut',
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            className='text-3xl font-bold text-neutral-800'
+          >
+            Select Your Yacht
+          </motion.h2>
+          <motion.div
+            initial={{ width: '0%' }}
+            whileInView={{ width: 120 }}
+            transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.5 }}
+            className='w-64 h-[2px] bg-blue-950 my-4'
+          />
+          <motion.p
+            initial={{
+              y: 10,
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.5,
+              ease: 'easeInOut',
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            className='text-neutral-500'
+          >
             Start your enchanting journey by selecting the yacht that perfectly
             suits your needs.
-          </p>
+          </motion.p>
         </div>
         <Carousel />
         {/* <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8'>

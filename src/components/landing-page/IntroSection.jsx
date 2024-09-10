@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 import compass from '../../assets/images/sections/compass.svg'
 import Modal from '../shared/Modal'
 import videoPreview from '../../assets/images/sections/video-preview.webp'
@@ -10,17 +11,52 @@ const IntroSection = () => {
     <>
       <section className='flex flex-col items-center justify-center px-4 pt-48 space-y-6'>
         <img src={compass} alt='Section Image' className='w-full h-24' />
-        <h2 className='text-2xl font-bold text-center'>
+        <motion.h2
+          initial={{
+            y: 10,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 0.5,
+            delay: 0.25,
+            ease: 'easeInOut',
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          className='text-2xl font-bold text-center text-neutral-800'
+        >
           Bring your dream experience to life with us
-        </h2>
-        <div className='w-64 h-[2px] bg-brandPrimary'></div>
-        <p className='text-center max-w-lg pb-12'>
+        </motion.h2>
+        <motion.div
+          initial={{ width: '0%' }}
+          whileInView={{ width: 200 }}
+          transition={{ duration: 0.75, ease: 'easeInOut' }}
+          className='w-64 h-[2px] origin-center bg-blue-950'
+        />
+        <motion.p
+          initial={{
+            y: 10,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 0.5,
+            delay: 0.75,
+            ease: 'easeInOut',
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+          className='text-center max-w-lg pb-12 text-neutral-500'
+        >
           Uncover how you can embark on the indulgent adventure you've always
           desired. If you seek unique experiences and the ultimate in luxury,
           you're in the right place. Even the most refined tastes will be
           captivated by the enchanting atmosphere, your private crew, and our
           exquisite luxury yachts...
-        </p>
+        </motion.p>
 
         {/* Full-width Video Preview */}
       </section>
