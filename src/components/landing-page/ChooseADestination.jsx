@@ -4,7 +4,7 @@ import Carousel from '../shared/Carousel'
 
 const ChooseADestination = () => {
   return (
-    <section className='pt-48 px-4 md:px-16'>
+    <section className='pt-48 px-8 md:px-16'>
       <div className='container mx-auto max-w-6xl'>
         {/* Carousel header */}
         <div className='mt-24 mb-12'>
@@ -22,7 +22,7 @@ const ChooseADestination = () => {
               y: 0,
               opacity: 1,
             }}
-            className='text-3xl font-bold text-neutral-800'
+            className='text-4xl md:text-5xl font-normal md:font-light text-neutral-800'
           >
             Select a Destination
           </motion.h2>

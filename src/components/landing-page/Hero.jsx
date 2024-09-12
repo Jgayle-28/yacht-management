@@ -28,7 +28,7 @@ const Hero = () => {
                 delay: 0.25,
                 ease: 'easeInOut',
               }}
-              className='mb-3 text-3xl font-bold leading-tight text-zinc-50 sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:text-8xl lg:leading-tight'
+              className='mb-3 text-3xl font-light leading-tight text-zinc-50 sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:text-8xl lg:leading-tight'
               // className='text-5xl md:text-6xl font-bold'
             >
               Premier Yachting in Greece
@@ -63,7 +63,7 @@ const Hero = () => {
                 delay: 0.5,
                 ease: 'easeInOut',
               }}
-              className='text-lg md:text-xl'
+              className='text-lg md:text-xl font-light'
             >
               Catamarans & Motor Boats
             </motion.p>
@@ -85,7 +85,7 @@ const Hero = () => {
                 delay: 0.75,
                 ease: 'easeInOut',
               }}
-              className='text-xl md:text-2xl italic'
+              className='text-xl md:text-2xl italic font-light'
             >
               "The best way to predict the future is to create it."
             </motion.p>

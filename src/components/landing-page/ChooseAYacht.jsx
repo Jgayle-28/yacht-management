@@ -1,52 +1,56 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import journeyDots from '../../assets/images/sections/journey-dots.svg'
 import Carousel from '../shared/Carousel'
+import useWindowSize from '../../hooks/use-window-size'
 
 const ChooseAYacht = () => {
+  const { width, height } = useWindowSize()
+  console.log('width, height', width)
   return (
-    <section className='pt-48 px-4 md:px-16'>
+    <section className='pt-48 px-8 md:px-16'>
       <div className='container mx-auto max-w-6xl'>
         {/* Dots intro */}
         {/* <div className='relative'>
           <span className='absolute left-[1px] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-blue-950 transition-all duration-500 scale-100' />
           <span className='absolute left-[1px] top-[1px] z-10 h-[2px] w-24 origin-left scale-0 bg-blue-950 transition-all duration-500 scale-100' />
         </div> */}
-        <div className='flex items-start ml-48'>
-          <div className='relative mt-4 mr-32'>
-            <motion.span
-              initial={{
-                height: 0,
-                opacity: 0,
-              }}
-              transition={{
-                duration: 0.5,
-                delay: 0.55,
-                ease: 'easeInOut',
-              }}
-              whileInView={{
-                height: 96,
-                opacity: 1,
-              }}
-              className='absolute left-[1px] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-blue-950 transition-all duration-500 scale-100'
-            />
-            <motion.span
-              initial={{
-                width: 0,
-                opacity: 0,
-              }}
-              transition={{
-                duration: 0.5,
-                delay: 0.55,
-                ease: 'easeInOut',
-              }}
-              whileInView={{
-                width: 96,
-                opacity: 1,
-              }}
-              className='absolute left-[1px] top-[1px] z-10 h-[2px] w-24 origin-right scale-0 bg-blue-950 transition-all duration-500 scale-100'
-            />
-          </div>
+        <div className='flex items-start justify-center md:justify-start md:ml-48 mb'>
+          {width > 930 && (
+            <div className='relative mt-6 mr-32'>
+              <motion.span
+                initial={{
+                  height: 0,
+                  opacity: 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.55,
+                  ease: 'easeInOut',
+                }}
+                whileInView={{
+                  height: 96,
+                  opacity: 1,
+                }}
+                className='absolute left-[1px] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-blue-950 transition-all duration-500 scale-100'
+              />
+              <motion.span
+                initial={{
+                  width: 0,
+                  opacity: 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.55,
+                  ease: 'easeInOut',
+                }}
+                whileInView={{
+                  width: 96,
+                  opacity: 1,
+                }}
+                className='absolute left-[1px] top-[1px] z-10 h-[2px] w-24 origin-right scale-0 bg-blue-950 transition-all duration-500 scale-100'
+              />
+            </div>
+          )}
           <div>
             <motion.h2
               initial={{
@@ -62,7 +66,7 @@ const ChooseAYacht = () => {
                 y: 0,
                 opacity: 1,
               }}
-              className='text-3xl font-bold text-center text-neutral-800'
+              className='text-4xl md:text-5xl font-normal md:font-light text-center text-neutral-800'
             >
               Your Adventure Awaits
             </motion.h2>
@@ -84,6 +88,26 @@ const ChooseAYacht = () => {
             >
               We understand that one size doesn’t fit all...
             </motion.p>
+            {width <= 930 && (
+              <div className='relative mt-6 flex-justify-center mx-auto mb-16'>
+                <motion.span
+                  initial={{
+                    height: 0,
+                    opacity: 0,
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.55,
+                    ease: 'easeInOut',
+                  }}
+                  whileInView={{
+                    height: 96,
+                    opacity: 1,
+                  }}
+                  className='absolute left-[50%] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-blue-950 transition-all duration-500 scale-100'
+                />
+              </div>
+            )}
           </div>
         </div>
 
@@ -103,7 +127,7 @@ const ChooseAYacht = () => {
               y: 0,
               opacity: 1,
             }}
-            className='text-3xl font-bold text-neutral-800'
+            className='text-4xl md:text-5xl font-normal md:font-light text-neutral-800'
           >
             Select Your Yacht
           </motion.h2>

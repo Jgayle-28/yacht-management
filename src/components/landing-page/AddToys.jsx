@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 const AddToys = () => {
   return (
-    <section className=' py-8 pt-48'>
+    <section className=' py-8 pt-48 px-8 md:px-16'>
       <div className='container mx-auto max-w-6xl'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
           {/* Left Section (Image) */}
@@ -23,7 +23,7 @@ const AddToys = () => {
                 y: 0,
                 opacity: 1,
               }}
-              className='text-3xl font-bold text-neutral-800'
+              className='text-4xl md:text-5xl font-normal md:font-light text-neutral-800'
             >
               Add Toys
             </motion.h2>
@@ -31,7 +31,7 @@ const AddToys = () => {
               initial={{ width: '0%' }}
               whileInView={{ width: 120 }}
               transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.5 }}
-              className='w-64 h-[2px] bg-blue-950 my-4'
+              className='w-64 h-[2px] bg-brandPrimary my-4'
             />
             {/* Paragraph */}
             <motion.p
@@ -82,11 +82,97 @@ const AddToys = () => {
           </div>
           {/* Right Section (Text + Images) */}
           <div className=' flex items-center justify-center flex-col'>
-            <img src={toysImage} alt='Water Toys Splash' className='h-24 ' />
-            <p className='my-4 text-2xl text-center font-bold text-brandPrimary'>
-              Toys Water Splash
-            </p>
-            <img src={toysScuba} alt='Water Toys Splash' className='h-24 ' />
+            {/* <img src={toysImage} alt='Water Toys Splash' className='h-24 ' /> */}
+            <div className='relative mt-6 flex-justify-center mx-auto mb-24'>
+              <motion.span
+                initial={{
+                  height: 0,
+                  opacity: 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0,
+                  ease: 'easeInOut',
+                }}
+                whileInView={{
+                  height: 96,
+                  opacity: 1,
+                }}
+                className='absolute left-[50%] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-blue-950 transition-all duration-500 scale-100'
+              />
+            </div>
+            <motion.h6
+              initial={{
+                y: 10,
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.45,
+                ease: 'easeInOut',
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              className='mt-4 text-center text-4xl md:text-5xl font-normal md:font-light text-brandPrimary'
+            >
+              Toys
+            </motion.h6>
+            <motion.h6
+              initial={{
+                y: 10,
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.5,
+                ease: 'easeInOut',
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              className='ml-20 text-center text-4xl md:text-5xl font-normal md:font-light text-brandPrimary'
+            >
+              Water
+            </motion.h6>
+            <motion.h6
+              initial={{
+                y: 10,
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.75,
+                ease: 'easeInOut',
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              className='mr-12 mb-1 text-center text-4xl md:text-5xl font-normal md:font-light text-brandPrimary'
+            >
+              Splash
+            </motion.h6>
+            <motion.img
+              initial={{
+                y: 10,
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.75,
+                ease: 'easeInOut',
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              src={toysScuba}
+              alt='Water Toys Splash'
+              className='h-24 '
+            />
           </div>
         </div>
       </div>

@@ -25,7 +25,7 @@ const IntroSection = () => {
             y: 0,
             opacity: 1,
           }}
-          className='text-2xl font-bold text-center text-neutral-800'
+          className='text-2xl md:text-5xl font-semibold md:font-light text-center text-neutral-800'
         >
           Bring your dream experience to life with us
         </motion.h2>
