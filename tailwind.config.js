@@ -5,9 +5,10 @@ module.exports = {
     extend: {
       colors: {
         transparent: 'transparent',
-        brandPrimary: '#1C2A48',
+        brandPrimary: '#222e63',
+        brandPrimaryLight: '#0047ba',
+        brandPrimaryDark: '#202d62',
         brandSecondary: '#d60c83',
-        brandPrimaryDark: '#00a69e',
         brandBlack: '#000',
       },
     },

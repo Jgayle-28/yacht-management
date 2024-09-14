@@ -1,16 +1,11 @@
 import { useEffect } from 'react'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Lenis from '@studio-freight/lenis'
 import Navigation from './components/navigation'
-import IntroSection from './components/landing-page/IntroSection'
-import Hero from './components/landing-page/Hero'
-import ChooseAYacht from './components/landing-page/ChooseAYacht'
-import ChooseADestination from './components/landing-page/ChooseADestination'
-import AddToys from './components/landing-page/AddToys'
-import FoodSection from './components/landing-page/FoodSection'
-import WaterSection from './components/landing-page/WaterSection'
-import ExploreSection from './components/landing-page/ExploreSection'
-import BookingSection from './components/landing-page/BookingSection'
 import Footer from './components/footer/Footer'
+import LandingPage from './pages/LandingPage'
+import YachtsPage from './pages/YachtsPage'
+import DestinationsPage from './pages/DestinationsPage'
 
 function App() {
   useEffect(() => {
@@ -24,19 +19,17 @@ function App() {
     requestAnimationFrame(raf)
   }, [])
   return (
-    <div>
+    <>
       <Navigation />
-      <Hero />
-      <IntroSection />
-      <ChooseAYacht />
-      <ChooseADestination />
-      <AddToys />
-      <FoodSection />
-      <WaterSection />
-      <ExploreSection />
-      <BookingSection />
+      <Router>
+        <Routes>
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/yachts' element={<YachtsPage />} />
+          <Route path='/destinations' element={<DestinationsPage />} />
+        </Routes>
+      </Router>
       <Footer />
-    </div>
+    </>
   )
 }
 

@@ -4,13 +4,34 @@ import compass from '../../assets/images/sections/compass.svg'
 import Modal from '../shared/Modal'
 import videoPreview from '../../assets/images/sections/video-preview.webp'
 import yachtVideo from '../../assets/videos/yacht.mp4'
+import PlayButton from '../shared/PlayButton'
+import { GiCompass } from 'react-icons/gi'
+import { PiCompassRoseLight } from 'react-icons/pi'
 
 const IntroSection = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
       <section className='flex flex-col items-center justify-center px-4 pt-48 space-y-6'>
-        <img src={compass} alt='Section Image' className='w-full h-24' />
+        {/* <img src={compass} alt='Section Image' className='w-full h-24' /> */}
+        <motion.div
+          initial={{
+            y: 10,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 0.5,
+            delay: 0,
+            ease: 'easeInOut',
+          }}
+          whileInView={{
+            once: true,
+            y: 0,
+            opacity: 1,
+          }}
+        >
+          <PiCompassRoseLight className='text-9xl text-brandPrimary' />
+        </motion.div>
         <motion.h2
           initial={{
             y: 10,
@@ -33,7 +54,7 @@ const IntroSection = () => {
           initial={{ width: '0%' }}
           whileInView={{ width: 200 }}
           transition={{ duration: 0.75, ease: 'easeInOut' }}
-          className='w-64 h-[2px] origin-center bg-blue-950'
+          className='w-64 h-[2px] origin-center bg-brandPrimary'
         />
         <motion.p
           initial={{
@@ -67,8 +88,9 @@ const IntroSection = () => {
         <img
           src={videoPreview}
           alt='Section Image'
-          className='w-full h-[450px]'
+          className='w-full h-[450px] object-cover'
         />
+        <PlayButton />
       </section>
       <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
         <div className='w-'>

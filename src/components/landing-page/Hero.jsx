@@ -10,7 +10,7 @@ const Hero = () => {
         backgroundImage: `linear-gradient(rgba(23, 37, 84, .4), rgba(23, 37, 84, .4)),url(${heroImage})`,
       }}
     >
-      <div className='container max-w-6xl mx-auto h-full flex items-center'>
+      <div className='container max-w-5xl mx-auto h-full flex items-center'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
           {/* Left Column */}
           <div className='text-white space-y-4'>
