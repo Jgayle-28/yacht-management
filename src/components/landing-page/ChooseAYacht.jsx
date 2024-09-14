@@ -2,9 +2,12 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Carousel from '../shared/Carousel'
 import useWindowSize from '../../hooks/use-window-size'
+import { useRouter } from '../../hooks/use-router'
+import ExpandButton from '../shared/ExpandButton'
 
 const ChooseAYacht = () => {
-  const { width, height } = useWindowSize()
+  const { width } = useWindowSize()
+  const router = useRouter()
   console.log('width, height', width)
   return (
     <section className='pt-48 px-8 md:px-16'>
@@ -52,6 +55,7 @@ const ChooseAYacht = () => {
             </div>
           )}
           <div>
+            {/* Top intro */}
             <motion.h2
               initial={{
                 y: 10,
@@ -158,56 +162,12 @@ const ChooseAYacht = () => {
           </motion.p>
         </div>
         <Carousel />
-        {/* <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8'>
-          <div className='bg-white shadow-md rounded-lg p-6'>
-            <img
-              src='https://source.unsplash.com/featured/?yacht'
-              alt='Yacht'
-              className='w-full h-48 object-cover rounded-md'
-            />
-            <h3 className='text-xl font-bold mt-4'>Luxury Yacht</h3>
-            <p className='text-gray-600 mt-2'>
-              Experience the ultimate in luxury and comfort on a private yacht.
-              Our luxury yachts are perfect for a romantic getaway or a family
-              vacation.
-            </p>
-            <button className='bg-blue-600 text-white px-4 py-2 rounded-full mt-4 hover:bg-blue-700'>
-              Learn More
-            </button>
-          </div>
-
-          <div className='bg-white shadow-md rounded-lg p-6'>
-            <img
-              src='https://source.unsplash.com/featured/?sailboat'
-              alt='Sailboat'
-              className='w-full h-48 object-cover rounded-md'
-            />
-            <h3 className='text-xl font-bold mt-4'>Sailboat</h3>
-            <p className='text-gray-600 mt-2'>
-              Set sail on a classic sailboat and experience the thrill of the
-              open sea. Our sailboats are perfect for adventure seekers and
-              sailing enthusiasts.
-            </p>
-            <button className='bg-blue-600 text-white px-4 py-2 rounded-full mt-4 hover:bg-blue-700'>
-              Learn More
-            </button>
-          </div>
-          <div className='bg-white shadow-md rounded-lg p-6'>
-            <img
-              src='https://source.unsplash.com/featured/?catamaran'
-              alt='Catamaran'
-              className='w-full h-48 object-cover rounded-md'
-            />
-            <h3 className='text-xl font-bold mt-4'>Catamaran</h3>
-            <p className='text-gray-600 mt-2'>
-              Cruise the crystal-clear waters on a spacious catamaran. Our
-              catamarans are perfect for large groups and family vacations.
-            </p>
-            <button className='bg-blue-600 text-white px-4 py-2 rounded-full mt-4 hover:bg-blue-700'>
-              Learn More
-            </button>
-          </div>
-        </div> */}
+        <div className='flex justify-center mt-12'>
+          <ExpandButton
+            buttonText='View All Yachts'
+            onClick={() => router.push(`/yachts`)}
+          />
+        </div>
       </div>
     </section>
   )

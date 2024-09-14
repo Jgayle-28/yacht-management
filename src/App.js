@@ -20,15 +20,15 @@ function App() {
   }, [])
   return (
     <>
-      <Navigation />
       <Router>
+        <Navigation />
         <Routes>
           <Route path='/' element={<LandingPage />} />
           <Route path='/yachts' element={<YachtsPage />} />
           <Route path='/destinations' element={<DestinationsPage />} />
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </>
   )
 }

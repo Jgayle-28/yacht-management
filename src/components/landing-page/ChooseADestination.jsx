@@ -1,8 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Carousel from '../shared/Carousel'
+import { useRouter } from '../../hooks/use-router'
+import ExpandButton from '../shared/ExpandButton'
 
 const ChooseADestination = () => {
+  const router = useRouter()
   return (
     <section className='pt-48 px-8 md:px-16'>
       <div className='container mx-auto max-w-6xl'>
@@ -65,6 +68,12 @@ const ChooseADestination = () => {
           </motion.p>
         </div>
         <Carousel />
+        <div className='flex justify-center mt-12'>
+          <ExpandButton
+            buttonText='View All Destinations'
+            onClick={() => router.push(`/destinations`)}
+          />
+        </div>
       </div>
     </section>
   )

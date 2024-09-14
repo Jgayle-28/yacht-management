@@ -6,7 +6,7 @@ import { Logo } from '../shared/Logo'
 
 const Footer = () => {
   return (
-    <footer className='relative overflow-hidden py-12 bg-brandPrimaryDark'>
+    <footer className='relative overflow-hidden py-12 bg-neutral-950'>
       <MaxWidthWrapper className='relative z-20 grid grid-cols-12 gap-x-1.5 gap-y-6'>
         <LogoColumn />
         <GenericColumn
