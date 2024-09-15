@@ -1,11 +1,47 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import ExpandButton from '../components/shared/ExpandButton'
+import React, { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import heroImage from '../assets/images/destinations/destinations-header.jpg'
+import {
+  destinationTabs,
+  cycladesTabData,
+  saronicGulfTabData,
+  sporadesTabData,
+  ionianTabData,
+} from '../data/destinations'
+import Tabs from '../components/shared/Tabs'
+import DestinationCard from '../components/destinations/DestinationCard'
+import useSmoothScroll from '../hooks/use-smooth-scroll'
 
 const DestinationsPage = () => {
+  const [selectedTab, setSelectedTab] = useState(destinationTabs[0])
+  const [currentTabData, setCurrentTabData] = useState(cycladesTabData)
+  const scrollToSection = useSmoothScroll()
+
+  const handleTabChange = (tab) => {
+    setSelectedTab(tab)
+
+    switch (tab) {
+      case 'Cyclades':
+        setCurrentTabData(cycladesTabData)
+        break
+      case 'Saronic Gulf':
+        setCurrentTabData(saronicGulfTabData)
+        break
+      case 'Sporades':
+        setCurrentTabData(sporadesTabData)
+        break
+      case 'Ionian':
+        setCurrentTabData(ionianTabData)
+        break
+      default:
+        setCurrentTabData(cycladesTabData)
+        break
+    }
+    // Scroll to top of the page
+    scrollToSection(`destination-top`, 1000)
+  }
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className='flex flex-col min-h-screen' id='destination-top'>
       {/* Top Div with Background Image */}
       <div
         className='relative bg-cover bg-center h-[500px] bg-blue-500'
@@ -62,7 +98,7 @@ const DestinationsPage = () => {
         </div>
       </div>
 
-      <main className='flex-grow max-w-6xl mx-auto'>
+      <main className='flex-grow max-w-7xl mx-auto px-8 md:px-0'>
         {/* Quote Section */}
         <section className='px-8 py-24 text-center text-brandPrimary'>
           <blockquote>
@@ -76,46 +112,25 @@ const DestinationsPage = () => {
 
         {/* Tabs Section */}
         <section className='p-4 bg-white shadow'>
-          <div className='flex space-x-4 border-b'>
-            <button className='py-2 px-4 font-semibold text-gray-700 border-b-2 border-blue-500'>
-              Tab 1
-            </button>
-            <button className='py-2 px-4 text-gray-500'>Tab 2</button>
-            <button className='py-2 px-4 text-gray-500'>Tab 3</button>
-          </div>
+          <Tabs
+            tabs={destinationTabs}
+            selectedTab={selectedTab}
+            setSelectedTab={handleTabChange}
+          />
         </section>
 
         {/* Cards Section */}
         <section className='py-8'>
-          <div className='flex flex-col space-y-6'>
-            {Array(3)
-              .fill()
-              .map((_, index) => (
-                <div
-                  key={index}
-                  className='bg-white shadow-lg rounded-lg overflow-hidden w-full'
-                >
-                  <div className='flex'>
-                    <img
-                      src={`/path/to/image-${index + 1}.jpg`}
-                      alt={`Card Image ${index + 1}`}
-                      className='w-1/3 h-32 object-cover'
-                    />
-                    <div className='p-4 w-2/3'>
-                      <h2 className='text-xl font-bold'>
-                        Card Title {index + 1}
-                      </h2>
-                      <p className='text-gray-600 mb-2'>Card Tagline</p>
-                      <p className='text-gray-800 mb-4'>
-                        This is a brief description of the card content. It
-                        provides additional details about the topic or content
-                        covered in the card.
-                      </p>
-                      <ExpandButton buttonText='View Details' />
-                    </div>
-                  </div>
-                </div>
+          <div className='flex flex-col space-y-8'>
+            <AnimatePresence>
+              {currentTabData.map((destination, index) => (
+                <DestinationCard
+                  key={`${destination.id}-${selectedTab}`}
+                  destination={destination}
+                  index={index}
+                />
               ))}
+            </AnimatePresence>
           </div>
         </section>
       </main>

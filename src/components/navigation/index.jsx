@@ -39,6 +39,7 @@ const Navigation = () => {
 
   return (
     <motion.nav
+      id='nav'
       initial={{
         y: -15,
         opacity: 0,
@@ -95,7 +96,7 @@ const NavLink = ({ children, href, FlyoutContent }) => {
       onMouseLeave={() => setOpen(false)}
       className='relative h-fit w-fit'
     >
-      <a href={href} className='relative'>
+      <a href={href} className='relative uppercase text-xs tracking-widest'>
         {children}
         <span
           style={{
