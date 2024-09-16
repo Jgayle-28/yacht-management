@@ -1,19 +1,18 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import compass from '../../assets/images/sections/compass.svg'
+import compass from '../../assets/icons/compass.svg'
 import Modal from '../shared/Modal'
 import videoPreview from '../../assets/images/sections/video-preview.webp'
 import yachtVideo from '../../assets/videos/yacht.mp4'
 import PlayButton from '../shared/PlayButton'
-import { GiCompass } from 'react-icons/gi'
-import { PiCompassRoseLight } from 'react-icons/pi'
+// import { GiCompass } from 'react-icons/gi'
+// import { PiCompassRoseLight } from 'react-icons/pi'
 
 const IntroSection = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
       <section className='flex flex-col items-center justify-center px-4 pt-48 space-y-6'>
-        {/* <img src={compass} alt='Section Image' className='w-full h-24' /> */}
         <motion.div
           initial={{
             y: 10,
@@ -30,7 +29,8 @@ const IntroSection = () => {
             opacity: 1,
           }}
         >
-          <PiCompassRoseLight className='text-9xl text-brandPrimary' />
+          <img src={compass} alt='Section Image' className='w-full h-32' />
+          {/* <PiCompassRoseLight className='text-9xl text-brandPrimary' /> */}
         </motion.div>
         <motion.h2
           initial={{

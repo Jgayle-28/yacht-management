@@ -1,6 +1,5 @@
-import toysImage from '../../assets/images/sections/toys.svg'
-import toysScuba from '../../assets/images/sections/toys-scuba.svg'
 import { motion } from 'framer-motion'
+import toysIcon from '../../assets/icons/toys.svg'
 
 const AddToys = () => {
   return (
@@ -169,9 +168,9 @@ const AddToys = () => {
                 y: 0,
                 opacity: 1,
               }}
-              src={toysScuba}
+              src={toysIcon}
               alt='Water Toys Splash'
-              className='h-24 '
+              className='h-10  mt-4'
             />
           </div>
         </div>
