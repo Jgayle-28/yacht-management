@@ -102,11 +102,44 @@ const DestinationsPage = () => {
         {/* Quote Section */}
         <section className='px-8 py-24 text-center text-brandPrimary'>
           <blockquote>
-            <h5 className='text-2xl'>
+            <motion.h5
+              initial={{
+                y: 15,
+                opacity: 0,
+              }}
+              animate={{
+                y: 0,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.25,
+                ease: 'easeInOut',
+              }}
+              className='text-2xl'
+            >
               “A nomad i will remain for life, in love with distant and
               uncharted places.”
-            </h5>
-            <p className='text-gray-500 text-sm'>- Isabelle Eberhardt</p>
+            </motion.h5>
+
+            <motion.p
+              initial={{
+                y: 15,
+                opacity: 0,
+              }}
+              animate={{
+                y: 0,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.35,
+                ease: 'easeInOut',
+              }}
+              className='text-gray-500 text-sm'
+            >
+              - Isabelle Eberhardt
+            </motion.p>
           </blockquote>
         </section>
 

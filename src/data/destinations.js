@@ -8,6 +8,34 @@ import kythnosPreview from '../assets/images/destinations/kythnos-preview.jpeg'
 import mykonosPreview from '../assets/images/destinations/mykonos-preview.jpeg'
 // Santorini
 import santoriniPreview from '../assets/images/destinations/santorini-preview.jpeg'
+// Hydra
+import hydraPreview from '../assets/images/destinations/hydra-preview.jpeg'
+// Aegina
+import aeginaPreview from '../assets/images/destinations/aegina-preview.jpg'
+// Spetses
+import spetsesPreview from '../assets/images/destinations/spetses-preview.jpeg'
+// Athens Riviera
+import athensRivieraPreview from '../assets/images/destinations/athens-preview.webp'
+// Skiathos
+import skiathosPreview from '../assets/images/destinations/skiathos-preview.jpeg'
+// Skyros
+import skyrosPreview from '../assets/images/destinations/skyros-preview.jpeg'
+// Tsougrias
+import tsougriasPreview from '../assets/images/destinations/tsougrias-preview.jpg'
+// Alonnisos
+import alonnisosPreview from '../assets/images/destinations/alonnisos-preview.webp'
+// Kyra Panagia
+import kyraPanagiaPreview from '../assets/images/destinations/kyra-panagia-preview.jpeg'
+// Corfu
+import corfuPreview from '../assets/images/destinations/corfu-preview.jpeg'
+// Zaykynthos
+import zaykynthosPreview from '../assets/images/destinations/zakynthos-preview.jpeg'
+// Lefkada
+import lefkadaPreview from '../assets/images/destinations/lefkada-preview.jpeg'
+// Ithaca
+import ithacaPreview from '../assets/images/destinations/ithaca-preview.jpeg'
+// Cythera
+import cytheraPreview from '../assets/images/destinations/cythera-preview.jpg'
 
 export const cycladesTabData = [
   {
@@ -55,7 +83,7 @@ export const cycladesTabData = [
 export const saronicGulfTabData = [
   {
     id: 1,
-    previewImage: 'https://source.unsplash.com/400x300/?destination',
+    previewImage: hydraPreview,
     heroImage: 'https://source.unsplash.com/1600x900/?destination',
     title: 'Hyrda',
     tabName: 'Saronic Gulf',
@@ -63,7 +91,7 @@ export const saronicGulfTabData = [
   },
   {
     id: 2,
-    previewImage: 'https://source.unsplash.com/400x300/?destination',
+    previewImage: aeginaPreview,
     heroImage: 'https://source.unsplash.com/1600x900/?destination',
     title: 'Aegina',
     tabName: 'Saronic Gulf',
@@ -71,7 +99,7 @@ export const saronicGulfTabData = [
   },
   {
     id: 3,
-    previewImage: 'https://source.unsplash.com/400x300/?destination',
+    previewImage: spetsesPreview,
     heroImage: 'https://source.unsplash.com/1600x900/?destination',
     title: 'Spetses',
     tabName: 'Saronic Gulf',
@@ -79,7 +107,7 @@ export const saronicGulfTabData = [
   },
   {
     id: 4,
-    previewImage: 'https://source.unsplash.com/400x300/?destination',
+    previewImage: athensRivieraPreview,
     heroImage: 'https://source.unsplash.com/1600x900/?destination',
     title: 'Athens Riviera',
     tabName: 'Saronic Gulf',
@@ -90,7 +118,7 @@ export const saronicGulfTabData = [
 export const sporadesTabData = [
   {
     id: 1,
-    previewImage: 'https://source.unsplash.com/400x300/?destination',
+    previewImage: skiathosPreview,
     heroImage: 'https://source.unsplash.com/1600x900/?destination',
     title: 'Skiathos',
     tabName: 'Sporades',
@@ -98,7 +126,7 @@ export const sporadesTabData = [
   },
   {
     id: 2,
-    previewImage: 'https://source.unsplash.com/400x300/?destination',
+    previewImage: skyrosPreview,
     heroImage: 'https://source.unsplash.com/1600x900/?destination',
     title: 'Skyros',
     tabName: 'Sporades',
@@ -106,7 +134,7 @@ export const sporadesTabData = [
   },
   {
     id: 3,
-    previewImage: 'https://source.unsplash.com/400x300/?destination',
+    previewImage: tsougriasPreview,
     heroImage: 'https://source.unsplash.com/1600x900/?destination',
     title: 'Tsougrias',
     tabName: 'Sporades',
@@ -114,7 +142,7 @@ export const sporadesTabData = [
   },
   {
     id: 4,
-    previewImage: 'https://source.unsplash.com/400x300/?destination',
+    previewImage: alonnisosPreview,
     heroImage: 'https://source.unsplash.com/1600x900/?destination',
     title: 'Alonnisos',
     tabName: 'Sporades',
@@ -122,7 +150,7 @@ export const sporadesTabData = [
   },
   {
     id: 5,
-    previewImage: 'https://source.unsplash.com/400x300/?destination',
+    previewImage: kyraPanagiaPreview,
     heroImage: 'https://source.unsplash.com/1600x900/?destination',
     title: 'Kyra Panagia',
     tabName: 'Sporades',
@@ -133,7 +161,7 @@ export const sporadesTabData = [
 export const ionianTabData = [
   {
     id: 1,
-    previewImage: 'https://source.unsplash.com/400x300/?destination',
+    previewImage: corfuPreview,
     heroImage: 'https://source.unsplash.com/1600x900/?destination',
     title: 'Corfu',
     tabName: 'Ionian',
@@ -141,15 +169,15 @@ export const ionianTabData = [
   },
   {
     id: 2,
-    previewImage: 'https://source.unsplash.com/400x300/?destination',
+    previewImage: zaykynthosPreview,
     heroImage: 'https://source.unsplash.com/1600x900/?destination',
-    title: 'Zykynthos',
+    title: 'Zaykynthos',
     tabName: 'Cyclades',
     introParagraph: `Zakynthos is a Greek island in the Ionian Sea and a well-known summer resort. The harbor city of Zakynthos is the capital and major hub, centered around waterfront Solomos Square. Popular beaches like Agios Nikolaos, Alykanas and Tsilivi offer swimming and water sports. Accessed by boat, Navagio beach is the site of a famed 1980 shipwreck resting in a sandy cove framed by cliffs`,
   },
   {
     id: 3,
-    previewImage: 'https://source.unsplash.com/400x300/?destination',
+    previewImage: lefkadaPreview,
     heroImage: 'https://source.unsplash.com/1600x900/?destination',
     title: 'Lefkada',
     tabName: 'Ionian',
@@ -157,7 +185,7 @@ export const ionianTabData = [
   },
   {
     id: 4,
-    previewImage: 'https://source.unsplash.com/400x300/?destination',
+    previewImage: ithacaPreview,
     heroImage: 'https://source.unsplash.com/1600x900/?destination',
     title: 'Ithaca',
     tabName: 'Ionian',
@@ -165,7 +193,7 @@ export const ionianTabData = [
   },
   {
     id: 5,
-    previewImage: 'https://source.unsplash.com/400x300/?destination',
+    previewImage: cytheraPreview,
     heroImage: 'https://source.unsplash.com/1600x900/?destination',
     title: 'Cythera',
     tabName: 'Ionian',
