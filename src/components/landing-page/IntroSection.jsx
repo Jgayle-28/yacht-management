@@ -13,14 +13,14 @@ const IntroSection = () => {
   return (
     <>
       <section className='flex flex-col items-center justify-center px-4 pt-48 space-y-6'>
-        <motion.div
+        <motion.img
           initial={{
             y: 10,
             opacity: 0,
           }}
           transition={{
             duration: 0.5,
-            delay: 0,
+            delay: 0.2,
             ease: 'easeInOut',
           }}
           whileInView={{
@@ -28,10 +28,11 @@ const IntroSection = () => {
             y: 0,
             opacity: 1,
           }}
-        >
-          <img src={compass} alt='Section Image' className='w-full h-32' />
-          {/* <PiCompassRoseLight className='text-9xl text-brandPrimary' /> */}
-        </motion.div>
+          src={compass}
+          alt='Section Image'
+          className='w-full h-32'
+        />
+
         <motion.h2
           initial={{
             y: 10,

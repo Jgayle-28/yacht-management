@@ -7,7 +7,7 @@ const AddToys = () => {
       <div className='container mx-auto max-w-6xl'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
           {/* Left Section (Image) */}
-          <div>
+          <div className='order-2 lg:order-1'>
             <motion.h2
               initial={{
                 y: 10,
@@ -80,7 +80,7 @@ const AddToys = () => {
             </div>
           </div>
           {/* Right Section (Text + Images) */}
-          <div className=' flex items-center justify-center flex-col'>
+          <div className='order-1 lg:order-2 flex items-center justify-center flex-col'>
             {/* <img src={toysImage} alt='Water Toys Splash' className='h-24 ' /> */}
             <div className='relative mt-6 flex-justify-center mx-auto mb-24'>
               <motion.span

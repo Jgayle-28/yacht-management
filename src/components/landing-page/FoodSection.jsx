@@ -167,7 +167,7 @@ const FoodSection = () => {
                 y: 0,
                 opacity: 1,
               }}
-              className='text-2xl font-bold text-center text-neutral-800'
+              className='text-2xl font-bold text-center text-brandPrimary'
             >
               “Kali Orexi!” ( Enjoy Your Meal! )
             </motion.h2>
@@ -175,7 +175,7 @@ const FoodSection = () => {
               initial={{ width: '0%' }}
               whileInView={{ width: 200 }}
               transition={{ duration: 0.75, ease: 'easeInOut' }}
-              className='w-64 h-[2px] origin-center bg-blue-950 my-4'
+              className='w-64 h-[2px] origin-center bg-brandPrimary my-4'
             />
             <motion.p
               initial={{
