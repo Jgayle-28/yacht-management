@@ -6,6 +6,8 @@ import Footer from './components/footer/Footer'
 import LandingPage from './pages/LandingPage'
 import YachtsPage from './pages/YachtsPage'
 import DestinationsPage from './pages/DestinationsPage'
+import FocusDestinationPage from './pages/FocusDestinationPage'
+import MakeRequestPage from './pages/MakeRequestPage'
 
 function App() {
   useEffect(() => {
@@ -19,17 +21,22 @@ function App() {
     requestAnimationFrame(raf)
   }, [])
   return (
-    <>
+    <div id='top'>
       <Router>
         <Navigation />
         <Routes>
           <Route path='/' element={<LandingPage />} />
           <Route path='/yachts' element={<YachtsPage />} />
           <Route path='/destinations' element={<DestinationsPage />} />
+          <Route
+            path='/destinations/:destination/:id'
+            element={<FocusDestinationPage />}
+          />
+          <Route path='/make-request' element={<MakeRequestPage />} />
         </Routes>
         <Footer />
       </Router>
-    </>
+    </div>
   )
 }
 

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 const AddToys = () => {
   return (
-    <section className=' py-8 pt-48 px-8 md:px-16'>
+    <section className=' py-8 pt-48 px-8 md:px-16' id='toys'>
       <div className='container mx-auto max-w-6xl'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
           {/* Left Section (Image) */}

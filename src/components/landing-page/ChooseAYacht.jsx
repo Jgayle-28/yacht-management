@@ -10,7 +10,7 @@ const ChooseAYacht = () => {
   const router = useRouter()
   console.log('width, height', width)
   return (
-    <section className='pt-48 px-8 md:px-16'>
+    <section className='pt-48 px-8 md:px-16' id='yachts'>
       <div className='container mx-auto max-w-6xl'>
         {/* Dots intro */}
         {/* <div className='relative'>

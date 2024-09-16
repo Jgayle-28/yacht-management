@@ -3,11 +3,18 @@ import { motion } from 'framer-motion'
 import Carousel from '../shared/Carousel'
 import { useRouter } from '../../hooks/use-router'
 import ExpandButton from '../shared/ExpandButton'
+import useSmoothScroll from '../../hooks/use-smooth-scroll'
 
 const ChooseADestination = () => {
   const router = useRouter()
+  const scrollToSection = useSmoothScroll()
+
+  const goToDestinations = () => {
+    scrollToSection(`top`, 0)
+    setTimeout(router.push(`/destinations`), 5000)
+  }
   return (
-    <section className='pt-48 px-8 md:px-16'>
+    <section className='pt-48 px-8 md:px-16' id='destinations'>
       <div className='container mx-auto max-w-6xl'>
         {/* Carousel header */}
         <div className='mt-24 mb-12'>
@@ -71,7 +78,7 @@ const ChooseADestination = () => {
         <div className='flex justify-center mt-12'>
           <ExpandButton
             buttonText='View All Destinations'
-            onClick={() => router.push(`/destinations`)}
+            onClick={goToDestinations}
           />
         </div>
       </div>

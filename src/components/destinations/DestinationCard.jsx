@@ -8,7 +8,7 @@ const DestinationCard = ({ destination, index }) => {
   const router = useRouter()
 
   const handleViewDetails = () => {
-    router.push(`/destinations/${id}`)
+    router.push(`/destinations/${tabName}/${id}`)
   }
 
   return (
@@ -26,12 +26,12 @@ const DestinationCard = ({ destination, index }) => {
         <img
           src={previewImage}
           alt={`Card Image ${id + 1}`}
-          className='w-full md:w-1/3 h-32 object-cover'
+          className='w-full md:w-1/3 object-cover'
         />
         <div className='p-4 w-full md:w-2/3'>
-          <h2 className='text-xl font-bold'>{title}</h2>
-          <p className='text-gray-600 my-2'>{tabName}</p>
-          <p className='text-gray-800 mb-4 text-sm tracking-wide'>
+          <h2 className='text-2xl font-bold'>{title}</h2>
+          <p className='text-gray-800 my-2'>{tabName}</p>
+          <p className='text-gray-600 mb-4 text-sm tracking-wider leading-relaxed'>
             {introParagraph}
           </p>
           <ExpandButton buttonText='View Details' onClick={handleViewDetails} />

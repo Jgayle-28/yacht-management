@@ -1,8 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import bookingImage from '../../assets/images/sections/booking-2.jpg'
+import { useRouter } from '../../hooks/use-router'
 
 const BookingSection = () => {
+  const router = useRouter()
   return (
     <section
       className='relative flex items-center justify-center h-[600px] bg-cover bg-center text-white'
@@ -84,6 +86,7 @@ const BookingSection = () => {
           Choose a date, choose a yacht, and let us take care of the rest...
         </motion.p>
         <motion.button
+          onClick={() => router.push('/make-request')}
           initial={{
             y: 5,
             opacity: 0,
@@ -97,7 +100,7 @@ const BookingSection = () => {
             y: 0,
             opacity: 1,
           }}
-          className='px-6 py-3 border border-white text-white font-semibold rounded transition hover:bg-white hover:text-black'
+          className='px-6 py-3 border border-white text-white font-light transition hover:bg-white hover:text-black duration-500'
         >
           Make a request now!
         </motion.button>

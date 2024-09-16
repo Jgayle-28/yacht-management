@@ -9,7 +9,7 @@ const FoodSection = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <section className='pt-48 px-4 md:px-16'>
+      <section className='pt-48 px-4 md:px-16' id='food'>
         <div className='container mx-auto max-w-6xl'>
           {/* Image Section */}
           <motion.div
