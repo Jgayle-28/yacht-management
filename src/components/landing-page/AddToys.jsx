@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion'
 import toysIcon from '../../assets/icons/toys.svg'
+import Carousel from '../shared/Carousel'
+import { destinationLandingData } from '../../data/destinations'
+import { toysLandingData } from '../../data/toys'
 
 const AddToys = () => {
   return (
@@ -61,7 +64,7 @@ const AddToys = () => {
             </motion.p>
 
             {/* Three Images Below Paragraph */}
-            <div className='grid grid-cols-3 gap-4'>
+            {/* <div className='grid grid-cols-3 gap-4'>
               <img
                 src='https://via.placeholder.com/150'
                 alt='Image 1'
@@ -77,7 +80,7 @@ const AddToys = () => {
                 alt='Image 3'
                 className='w-full object-cover rounded-lg shadow-md'
               />
-            </div>
+            </div> */}
           </div>
           {/* Right Section (Text + Images) */}
           <div className='order-1 lg:order-2 flex items-center justify-center flex-col mb-12 md:mb-0'>
@@ -174,6 +177,24 @@ const AddToys = () => {
           </div>
         </div>
       </div>
+      <motion.div
+        className='mt-24'
+        initial={{
+          y: 10,
+          opacity: 0,
+        }}
+        transition={{
+          duration: 0.5,
+          delay: 0.5,
+          ease: 'easeInOut',
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+        }}
+      >
+        <Carousel items={toysLandingData} />
+      </motion.div>
     </section>
   )
 }
