@@ -4,6 +4,7 @@ import Carousel from '../shared/Carousel'
 import { useRouter } from '../../hooks/use-router'
 import ExpandButton from '../shared/ExpandButton'
 import useSmoothScroll from '../../hooks/use-smooth-scroll'
+import { destinationLandingData } from '../../data/destinations'
 
 const ChooseADestination = () => {
   const router = useRouter()
@@ -74,7 +75,24 @@ const ChooseADestination = () => {
             endless, vivid memories for years to come.
           </motion.p>
         </div>
-        <Carousel />
+        <motion.div
+          initial={{
+            y: 10,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 0.5,
+            delay: 0.5,
+            ease: 'easeInOut',
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+        >
+          <Carousel items={destinationLandingData} />
+        </motion.div>
+
         <div className='flex justify-center mt-12'>
           <ExpandButton
             buttonText='View All Destinations'

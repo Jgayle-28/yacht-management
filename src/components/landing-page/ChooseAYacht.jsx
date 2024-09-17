@@ -4,6 +4,7 @@ import Carousel from '../shared/Carousel'
 import useWindowSize from '../../hooks/use-window-size'
 import { useRouter } from '../../hooks/use-router'
 import ExpandButton from '../shared/ExpandButton'
+import { yachtData } from '../../data/yachts'
 
 const ChooseAYacht = () => {
   const { width } = useWindowSize()
@@ -156,7 +157,23 @@ const ChooseAYacht = () => {
             suits your needs.
           </motion.p>
         </div>
-        <Carousel />
+        <motion.div
+          initial={{
+            y: 10,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 0.5,
+            delay: 0.5,
+            ease: 'easeInOut',
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+          }}
+        >
+          <Carousel items={yachtData} />
+        </motion.div>
         <div className='flex justify-center mt-12'>
           <ExpandButton
             buttonText='View All Yachts'

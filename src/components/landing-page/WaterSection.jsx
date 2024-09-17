@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Carousel from '../shared/Carousel'
 import beachIcon from '../../assets/icons/beach.svg'
+import waterImage from '../../assets/images/sections/water.png'
 
 const WaterSection = () => {
   return (
@@ -114,7 +115,7 @@ const WaterSection = () => {
               y: 0,
               opacity: 1,
             }}
-            src='https://via.placeholder.com/400'
+            src={waterImage}
             alt='Section Image'
             className='w-full max-w-lg object-cover rounded-lg shadow-lg'
           />

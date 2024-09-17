@@ -207,3 +207,41 @@ export const destinationTabs = [
   'Sporades',
   'Ionian',
 ]
+
+export const destinationLandingData = [
+  {
+    image: parosPreview,
+    title: 'Paros',
+    info: '',
+    category: 'Cyclades',
+    route: '/destinations/Cyclades/1',
+  },
+  {
+    image: hydraPreview,
+    title: 'Hydra',
+    info: '',
+    category: 'Spetses',
+    route: '/destinations/Saronic%20Gulf/1',
+  },
+  {
+    image: skiathosPreview,
+    title: 'Skiahtos',
+    info: '',
+    category: 'Sporades',
+    route: '/destinations/Sporades/1',
+  },
+  {
+    image: corfuPreview,
+    title: 'Corfu',
+    info: '',
+    category: 'Ionian',
+    route: '/destinations/Ionian/1',
+  },
+  {
+    image: cytheraPreview,
+    title: 'Cythera',
+    info: '',
+    category: 'Ionian',
+    route: '/destinations/Ionian/5',
+  },
+]

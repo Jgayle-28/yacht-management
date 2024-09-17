@@ -98,7 +98,7 @@ const DestinationsPage = () => {
         </div>
       </div>
 
-      <main className='flex-grow max-w-7xl mx-auto px-8 md:px-0'>
+      <main className='flex-grow max-w-7xl mx-auto px-8'>
         {/* Quote Section */}
         <section className='px-8 py-24 text-center text-brandPrimary'>
           <blockquote>
