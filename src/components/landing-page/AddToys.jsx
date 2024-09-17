@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import toysIcon from '../../assets/icons/toys.svg'
 import Carousel from '../shared/Carousel'
-import { destinationLandingData } from '../../data/destinations'
 import { toysLandingData } from '../../data/toys'
 
 const AddToys = () => {
@@ -62,25 +61,6 @@ const AddToys = () => {
               built for the ultimate on or off-road adventure. These top-rated
               toys offer something for everyone!
             </motion.p>
-
-            {/* Three Images Below Paragraph */}
-            {/* <div className='grid grid-cols-3 gap-4'>
-              <img
-                src='https://via.placeholder.com/150'
-                alt='Image 1'
-                className='w-full object-cover rounded-lg shadow-md'
-              />
-              <img
-                src='https://via.placeholder.com/150'
-                alt='Image 2'
-                className='w-full object-cover rounded-lg shadow-md'
-              />
-              <img
-                src='https://via.placeholder.com/150'
-                alt='Image 3'
-                className='w-full object-cover rounded-lg shadow-md'
-              />
-            </div> */}
           </div>
           {/* Right Section (Text + Images) */}
           <div className='order-1 lg:order-2 flex items-center justify-center flex-col mb-12 md:mb-0'>

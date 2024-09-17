@@ -6,6 +6,7 @@ import foodImage from '../../assets/images/sections/food.webp'
 import yachtVideo from '../../assets/videos/yacht.mp4'
 import foodIcon from '../../assets/icons/food.svg'
 import PlayButton from '../shared/PlayButton'
+import { foodLandingData } from '../../data/food'
 
 const FoodSection = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -148,9 +149,24 @@ const FoodSection = () => {
           </motion.div>
 
           {/* Carousel Section */}
-          <div className='w-full'>
-            <Carousel />
-          </div>
+          <motion.div
+            initial={{
+              y: 10,
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.25,
+              ease: 'easeInOut',
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            className='w-full'
+          >
+            <Carousel items={foodLandingData} />
+          </motion.div>
           <div className='w-full flex flex-col items-center my-24'>
             <motion.h2
               initial={{
