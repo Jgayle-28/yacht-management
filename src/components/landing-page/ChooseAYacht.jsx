@@ -8,15 +8,10 @@ import ExpandButton from '../shared/ExpandButton'
 const ChooseAYacht = () => {
   const { width } = useWindowSize()
   const router = useRouter()
-  console.log('width, height', width)
+
   return (
     <section className='pt-48 px-8 md:px-16' id='yachts'>
       <div className='container mx-auto max-w-6xl'>
-        {/* Dots intro */}
-        {/* <div className='relative'>
-          <span className='absolute left-[1px] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-blue-950 transition-all duration-500 scale-100' />
-          <span className='absolute left-[1px] top-[1px] z-10 h-[2px] w-24 origin-left scale-0 bg-blue-950 transition-all duration-500 scale-100' />
-        </div> */}
         <div className='flex items-start justify-center md:justify-start md:ml-48 mb'>
           {width > 930 && (
             <div className='relative mt-6 mr-32'>
@@ -34,7 +29,7 @@ const ChooseAYacht = () => {
                   height: 96,
                   opacity: 1,
                 }}
-                className='absolute left-[1px] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-blue-950 transition-all duration-500 scale-100'
+                className='absolute left-[1px] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-brandPrimary transition-all duration-500 scale-100'
               />
               <motion.span
                 initial={{
@@ -50,7 +45,7 @@ const ChooseAYacht = () => {
                   width: 96,
                   opacity: 1,
                 }}
-                className='absolute left-[1px] top-[1px] z-10 h-[2px] w-24 origin-right scale-0 bg-blue-950 transition-all duration-500 scale-100'
+                className='absolute left-[1px] top-[1px] z-10 h-[2px] w-24 origin-right scale-0 bg-brandPrimary transition-all duration-500 scale-100'
               />
             </div>
           )}
@@ -70,7 +65,7 @@ const ChooseAYacht = () => {
                 y: 0,
                 opacity: 1,
               }}
-              className='text-4xl md:text-5xl font-normal md:font-light text-center text-neutral-800'
+              className='text-4xl md:text-5xl font-normal md:font-light text-center text-brandPrimary'
             >
               Your Adventure Awaits
             </motion.h2>
@@ -108,7 +103,7 @@ const ChooseAYacht = () => {
                     height: 96,
                     opacity: 1,
                   }}
-                  className='absolute left-[50%] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-blue-950 transition-all duration-500 scale-100'
+                  className='absolute left-[50%] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-brandPrimary transition-all duration-500 scale-100'
                 />
               </div>
             )}
@@ -131,7 +126,7 @@ const ChooseAYacht = () => {
               y: 0,
               opacity: 1,
             }}
-            className='text-4xl md:text-5xl font-normal md:font-light text-neutral-800'
+            className='text-4xl md:text-5xl font-normal md:font-light text-brandPrimary'
           >
             Select Your Yacht
           </motion.h2>
@@ -139,7 +134,7 @@ const ChooseAYacht = () => {
             initial={{ width: '0%' }}
             whileInView={{ width: 120 }}
             transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.5 }}
-            className='w-64 h-[2px] bg-blue-950 my-4'
+            className='w-64 h-[2px] bg-brandPrimary my-4'
           />
           <motion.p
             initial={{

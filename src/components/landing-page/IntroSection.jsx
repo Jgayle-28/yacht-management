@@ -12,7 +12,7 @@ const IntroSection = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <section className='flex flex-col items-center justify-center px-4 pt-48 space-y-6'>
+      <section className='flex flex-col items-center justify-center px-8 pt-48 space-y-6'>
         <motion.img
           initial={{
             y: 10,
@@ -47,7 +47,7 @@ const IntroSection = () => {
             y: 0,
             opacity: 1,
           }}
-          className='text-2xl md:text-5xl font-semibold md:font-light text-center text-neutral-800'
+          className='text-3xl md:text-5xl font-light text-center text-brandPrimary'
         >
           Bring your dream experience to life with us
         </motion.h2>

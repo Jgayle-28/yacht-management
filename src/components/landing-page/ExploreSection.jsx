@@ -6,10 +6,10 @@ import exploreIcon from '../../assets/icons/explore.svg'
 const ExploreSection = () => {
   return (
     <>
-      <section className='pt-48 px-4 md:px-16'>
+      <section className='pt-16 md:pt-48 px-4 md:px-16'>
         <div className='container mx-auto max-w-6xl'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
-            <div className='flex items-center justify-center flex-col'>
+            <div className='flex items-center justify-center flex-col mb-20 md:mb-0'>
               <div className='relative mt-6 flex-justify-center mx-auto mb-24'>
                 <motion.span
                   initial={{
@@ -25,7 +25,7 @@ const ExploreSection = () => {
                     height: 96,
                     opacity: 1,
                   }}
-                  className='absolute left-[50%] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-blue-950 transition-all duration-500 scale-100'
+                  className='absolute left-[50%] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-brandPrimary transition-all duration-500 scale-100'
                 />
               </div>
               <motion.h6
@@ -139,7 +139,7 @@ const ExploreSection = () => {
                 y: 0,
                 opacity: 1,
               }}
-              className='text-2xl font-bold text-neutral-800'
+              className='text-3xl md:text-4xl font-light text-brandPrimary'
             >
               Discover Ancient Greece
             </motion.h2>
@@ -147,7 +147,7 @@ const ExploreSection = () => {
               initial={{ width: '0%' }}
               whileInView={{ width: 200 }}
               transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.3 }}
-              className='w-64 h-[2px] origin-center bg-blue-950 my-4'
+              className='w-64 h-[2px] origin-center bg-brandPrimary my-4'
             />
             <motion.p
               initial={{

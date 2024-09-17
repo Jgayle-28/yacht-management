@@ -92,7 +92,7 @@ const BookingSection = () => {
       
       </div> */}
       <section
-        className='relative flex items-center justify-center h-[600px] bg-cover bg-center text-white'
+        className='relative flex items-center justify-center h-[600px] bg-cover bg-center text-white px-8'
         style={{
           backgroundImage: `linear-gradient(rgba(23, 37, 84, .4), rgba(23, 37, 84, .4)), url(${bookingImage})`,
         }}
@@ -112,7 +112,7 @@ const BookingSection = () => {
               y: 0,
               opacity: 1,
             }}
-            className='text-4xl font-bold mb-4'
+            className='text-3xl md:text-4xl font-bold mb-4'
           >
             Luxurious Experiences,
           </motion.h2>
@@ -130,7 +130,7 @@ const BookingSection = () => {
               y: 0,
               opacity: 1,
             }}
-            className='text-4xl font-bold mb-4 ml-12'
+            className='text-3xl md:text-4xl font-bold mb-4 ml-12'
           >
             Enduring Memories,
           </motion.h2>
@@ -148,7 +148,7 @@ const BookingSection = () => {
               y: 0,
               opacity: 1,
             }}
-            className='text-4xl font-bold mb-4 ml-20'
+            className='text-3xl md:text-4xl font-bold mb-4 ml-20'
           >
             Affordable Prices...
           </motion.h2>

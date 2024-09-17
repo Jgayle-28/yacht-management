@@ -10,7 +10,7 @@ const FoodSection = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <section className='pt-48 px-4 md:px-16' id='food'>
+      <section className='pt-24 md:pt-48 px-4 md:px-16' id='food'>
         <div className=' flex items-center justify-center flex-col'>
           {/* <img src={toysImage} alt='Water Toys Splash' className='h-24 ' /> */}
           <div className='relative mt-6 flex-justify-center mx-auto mb-24'>
@@ -28,7 +28,7 @@ const FoodSection = () => {
                 height: 96,
                 opacity: 1,
               }}
-              className='absolute left-[50%] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-blue-950 transition-all duration-500 scale-100'
+              className='absolute left-[50%] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-brandPrimary transition-all duration-500 scale-100'
             />
           </div>
           <motion.h6
@@ -118,7 +118,7 @@ const FoodSection = () => {
                 height: 96,
                 opacity: 1,
               }}
-              className='absolute left-[50%] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-blue-950 transition-all duration-500 scale-100'
+              className='absolute left-[50%] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-brandPrimary transition-all duration-500 scale-100'
             />
           </div>
         </div>
@@ -167,7 +167,7 @@ const FoodSection = () => {
                 y: 0,
                 opacity: 1,
               }}
-              className='text-2xl font-bold text-center text-brandPrimary'
+              className='text-3xl font-semibold text-center text-brandPrimary'
             >
               “Kali Orexi!” ( Enjoy Your Meal! )
             </motion.h2>

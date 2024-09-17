@@ -3,7 +3,7 @@ import toysIcon from '../../assets/icons/toys.svg'
 
 const AddToys = () => {
   return (
-    <section className=' py-8 pt-48 px-8 md:px-16' id='toys'>
+    <section className='py-8 pt-24 md:pt-48 px-8 md:px-16' id='toys'>
       <div className='container mx-auto max-w-6xl'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
           {/* Left Section (Image) */}
@@ -22,7 +22,7 @@ const AddToys = () => {
                 y: 0,
                 opacity: 1,
               }}
-              className='text-4xl md:text-5xl font-normal md:font-light text-neutral-800'
+              className='text-4xl md:text-5xl font-normal md:font-light text-brandPrimary'
             >
               Add Toys
             </motion.h2>
@@ -80,8 +80,7 @@ const AddToys = () => {
             </div>
           </div>
           {/* Right Section (Text + Images) */}
-          <div className='order-1 lg:order-2 flex items-center justify-center flex-col'>
-            {/* <img src={toysImage} alt='Water Toys Splash' className='h-24 ' /> */}
+          <div className='order-1 lg:order-2 flex items-center justify-center flex-col mb-12 md:mb-0'>
             <div className='relative mt-6 flex-justify-center mx-auto mb-24'>
               <motion.span
                 initial={{
@@ -97,7 +96,7 @@ const AddToys = () => {
                   height: 96,
                   opacity: 1,
                 }}
-                className='absolute left-[50%] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-blue-950 transition-all duration-500 scale-100'
+                className='absolute left-[50%] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-brandPrimary transition-all duration-500 scale-100'
               />
             </div>
             <motion.h6

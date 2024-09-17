@@ -22,7 +22,7 @@ const WaterSection = () => {
               height: 96,
               opacity: 1,
             }}
-            className='absolute left-[50%] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-blue-950 transition-all duration-500 scale-100'
+            className='absolute left-[50%] top-[1px] z-10 h-24 w-[2px] origin-top scale-0 bg-brandPrimary transition-all duration-500 scale-100'
           />
         </div>
         <motion.h6
@@ -99,7 +99,7 @@ const WaterSection = () => {
         />
       </div>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-24'>
-        <div className='flex justify-center'>
+        <div className='flex justify-center mb-8 md:mb-0'>
           <motion.img
             initial={{
               y: 10,
@@ -135,7 +135,7 @@ const WaterSection = () => {
               y: 0,
               opacity: 1,
             }}
-            className='text-3xl font-bold text-neutral-800'
+            className='text-3xl md:text-4xl font-light text-brandPrimary'
           >
             Our Shade of Blue is Unique
           </motion.h2>
@@ -143,7 +143,7 @@ const WaterSection = () => {
             initial={{ width: '0%' }}
             whileInView={{ width: 120 }}
             transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.5 }}
-            className='w-64 h-[2px] bg-blue-950 my-4'
+            className='w-64 h-[2px] bg-brandPrimary my-4'
           />
           <motion.p
             initial={{

@@ -14,7 +14,7 @@ const ChooseADestination = () => {
     setTimeout(router.push(`/destinations`), 5000)
   }
   return (
-    <section className='pt-48 px-8 md:px-16' id='destinations'>
+    <section className='pt-8 md:pt-48 px-8 md:px-16' id='destinations'>
       <div className='container mx-auto max-w-6xl'>
         {/* Carousel header */}
         <div className='mt-24 mb-12'>
@@ -32,7 +32,7 @@ const ChooseADestination = () => {
               y: 0,
               opacity: 1,
             }}
-            className='text-4xl md:text-5xl font-normal md:font-light text-neutral-800'
+            className='text-4xl md:text-5xl font-normal md:font-light text-brandPrimary'
           >
             Select a Destination
           </motion.h2>
@@ -40,7 +40,7 @@ const ChooseADestination = () => {
             initial={{ width: '0%' }}
             whileInView={{ width: 120 }}
             transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.5 }}
-            className='w-64 h-[2px] bg-blue-950 my-4'
+            className='w-64 h-[2px] bg-brandPrimary my-4'
           />
           <motion.p
             initial={{

@@ -10,8 +10,8 @@ const Hero = () => {
         backgroundImage: `linear-gradient(rgba(23, 37, 84, .4), rgba(23, 37, 84, .4)),url(${heroImage})`,
       }}
     >
-      <div className='container max-w-5xl mx-auto h-full flex items-center'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center'>
+      <div className='container mx-auto max-w-5xl h-full flex items-center px-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left'>
           {/* Left Column */}
           <div className='text-white space-y-4'>
             <motion.h1
@@ -28,8 +28,7 @@ const Hero = () => {
                 delay: 0.25,
                 ease: 'easeInOut',
               }}
-              className='mb-3 text-3xl font-light leading-tight text-zinc-50 sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:text-8xl lg:leading-tight'
-              // className='text-5xl md:text-6xl font-bold'
+              className='mb-3 text-5xl md:text-3xl font-light leading-tight text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:text-8xl lg:leading-tight'
             >
               Premier Yachting in Greece
             </motion.h1>
@@ -47,7 +46,7 @@ const Hero = () => {
                 delay: 0.5,
                 ease: 'easeInOut',
               }}
-              className='w-32 h-[2px] bg-white my-3'
+              className='w-32 h-[2px] bg-white my-3 mx-auto md:mx-0'
             />
             <motion.p
               initial={{
@@ -89,9 +88,6 @@ const Hero = () => {
             >
               "The best way to predict the future is to create it."
             </motion.p>
-            {/* <button className='px-6 py-3 border border-white text-white font-semibold rounded transition duration-300 ease-in-out hover:bg-white hover:text-black'>
-              Get Started
-            </button> */}
           </div>
         </div>
       </div>
