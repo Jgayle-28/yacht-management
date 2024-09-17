@@ -5,6 +5,7 @@ import Modal from '../shared/Modal'
 import foodImage from '../../assets/images/sections/food.webp'
 import yachtVideo from '../../assets/videos/yacht.mp4'
 import foodIcon from '../../assets/icons/food.svg'
+import PlayButton from '../shared/PlayButton'
 
 const FoodSection = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -12,7 +13,6 @@ const FoodSection = () => {
     <>
       <section className='pt-24 md:pt-48 px-4 md:px-16' id='food'>
         <div className=' flex items-center justify-center flex-col'>
-          {/* <img src={toysImage} alt='Water Toys Splash' className='h-24 ' /> */}
           <div className='relative mt-6 flex-justify-center mx-auto mb-24'>
             <motion.span
               initial={{
@@ -138,14 +138,13 @@ const FoodSection = () => {
               y: 0,
               opacity: 1,
             }}
-            className='w-full mb-8 cursor-pointer'
+            className='mb-8 relative w-full cursor-pointer h-[450px] bg-cover bg-center bg-no-repeat flex items-center justify-center'
             onClick={() => setIsOpen(true)}
+            style={{
+              backgroundImage: `linear-gradient(rgba(23, 37, 84, .4), rgba(23, 37, 84, .4)), url(${foodImage})`,
+            }}
           >
-            <img
-              src={foodImage}
-              alt='Food Image'
-              className='w-full h-[550px] object-cover rounded-sm shadow-lg'
-            />
+            <PlayButton />
           </motion.div>
 
           {/* Carousel Section */}

@@ -5,8 +5,6 @@ import Modal from '../shared/Modal'
 import videoPreview from '../../assets/images/sections/video-preview.webp'
 import yachtVideo from '../../assets/videos/yacht.mp4'
 import PlayButton from '../shared/PlayButton'
-// import { GiCompass } from 'react-icons/gi'
-// import { PiCompassRoseLight } from 'react-icons/pi'
 
 const IntroSection = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -83,14 +81,12 @@ const IntroSection = () => {
         {/* Full-width Video Preview */}
       </section>
       <section
-        className='w-full cursor-pointer'
+        className='relative w-full cursor-pointer h-[450px] bg-cover bg-center bg-no-repeat flex items-center justify-center'
         onClick={() => setIsOpen(true)}
+        style={{
+          backgroundImage: `linear-gradient(rgba(23, 37, 84, .4), rgba(23, 37, 84, .4)), url(${videoPreview})`,
+        }}
       >
-        <img
-          src={videoPreview}
-          alt='Section Image'
-          className='w-full h-[450px] object-cover'
-        />
         <PlayButton />
       </section>
       <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
