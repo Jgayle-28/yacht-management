@@ -11,7 +11,7 @@ import { Logo } from '../shared/Logo'
 import { useRouter } from '../../hooks/use-router'
 import { LINKS } from '../../data/navigation'
 import useSmoothScroll from '../../hooks/use-smooth-scroll'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 // const Navigation = () => {
 //   return (
@@ -97,7 +97,7 @@ const NavLink = ({ children, FlyoutContent, id }) => {
   const [open, setOpen] = useState(false)
   const scrollToSection = useSmoothScroll()
   const location = useLocation()
-  const navigate = useNavigate()
+  const router = useRouter()
 
   const showFlyout = FlyoutContent && open
 
@@ -105,7 +105,8 @@ const NavLink = ({ children, FlyoutContent, id }) => {
     if (location.pathname === '/') {
       scrollToSection(id, 1000)
     } else {
-      navigate(`/${id}`)
+      scrollToSection(`top`, 0)
+      setTimeout(router.push(`/${id}`), 5000)
     }
   }
 

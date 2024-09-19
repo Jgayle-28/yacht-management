@@ -7,9 +7,20 @@ import yachtVideo from '../../assets/videos/yacht.mp4'
 import foodIcon from '../../assets/icons/food.svg'
 import PlayButton from '../shared/PlayButton'
 import { foodLandingData } from '../../data/food'
+import ExpandButton from '../shared/ExpandButton'
+import { useRouter } from '../../hooks/use-router'
+import useSmoothScroll from '../../hooks/use-smooth-scroll'
 
 const FoodSection = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const scrollToSection = useSmoothScroll()
+  const router = useRouter()
+
+  const goToFoodPage = () => {
+    scrollToSection(`top`, 0)
+    setTimeout(router.push(`/food`), 5000)
+  }
+
   return (
     <>
       <section className='pt-24 md:pt-48 px-4 md:px-16' id='food'>
@@ -166,6 +177,24 @@ const FoodSection = () => {
             className='w-full'
           >
             <Carousel items={foodLandingData} />
+          </motion.div>
+          <motion.div
+            initial={{
+              y: 10,
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.25,
+              ease: 'easeInOut',
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            className='flex justify-center mt-12'
+          >
+            <ExpandButton buttonText='Find Out More' onClick={goToFoodPage} />
           </motion.div>
           <div className='w-full flex flex-col items-center my-24'>
             <motion.h2

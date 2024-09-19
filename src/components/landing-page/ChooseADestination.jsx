@@ -14,6 +14,7 @@ const ChooseADestination = () => {
     scrollToSection(`top`, 0)
     setTimeout(router.push(`/destinations`), 5000)
   }
+
   return (
     <section className='pt-8 md:pt-48 px-8 md:px-16' id='destinations'>
       <div className='container mx-auto max-w-6xl'>
