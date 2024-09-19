@@ -129,7 +129,7 @@ const ChooseAYacht = () => {
             }}
             className='text-4xl md:text-5xl font-normal md:font-light text-brandPrimary'
           >
-            Select Your Yacht
+            Select Your Vessel
           </motion.h2>
           <motion.div
             initial={{ width: '0%' }}
