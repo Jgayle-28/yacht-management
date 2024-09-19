@@ -11,6 +11,7 @@ import { Logo } from '../shared/Logo'
 import { useRouter } from '../../hooks/use-router'
 import { LINKS } from '../../data/navigation'
 import useSmoothScroll from '../../hooks/use-smooth-scroll'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 // const Navigation = () => {
 //   return (
@@ -95,8 +96,18 @@ const Links = () => {
 const NavLink = ({ children, FlyoutContent, id }) => {
   const [open, setOpen] = useState(false)
   const scrollToSection = useSmoothScroll()
+  const location = useLocation()
+  const navigate = useNavigate()
 
   const showFlyout = FlyoutContent && open
+
+  const handleLinkClick = (e) => {
+    if (location.pathname === '/') {
+      scrollToSection(id, 1000)
+    } else {
+      navigate(`/${id}`)
+    }
+  }
 
   return (
     <div
@@ -105,7 +116,7 @@ const NavLink = ({ children, FlyoutContent, id }) => {
       className='relative h-fit w-fit'
     >
       <span
-        onClick={() => scrollToSection(id, 1000)}
+        onClick={handleLinkClick}
         className='relative uppercase text-xs tracking-widest group text-white/80 hover:text-white cursor-pointer'
       >
         {children}
