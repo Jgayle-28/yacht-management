@@ -5,8 +5,6 @@ import videoPreview from '../assets/images/toys/toys-video-img.jpg'
 import Modal from '../components/shared/Modal'
 import yachtVideo from '../assets/videos/yacht.mp4'
 import PlayButton from '../components/shared/PlayButton'
-import foodIcon from '../assets/icons/food-page.svg'
-import { foodPageData } from '../data/food'
 import ToysCard from '../components/toys/ToysCard'
 import { toysLandingData } from '../data/toys'
 
@@ -140,27 +138,7 @@ const ToysPage = () => {
           </section>
 
           {/* Cards Section */}
-          <section className='flex flex-col items-center justify-center px-8 pt-32 space-y-6'>
-            {/* <motion.img
-              initial={{
-                y: 10,
-                opacity: 0,
-              }}
-              transition={{
-                duration: 0.5,
-                delay: 0.2,
-                ease: 'easeInOut',
-              }}
-              whileInView={{
-                once: true,
-                y: 0,
-                opacity: 1,
-              }}
-              src={foodIcon}
-              alt='Section Image'
-              className='w-full h-32'
-            /> */}
-
+          <section className='flex flex-col items-center justify-center px-8 pt-32 space-y-6 pb-20'>
             <motion.p
               initial={{
                 y: 10,
@@ -207,7 +185,7 @@ const ToysPage = () => {
             </motion.p>
           </section>
 
-          <section className='py-8'>
+          <section className='pb-8 mt-20'>
             <div className='flex flex-col space-y-8'>
               <AnimatePresence>
                 {toysLandingData.map((toy, index) => (

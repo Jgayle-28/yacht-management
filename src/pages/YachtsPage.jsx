@@ -32,7 +32,7 @@ const YachtsPage = () => {
     <div className='flex flex-col min-h-screen' id='yacht-top'>
       {/* Top Div with Background Image */}
       <div
-        className='relative bg-cover bg-center h-[500px] bg-blue-500'
+        className='relative bg-cover bg-center h-[500px]'
         style={{
           backgroundImage: `linear-gradient(rgba(23, 37, 84, .4), rgba(23, 37, 84, .4)),url(${heroImage})`,
         }}

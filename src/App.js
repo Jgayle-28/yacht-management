@@ -12,6 +12,7 @@ import MakeRequestPage from './pages/MakeRequestPage'
 import FocusYachtPage from './pages/FocusYachtPage'
 import FoodPage from './pages/FoodPage'
 import ToysPage from './pages/ToysPage'
+import YachtManagementPage from './pages/YachtManagementPage'
 
 function App() {
   useEffect(() => {
@@ -40,6 +41,7 @@ function App() {
           <Route path='/make-request' element={<MakeRequestPage />} />
           <Route path='/food' element={<FoodPage />} />
           <Route path='/toys' element={<ToysPage />} />
+          <Route path='/management' element={<YachtManagementPage />} />
         </Routes>
         <Footer />
       </Router>

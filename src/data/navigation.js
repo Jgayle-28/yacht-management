@@ -1,5 +1,11 @@
 export const LINKS = [
   {
+    text: 'management',
+    id: 'management',
+    href: '/management',
+    // component: AboutUsContent,
+  },
+  {
     text: 'yachts',
     id: 'yachts',
     href: null,

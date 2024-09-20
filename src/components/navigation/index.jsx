@@ -93,7 +93,8 @@ const Links = () => {
   )
 }
 
-const NavLink = ({ children, FlyoutContent, id }) => {
+const NavLink = ({ children, FlyoutContent, id, href = null }) => {
+  console.log('href :>> ', href)
   const [open, setOpen] = useState(false)
   const scrollToSection = useSmoothScroll()
   const location = useLocation()
@@ -102,12 +103,16 @@ const NavLink = ({ children, FlyoutContent, id }) => {
   const showFlyout = FlyoutContent && open
 
   const handleLinkClick = (e) => {
-    if (location.pathname === '/') {
-      scrollToSection(id, 1000)
-    } else {
+    if (id === 'management') {
       scrollToSection(`top`, 0)
-      setTimeout(router.push(`/${id}`), 5000)
+      setTimeout(() => router.push(`/${id}`), 100)
+      return
     }
+    if (location.pathname === '/') {
+      return scrollToSection(id, 1000)
+    }
+    scrollToSection(`top`, 0)
+    setTimeout(router.push(`/${id}`), 5000)
   }
 
   return (
