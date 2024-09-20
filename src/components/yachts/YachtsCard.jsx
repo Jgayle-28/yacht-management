@@ -38,24 +38,23 @@ const YachtsCard = ({ boat, index }) => {
           <div className='grid grid-cols-1 sm:grid-cols-5 gap-4 pt-8 mb-4 text-sm'>
             <div className='flex flex-col text-brandPrimary'>
               <span className='font-semibold'>Length:</span>
-              <span>{boatData.length}m</span> {/* Replace with actual data */}
+              <span>{boatData.length}m</span>
             </div>
             <div className='flex flex-col text-brandPrimary'>
               <span className='font-semibold'>Berths:</span>
-              <span>{boatData.berths}</span> {/* Replace with actual data */}
+              <span>{boatData.berths}</span>
             </div>
             <div className='flex flex-col text-brandPrimary'>
               <span className='font-semibold'>Cabins:</span>
-              <span>{boatData.cabins}</span> {/* Replace with actual data */}
+              <span>{boatData.cabins}</span>
             </div>
             <div className='flex flex-col text-brandPrimary'>
               <span className='font-semibold'>WC:</span>
-              <span>{boatData.wc}</span> {/* Replace with actual data */}
+              <span>{boatData.wc}</span>
             </div>
             <div className='flex flex-col text-brandPrimary'>
               <span className='font-semibold'>Cruising Speed:</span>
               <span>{boatData.cruisingSpeed} KNOTS</span>{' '}
-              {/* Replace with actual data */}
             </div>
           </div>
           {/* Price */}

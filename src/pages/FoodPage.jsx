@@ -11,16 +11,6 @@ import { foodPageData } from '../data/food'
 const FoodPage = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const images = [
-    // Add your image URLs here
-    'https://via.placeholder.com/300',
-    'https://via.placeholder.com/300',
-    'https://via.placeholder.com/300',
-    'https://via.placeholder.com/300',
-    'https://via.placeholder.com/300',
-    'https://via.placeholder.com/300',
-  ]
-
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: (i) => ({
@@ -38,7 +28,7 @@ const FoodPage = () => {
       <div className='flex flex-col min-h-screen' id='destination-top'>
         {/* Top Div with Background Image */}
         <div
-          className='relative bg-cover bg-center h-[500px] bg-blue-500'
+          className='relative bg-cover bg-center h-[500px]'
           style={{
             backgroundImage: `linear-gradient(rgba(23, 37, 84, .4), rgba(23, 37, 84, .4)),url(${heroImage})`,
           }}

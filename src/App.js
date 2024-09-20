@@ -11,6 +11,7 @@ import FocusDestinationPage from './pages/FocusDestinationPage'
 import MakeRequestPage from './pages/MakeRequestPage'
 import FocusYachtPage from './pages/FocusYachtPage'
 import FoodPage from './pages/FoodPage'
+import ToysPage from './pages/ToysPage'
 
 function App() {
   useEffect(() => {
@@ -38,6 +39,7 @@ function App() {
           />
           <Route path='/make-request' element={<MakeRequestPage />} />
           <Route path='/food' element={<FoodPage />} />
+          <Route path='/toys' element={<ToysPage />} />
         </Routes>
         <Footer />
       </Router>

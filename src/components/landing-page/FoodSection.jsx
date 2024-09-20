@@ -86,7 +86,7 @@ const FoodSection = () => {
             }}
             transition={{
               duration: 0.5,
-              delay: 0.75,
+              delay: 0.5,
               ease: 'easeInOut',
             }}
             whileInView={{
@@ -104,7 +104,7 @@ const FoodSection = () => {
             }}
             transition={{
               duration: 0.5,
-              delay: 0.75,
+              delay: 0.5,
               ease: 'easeInOut',
             }}
             whileInView={{

@@ -80,7 +80,18 @@ const IntroSection = () => {
 
         {/* Full-width Video Preview */}
       </section>
-      <section
+      <motion.section
+        initial={{
+          opacity: 0,
+        }}
+        transition={{
+          duration: 0.5,
+          delay: 0.15,
+          ease: 'easeInOut',
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
         className='relative w-full cursor-pointer h-[450px] bg-cover bg-center bg-no-repeat flex items-center justify-center'
         onClick={() => setIsOpen(true)}
         style={{
@@ -88,7 +99,7 @@ const IntroSection = () => {
         }}
       >
         <PlayButton />
-      </section>
+      </motion.section>
       <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
         <div className='w-'>
           <video className='h-full w-full object-cover' controls>
