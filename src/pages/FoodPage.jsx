@@ -340,30 +340,6 @@ const FoodPage = () => {
 
           {/* Image gallery */}
           <section className=''>
-            {/* <motion.h2
-              initial={{
-                y: 10,
-                opacity: 0,
-              }}
-              transition={{
-                duration: 0.5,
-                delay: 0.25,
-                ease: 'easeInOut',
-              }}
-              whileInView={{
-                y: 0,
-                opacity: 1,
-              }}
-              className='text-4xl md:text-5xl font-normal md:font-light text-brandPrimary'
-            >
-              Our Gallery
-            </motion.h2>
-            <motion.div
-              initial={{ width: '0%' }}
-              whileInView={{ width: 120 }}
-              transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.5 }}
-              className='w-64 h-[2px] bg-brandPrimary my-4'
-            /> */}
             <div className='flex flex-wrap justify-center my-32'>
               {foodPageData.map((image, index) => (
                 <motion.div
