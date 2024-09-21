@@ -14,6 +14,7 @@ import FoodPage from './pages/FoodPage'
 import ToysPage from './pages/ToysPage'
 import YachtManagementPage from './pages/YachtManagementPage'
 import AboutPage from './pages/AboutPage'
+import ContactPage from './pages/ContactPage'
 
 function App() {
   useEffect(() => {
@@ -44,6 +45,7 @@ function App() {
           <Route path='/toys' element={<ToysPage />} />
           <Route path='/management' element={<YachtManagementPage />} />
           <Route path='/about' element={<AboutPage />} />
+          <Route path='/contact' element={<ContactPage />} />
         </Routes>
         <Footer />
       </Router>
