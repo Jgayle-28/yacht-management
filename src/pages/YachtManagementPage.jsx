@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import heroImage from '../assets/images/yachts/management-hero-img.jpeg'
 import TabButton from '../components/shared/TabButton'
 import { managementTabs } from '../data/management'
+import SelectDropdown from '../components/shared/SelectDropdown'
 
 const YachtManagementPage = () => {
   const [currentTab, setCurrentTab] = useState(managementTabs[0])
@@ -103,7 +104,7 @@ const YachtManagementPage = () => {
             specific aspect of management, we're here to help.
           </motion.p>
 
-          <div className='flex items-center justify-center mt-12 space-y-4 space-x-6 flex-wrap'>
+          <div className='items-center justify-center mt-12 space-y-4 space-x-6 flex-wrap hidden md:flex'>
             {managementTabs.map((tab, i) => (
               <TabButton
                 key={i}
@@ -111,9 +112,11 @@ const YachtManagementPage = () => {
                 icon={tab.icon}
                 btnText={tab.tabName}
                 isActive={currentTab.tabName === tab.tabName}
-                // className='hover:bg-neutral-200'
               />
             ))}
+          </div>
+          <div className='block md:hidden mt-12'>
+            <SelectDropdown options={managementTabs} onChange={setCurrentTab} />
           </div>
           <div className='my-24'>
             <AnimatePresence>
@@ -139,8 +142,6 @@ const YachtManagementPage = () => {
                     {info}
                   </motion.p>
                 ))}
-                {/* <p className='text-lg text-neutral-500 mt-4'></p>
-                <p className='text-lg text-neutral-500 mt-4'></p> */}
               </motion.div>
             </AnimatePresence>
           </div>

@@ -1,17 +1,11 @@
 import { PiFiles } from 'react-icons/pi'
-import { GiTreasureMap } from 'react-icons/gi'
 import { RiTreasureMapLine } from 'react-icons/ri'
-import { GiCaptainHatProfile } from 'react-icons/gi'
 import { MdOutlineAdminPanelSettings } from 'react-icons/md'
-
 import { FaChartLine } from 'react-icons/fa6'
 import { IoMegaphoneOutline } from 'react-icons/io5'
 import { GoChecklist } from 'react-icons/go'
 import { MdOutlineDirectionsBoatFilled } from 'react-icons/md'
-import { TbSpeedboat } from 'react-icons/tb'
-import { GiSlashedShield } from 'react-icons/gi'
 import { HiOutlinePresentationChartBar } from 'react-icons/hi2'
-
 import { GoShieldCheck } from 'react-icons/go'
 import { GiGearHammer } from 'react-icons/gi'
 
