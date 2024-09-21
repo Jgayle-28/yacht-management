@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import heroImage from '../assets/images/destinations/destinations-header.jpg'
+import heroImage from '../assets/images/destinations/destinations-hero.jpeg'
 import {
   destinationTabs,
   cycladesTabData,
@@ -46,7 +46,7 @@ const DestinationsPage = () => {
       <div
         className='relative bg-cover bg-center h-[500px] bg-blue-500'
         style={{
-          backgroundImage: `linear-gradient(rgba(23, 37, 84, .4), rgba(23, 37, 84, .4)),url(${heroImage})`,
+          backgroundImage: `linear-gradient(rgba(23, 37, 84, .45), rgba(23, 37, 84, .45)),url(${heroImage})`,
         }}
       >
         <div className='flex flex-col items-center justify-center h-full text-center text-white w-full'>

@@ -1,10 +1,11 @@
-import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import heroImage from '../assets/images/contact-img.jpeg'
 
 const ShiftingContactForm = () => {
   const [selected, setSelected] = useState('individual')
   return (
-    <section className='p-4 bg-slate-100'>
+    <section className='p-4 min-h-screen flex justify-center items-center bg-slate-50'>
       <div className='w-full max-w-6xl mx-auto shadow-lg flex flex-col-reverse lg:flex-row rounded-lg overflow-hidden'>
         <Form selected={selected} setSelected={setSelected} />
         <Images selected={selected} />
@@ -14,32 +15,76 @@ const ShiftingContactForm = () => {
 }
 
 const Form = ({ selected, setSelected }) => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [emailError, setEmailError] = useState('')
+
+  const validateEmail = (email) => {
+    // Simple email regex for validation
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return regex.test(email)
+  }
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value)
+    if (validateEmail(e.target.value)) {
+      setEmailError('')
+    } else {
+      setEmailError('Please enter a valid email address.')
+    }
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (validateEmail(email)) {
+      // Submit the form or handle the valid email
+      console.log('Email is valid:', email)
+    } else {
+      setEmailError('Please enter a valid email address.')
+    }
+  }
   return (
     <form
-      onSubmit={(e) => e.preventDefault()}
+      onSubmit={handleSubmit}
       className={`p-8 w-full text-white transition-colors duration-[750ms] ${
-        selected === 'company' ? 'bg-indigo-600' : 'bg-violet-600'
+        selected === 'company' ? 'bg-indigo-600' : 'bg-white'
       }`}
     >
-      <h3 className='text-4xl font-bold mb-6'>Contact us</h3>
+      {/* <h3 className='text-4xl font-bold mb-6'>Contact us</h3> */}
 
       {/* Name input */}
       <div className='mb-6'>
-        <p className='text-2xl mb-2'>Hi 👋! My name is...</p>
+        <p className='text-2xl mb-2 text-slate-500'>Hi 👋! My name is...</p>
         <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           type='text'
           placeholder='Your name...'
           className={`${
-            selected === 'company' ? 'bg-indigo-700' : 'bg-violet-700'
-          } transition-colors duration-[750ms] placeholder-white/70 p-2 rounded-md w-full focus:outline-0`}
+            selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
+          } transition-colors duration-[750ms] placeholder-slate/70 p-2 rounded-md w-full focus:outline-0 text-slate-900 `}
         />
+      </div>
+      <div className='mb-6'>
+        <p className='text-2xl mb-2 text-slate-500'>You can reacht me at...</p>
+        <input
+          type='email'
+          placeholder='Your email...'
+          className={`${
+            selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
+          } transition-colors duration-[750ms]  p-2 rounded-md w-full focus:outline-0 text-slate-900`}
+          value={email}
+          onChange={handleEmailChange}
+        />
+        {emailError && <p className='text-red-500'>{emailError}</p>}
       </div>
 
       {/* Company/individual toggle */}
-      <div className='mb-6'>
+      {/* <div className='mb-6'>
         <p className='text-2xl mb-2'>and I represent...</p>
         <FormSelect selected={selected} setSelected={setSelected} />
-      </div>
+      </div> */}
 
       {/* Company name */}
       <AnimatePresence>
@@ -66,11 +111,11 @@ const Form = ({ selected, setSelected }) => {
           >
             <p className='text-2xl mb-2'>by the name of...</p>
             <input
-              type='text'
+              type='email'
               placeholder='Your company name...'
               className={`${
-                selected === 'company' ? 'bg-indigo-700' : 'bg-violet-700'
-              } transition-colors duration-[750ms] placeholder-white/70 p-2 rounded-md w-full focus:outline-0`}
+                selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
+              } transition-colors duration-[750ms]  p-2 rounded-md w-full focus:outline-0 text-slate-900`}
             />
           </motion.div>
         )}
@@ -78,12 +123,16 @@ const Form = ({ selected, setSelected }) => {
 
       {/* Info */}
       <div className='mb-6'>
-        <p className='text-2xl mb-2'>I'd love to ask about...</p>
+        <p className='text-2xl mb-2 text-slate-500'>
+          I would like to ask about...
+        </p>
         <textarea
-          placeholder='Whatever your heart desires :)'
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder='Yacht management, yacht charter, etc...'
           className={`${
-            selected === 'company' ? 'bg-indigo-700' : 'bg-violet-700'
-          } transition-colors duration-[750ms] min-h-[150px] resize-none placeholder-white/70 p-2 rounded-md w-full focus:outline-0`}
+            selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
+          } transition-colors duration-[750ms] min-h-[150px] resize-none p-2 rounded-md w-full focus:outline-0 text-slate-900`}
         />
       </div>
 
@@ -99,8 +148,8 @@ const Form = ({ selected, setSelected }) => {
         className={`${
           selected === 'company'
             ? 'bg-white text-indigo-600'
-            : 'bg-white text-violet-600'
-        } transition-colors duration-[750ms] text-lg text-center rounded-lg w-full py-3 font-semibold`}
+            : 'bg-slate-950 text-slate-100'
+        } transition-colors duration-[750ms] text-lg text-center w-full py-3 uppercase tracking-wider`}
       >
         Submit
       </motion.button>
@@ -156,8 +205,7 @@ const Images = ({ selected }) => {
         transition={BASE_TRANSITION}
         className='absolute inset-0 bg-slate-200'
         style={{
-          backgroundImage:
-            'url(https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80)',
+          backgroundImage: `url(${heroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
