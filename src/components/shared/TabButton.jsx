@@ -1,5 +1,4 @@
 import React from 'react'
-import { FiSend } from 'react-icons/fi'
 
 const TabButton = ({ btnText, isActive, onClick, icon, ...rest }) => {
   return (
@@ -26,7 +25,6 @@ const TabButton = ({ btnText, isActive, onClick, icon, ...rest }) => {
     `}
       {...rest}
     >
-      {/* <FiSend /> */}
       {icon}
       <span>{btnText}</span>
     </button>

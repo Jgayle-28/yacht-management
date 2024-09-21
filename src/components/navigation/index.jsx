@@ -1,36 +1,17 @@
 import React, { useState } from 'react'
-import { FiMenu, FiArrowRight, FiX, FiChevronDown } from 'react-icons/fi'
+import { FiMenu, FiArrowRight, FiX } from 'react-icons/fi'
 import {
   useMotionValueEvent,
   AnimatePresence,
   useScroll,
   motion,
 } from 'framer-motion'
-import useMeasure from 'react-use-measure'
+
 import { Logo } from '../shared/Logo'
 import { useRouter } from '../../hooks/use-router'
 import { LINKS } from '../../data/navigation'
 import useSmoothScroll from '../../hooks/use-smooth-scroll'
 import { useLocation } from 'react-router-dom'
-
-// const Navigation = () => {
-//   return (
-//     <>
-//       <FlyoutNav />
-//       {/* <div
-//         className='relative min-h-screen'
-//         style={{
-//           backgroundImage: 'url(/imgs/random/12.jpg)',
-//           backgroundSize: 'cover',
-//           backgroundPosition: 'center',
-//         }}
-//       > */}
-//         {/* <div className='absolute inset-0 z-0 bg-gradient-to-b from-neutral-950/90 to-neutral-950/0' /> */}
-//       </div>
-//       {/* <div className='h-screen bg-neutral-50' /> */}
-//     </>
-//   )
-// }
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -93,8 +74,7 @@ const Links = () => {
   )
 }
 
-const NavLink = ({ children, FlyoutContent, id, href = null }) => {
-  console.log('href :>> ', href)
+const NavLink = ({ children, FlyoutContent, id }) => {
   const [open, setOpen] = useState(false)
   const scrollToSection = useSmoothScroll()
   const location = useLocation()
@@ -103,7 +83,7 @@ const NavLink = ({ children, FlyoutContent, id, href = null }) => {
   const showFlyout = FlyoutContent && open
 
   const handleLinkClick = (e) => {
-    if (id === 'management') {
+    if (id === 'management' || id === 'about' || id === 'contact') {
       scrollToSection(`top`, 0)
       setTimeout(() => router.push(`/${id}`), 100)
       return
@@ -162,64 +142,36 @@ const CTAs = () => {
   )
 }
 
-const MobileMenuLink = ({ children, href, FoldContent, setMenuOpen }) => {
-  const [ref, { height }] = useMeasure()
-  const [open, setOpen] = useState(false)
+const MobileMenuLink = ({ children, setMenuOpen, id }) => {
+  const scrollToSection = useSmoothScroll()
+  const location = useLocation()
+  const router = useRouter()
+
+  const handleLinkClick = (e) => {
+    if (id === 'management' || id === 'about' || id === 'contact') {
+      setMenuOpen(false)
+      scrollToSection(`top`, 0)
+      setTimeout(() => router.push(`/${id}`), 100)
+      return
+    }
+    if (location.pathname === '/') {
+      setMenuOpen(false)
+      return scrollToSection(id, 1000)
+    }
+    setMenuOpen(false)
+    scrollToSection(`top`, 0)
+    setTimeout(router.push(`/${id}`), 5000)
+  }
 
   return (
     <div className='relative text-neutral-950'>
-      {FoldContent ? (
-        <div
-          className='flex w-full cursor-pointer items-center justify-between border-b border-neutral-300 py-6 text-start text-2xl font-semibold'
-          onClick={() => setOpen((pv) => !pv)}
-        >
-          <a
-            onClick={(e) => {
-              e.stopPropagation()
-              setMenuOpen(false)
-            }}
-            href={href}
-          >
-            {children}
-          </a>
-          <motion.div
-            animate={{ rotate: open ? '180deg' : '0deg' }}
-            transition={{
-              duration: 0.3,
-              ease: 'easeOut',
-            }}
-          >
-            <FiChevronDown />
-          </motion.div>
-        </div>
-      ) : (
-        <a
-          onClick={(e) => {
-            e.stopPropagation()
-            setMenuOpen(false)
-          }}
-          href='#'
-          className='flex w-full cursor-pointer items-center justify-between border-b border-neutral-300 py-6 text-start text-2xl font-semibold'
-        >
-          <span>{children}</span>
-          <FiArrowRight />
-        </a>
-      )}
-      {FoldContent && (
-        <motion.div
-          initial={false}
-          animate={{
-            height: open ? height : '0px',
-            marginBottom: open ? '24px' : '0px',
-            marginTop: open ? '12px' : '0px',
-          }}
-          className='overflow-hidden'
-        >
-          <div ref={ref}>
-            <FoldContent />
-          </div>
-        </motion.div>
-      )}
+      <a
+        onClick={handleLinkClick}
+        className='group flex w-full cursor-pointer items-center justify-between border-b border-neutral-300 py-6 text-start text-2xl font-semibold'
+      >
+        <span>{children}</span>
+        <FiArrowRight className='mr-8 group-hover:mr-2 transition-all duration-200' />
+      </a>
     </div>
   )
 }
@@ -253,6 +205,7 @@ const MobileMenu = () => {
                   href={l.href}
                   FoldContent={l.component}
                   setMenuOpen={setOpen}
+                  id={l.id}
                 >
                   {l.text}
                 </MobileMenuLink>

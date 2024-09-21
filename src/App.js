@@ -13,6 +13,7 @@ import FocusYachtPage from './pages/FocusYachtPage'
 import FoodPage from './pages/FoodPage'
 import ToysPage from './pages/ToysPage'
 import YachtManagementPage from './pages/YachtManagementPage'
+import AboutPage from './pages/AboutPage'
 
 function App() {
   useEffect(() => {
@@ -42,6 +43,7 @@ function App() {
           <Route path='/food' element={<FoodPage />} />
           <Route path='/toys' element={<ToysPage />} />
           <Route path='/management' element={<YachtManagementPage />} />
+          <Route path='/about' element={<AboutPage />} />
         </Routes>
         <Footer />
       </Router>
