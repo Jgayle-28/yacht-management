@@ -3,25 +3,27 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 import heroImage from '../assets/images/contact-img.jpeg'
 
-const ShiftingContactForm = () => {
-  const [selected, setSelected] = useState('individual')
+// const ShiftingContactForm = () => {
+//   const [selected, setSelected] = useState('individual')
 
-  return (
-    <section className='p-4 min-h-screen flex justify-center items-center bg-slate-50'>
-      <div className='w-full max-w-6xl mx-auto shadow-lg flex flex-col-reverse lg:flex-row rounded-lg overflow-hidden'>
-        <Form selected={selected} setSelected={setSelected} />
-        <Images selected={selected} />
-      </div>
-    </section>
-  )
-}
+//   return (
+//     <section className='p-4 min-h-screen flex justify-center items-center bg-slate-50'>
+//       <div className='w-full max-w-6xl mx-auto shadow-lg flex flex-col-reverse lg:flex-row rounded-lg overflow-hidden'>
+//         <Form selected={selected} setSelected={setSelected} />
+//         <Images selected={selected} />
+//       </div>
+//     </section>
+//   )
+// }
 
 const Form = ({ selected, setSelected }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { isSubmitting, errors },
   } = useForm()
+
+  const [successMessage, setSuccessMessage] = useState('')
 
   const onSubmit = (data) => {
     console.log('Form Data:', data)
@@ -44,366 +46,502 @@ const Form = ({ selected, setSelected }) => {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className={`p-8 w-full text-white transition-colors duration-[750ms] ${
-        selected === 'company' ? 'bg-indigo-600' : 'bg-white'
-      }`}
-    >
-      <div className='mb-6'>
-        <p className='text-2xl mb-2 text-slate-500'>Hi 👋! My name is...</p>
-        <input
-          type='text'
-          placeholder='Your name...'
-          {...register('name', { required: 'Name is required' })}
-          className={`${
-            selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
-          } transition-colors duration-[750ms] placeholder-slate/70 p-2 rounded-md w-full focus:outline-0 text-slate-900`}
-        />
-        {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
-      </div>
-      <div className='mb-6'>
-        <p className='text-2xl mb-2 text-slate-500'>You can reach me at...</p>
-        <input
-          type='email'
-          placeholder='Your email...'
-          {...register('email', {
-            required: 'Email is required',
-            pattern: {
-              value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-              message: 'Please enter a valid email address.',
-            },
-          })}
-          className={`${
-            selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
-          } transition-colors duration-[750ms] p-2 rounded-md w-full focus:outline-0 text-slate-900`}
-        />
-        {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
-      </div>
-
-      <AnimatePresence>
-        {selected === 'company' && (
-          <motion.div
-            initial={{ marginTop: -104, opacity: 0 }}
-            animate={{ marginTop: 0, opacity: 1 }}
-            exit={{ marginTop: -104, opacity: 0 }}
-            transition={BASE_TRANSITION}
-            className='mb-6'
-          >
-            <p className='text-2xl mb-2'>by the name of...</p>
-            <input
-              type='text'
-              placeholder='Your company name...'
-              {...register('companyName', {
-                required: 'Company name is required',
-              })}
-              className={`${
-                selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
-              } transition-colors duration-[750ms] p-2 rounded-md w-full focus:outline-0 text-slate-900`}
-            />
-            {errors.companyName && (
-              <p className='text-red-500'>{errors.companyName.message}</p>
-            )}
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <div className='mb-6'>
-        <p className='text-2xl mb-2 text-slate-500'>
-          I would like to ask about...
-        </p>
-        <textarea
-          placeholder='Yacht management, yacht charter, etc...'
-          {...register('message', { required: 'Message is required' })}
-          className={`${
-            selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
-          } transition-colors duration-[750ms] min-h-[150px] resize-none p-2 rounded-md w-full focus:outline-0 text-slate-900`}
-        />
-        {errors.message && (
-          <p className='text-red-500'>{errors.message.message}</p>
-        )}
-      </div>
-
-      <motion.button
-        whileHover={{ scale: 1.01 }}
-        whileTap={{ scale: 0.99 }}
-        type='submit'
-        className={`${
-          selected === 'company'
-            ? 'bg-white text-indigo-600'
-            : 'bg-slate-950 text-slate-100'
-        } transition-colors duration-[750ms] text-lg text-center w-full py-3 uppercase tracking-wider`}
+    <div className='flex flex-col min-h-screen' id='destination-top'>
+      {/* Top Div with Background Image */}
+      <div
+        className='relative bg-cover bg-center h-[500px] z-0'
+        style={{
+          backgroundImage: `linear-gradient(rgba(23, 37, 84, .4), rgba(23, 37, 84, .4)),url(${heroImage})`,
+        }}
       >
-        Submit
-      </motion.button>
-    </form>
-  )
-}
+        <div className='flex flex-col items-center justify-center h-full text-center text-white w-full'>
+          <motion.h1
+            initial={{
+              y: 15,
+              opacity: 0,
+            }}
+            animate={{
+              y: 0,
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.75,
+              delay: 0.25,
+              ease: 'easeInOut',
+            }}
+            className='text-4xl font-light mb-2 w-full'
+          >
+            Contact Us
+          </motion.h1>
+          <div className='w-full flex justify-center my-4'>
+            <motion.div
+              initial={{ width: '0%' }}
+              whileInView={{ width: 200 }}
+              transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.5 }}
+              className='w-64 h-[2px] origin-center bg-white'
+            />
+          </div>
 
-const Images = ({ selected }) => {
-  return (
-    <div className='bg-white relative overflow-hidden w-full min-h-[100px]'>
-      <motion.div
-        initial={false}
-        animate={{ x: selected === 'individual' ? '0%' : '100%' }}
-        transition={BASE_TRANSITION}
-        className='absolute inset-0 bg-slate-200'
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
-      <motion.div
-        initial={false}
-        animate={{ x: selected === 'company' ? '0%' : '-100%' }}
-        transition={BASE_TRANSITION}
-        className='absolute inset-0 bg-slate-200'
-        style={{
-          backgroundImage:
-            'url(https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
+          <motion.p
+            initial={{
+              y: 15,
+              opacity: 0,
+            }}
+            animate={{
+              y: 0,
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.75,
+              delay: 0.6,
+              ease: 'easeInOut',
+            }}
+            className='text-lg tracking-wide'
+          >
+            Set Sail on a New Adventure
+          </motion.p>
+        </div>
+      </div>
+
+      <main className='w-full mx-auto px-8  relative'>
+        <motion.div
+          className='flex items-center justify-center -mt-16 z-10'
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 15 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.5,
+            ease: 'easeInOut',
+          }}
+        >
+          <div className='max-w-2xl w-full p-6 bg-white rounded-sm shadow-lg'>
+            {successMessage && (
+              <p className='text-green-500 text-center mb-4'>
+                {successMessage}
+              </p>
+            )}
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className={`p-8 w-full text-white transition-colors duration-[750ms] ${
+                selected === 'company' ? 'bg-indigo-600' : 'bg-white'
+              }`}
+            >
+              <div className='mb-6'>
+                <p className='text-2xl mb-2 text-slate-500'>
+                  Hi! My name is...
+                </p>
+                <input
+                  type='text'
+                  placeholder='Your name...'
+                  {...register('name', { required: 'Name is required' })}
+                  className={`${
+                    selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
+                  } transition-colors duration-[750ms] placeholder-slate/70 p-2 rounded-md w-full focus:outline-0 text-slate-900`}
+                />
+                {errors.name && (
+                  <p className='text-red-500'>{errors.name.message}</p>
+                )}
+              </div>
+              <div className='mb-6'>
+                <p className='text-2xl mb-2 text-slate-500'>
+                  You can reach me at...
+                </p>
+                <input
+                  type='email'
+                  placeholder='Your email...'
+                  {...register('email', {
+                    required: 'Email is required',
+                    pattern: {
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                      message: 'Please enter a valid email address.',
+                    },
+                  })}
+                  className={`${
+                    selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
+                  } transition-colors duration-[750ms] p-2 rounded-md w-full focus:outline-0 text-slate-900`}
+                />
+                {errors.email && (
+                  <p className='text-red-500'>{errors.email.message}</p>
+                )}
+              </div>
+
+              <AnimatePresence>
+                {selected === 'company' && (
+                  <motion.div
+                    initial={{ marginTop: -104, opacity: 0 }}
+                    animate={{ marginTop: 0, opacity: 1 }}
+                    exit={{ marginTop: -104, opacity: 0 }}
+                    className='mb-6'
+                  >
+                    <p className='text-2xl mb-2'>by the name of...</p>
+                    <input
+                      type='text'
+                      placeholder='Your company name...'
+                      {...register('companyName', {
+                        required: 'Company name is required',
+                      })}
+                      className={`${
+                        selected === 'company'
+                          ? 'bg-indigo-700'
+                          : 'bg-slate-100'
+                      } transition-colors duration-[750ms] p-2 rounded-md w-full focus:outline-0 text-slate-900`}
+                    />
+                    {errors.companyName && (
+                      <p className='text-red-500'>
+                        {errors.companyName.message}
+                      </p>
+                    )}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              <div className='mb-6'>
+                <p className='text-2xl mb-2 text-slate-500'>
+                  I would like to ask about...
+                </p>
+                <textarea
+                  placeholder='Yacht management, yacht charter, etc...'
+                  {...register('message', { required: 'Message is required' })}
+                  className={`${
+                    selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
+                  } transition-colors duration-[750ms] min-h-[150px] resize-none p-2 rounded-md w-full focus:outline-0 text-slate-900`}
+                />
+                {errors.message && (
+                  <p className='text-red-500'>{errors.message.message}</p>
+                )}
+              </div>
+
+              <motion.button
+                whileHover={{ scale: 1.01 }}
+                whileTap={{ scale: 0.99 }}
+                type='submit'
+                className={`${
+                  selected === 'company'
+                    ? 'bg-white text-indigo-600'
+                    : 'bg-slate-950 text-slate-100'
+                } transition-colors duration-[750ms] text-lg text-center w-full py-3 uppercase tracking-wider`}
+              >
+                Submit
+              </motion.button>
+            </form>
+            {/* <form
+              onSubmit={handleSubmit(onSubmit)}
+              className='grid grid-cols-1 md:grid-cols-2 gap-4'
+            >
+              <div className='mb-4'>
+                <label className='block text-sm font-medium text-gray-700'>
+                  Full Name
+                </label>
+                <input
+                  type='text'
+                  {...register('fullName', { required: true })}
+                  className='bg-slate-100 mt-1 transition-colors duration-[750ms]  p-2 rounded-md w-full focus:outline-0 text-slate-900'
+                />
+              </div>
+              <div className='mb-4'>
+                <label className='block text-sm font-medium text-gray-700'>
+                  Email
+                </label>
+                <input
+                  type='email'
+                  {...register('email', { required: true })}
+                  className='bg-slate-100 mt-1 transition-colors duration-[750ms]  p-2 rounded-md w-full focus:outline-0 text-slate-900'
+                />
+              </div>
+              <div className='mb-4'>
+                <label className='block text-sm font-medium text-gray-700'>
+                  Country
+                </label>
+                <input
+                  type='text'
+                  {...register('country', { required: true })}
+                  className='bg-slate-100 mt-1 transition-colors duration-[750ms]  p-2 rounded-md w-full focus:outline-0 text-slate-900'
+                />
+              </div>
+              <div className='mb-4'>
+                <label className='block text-sm font-medium text-gray-700'>
+                  Number of Passengers
+                </label>
+                <input
+                  type='number'
+                  {...register('passengers', { required: true })}
+                  className='bg-slate-100 mt-1 transition-colors duration-[750ms]  p-2 rounded-md w-full focus:outline-0 text-slate-900'
+                />
+              </div>
+              <div className='mb-4'>
+                <label className='block text-sm font-medium text-gray-700'>
+                  Telephone
+                </label>
+                <input
+                  type='tel'
+                  {...register('telephone', { required: true })}
+                  className='bg-slate-100 mt-1 transition-colors duration-[750ms]  p-2 rounded-md w-full focus:outline-0 text-slate-900'
+                />
+              </div>
+
+              <div className='mb-4'>
+                <label className='block text-sm font-medium text-gray-700'>
+                  Yacht Type
+                </label>
+                <select
+                  {...register('yachtType', { required: true })}
+                  className='bg-slate-100 mt-1 transition-colors duration-[750ms]  p-2 rounded-md w-full focus:outline-0 text-slate-900'
+                >
+                  <option value='sailing catamaran'>Sailing Catamaran</option>
+                  <option value='power catamaran'>Power Catamaran</option>
+                  <option value='sailing yacht'>Sailing Yacht</option>
+                  <option value='motor yacht'>Motor Yacht</option>
+                  <option value='gulet'>Gulet</option>
+                  <option value='super yacht'>Super Yacht</option>
+                </select>
+              </div>
+              <div className='mb-4 col-span-1 md:col-span-2'>
+                <label className='block text-sm font-medium text-gray-700'>
+                  Select Days
+                </label>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
+                  <input
+                    type='date'
+                    {...register('startDate', { required: true })}
+                    className='bg-slate-100 mt-1 transition-colors duration-[750ms]  p-2 rounded-md w-full focus:outline-0 text-slate-900'
+                  />
+                  <input
+                    type='date'
+                    {...register('endDate', { required: true })}
+                    className='bg-slate-100 mt-1 transition-colors duration-[750ms]  p-2 rounded-md w-full focus:outline-0 text-slate-900'
+                  />
+                </div>
+              </div>
+              <div className='mb-4'>
+                <label className='block text-sm font-medium text-gray-700'>
+                  Destination
+                </label>
+                <select
+                  {...register('destination', { required: true })}
+                  className='bg-slate-100 mt-1 transition-colors duration-[750ms]  p-2 rounded-md w-full focus:outline-0 text-slate-900'
+                >
+                  <option value='Cyclades'>Cyclades</option>
+                  <option value='Saronic Gulf'>Saronic Gulf</option>
+                  <option value='Sporades'>Sporades</option>
+                  <option value='Ionian'>Ionian</option>
+                </select>
+              </div>
+              <div className='mb-4 col-span-1 md:col-span-2'>
+                <label className='block text-sm font-medium text-gray-700'>
+                  message
+                </label>
+                <textarea
+                  {...register('message')}
+                  className='bg-slate-100 mt-1 transition-colors duration-[750ms]  p-2 rounded-md w-full focus:outline-0 text-slate-900'
+                  rows='4'
+                />
+              </div>
+              <motion.button
+                whileHover={{
+                  scale: 1.01,
+                }}
+                whileTap={{
+                  scale: 0.99,
+                }}
+                type='submit'
+                disabled={isSubmitting}
+                className={`col-span-1 md:col-span-2 bg-slate-950 text-slate-100'
+             transition-colors duration-[750ms] text-lg text-center w-full py-3 uppercase tracking-wider text-white`}
+                // className='col-span-1 md:col-span-2 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-200'
+              >
+                {isSubmitting ? 'Submitting...' : 'Submit'}
+              </motion.button>
+            </form> */}
+          </div>
+        </motion.div>
+      </main>
     </div>
+    // <div className='flex flex-col min-h-screen' id='destination-top'>
+    //   {/* Top Div with Background Image */}
+    //   <div
+    //     className='relative bg-cover bg-center h-[500px] z-0'
+    //     style={{
+    //       backgroundImage: `linear-gradient(rgba(23, 37, 84, .4), rgba(23, 37, 84, .4)),url(${heroImage})`,
+    //     }}
+    //   >
+    //     <div className='flex flex-col items-center justify-center h-full text-center text-white w-full'>
+    //       <motion.h1
+    //         initial={{
+    //           y: 15,
+    //           opacity: 0,
+    //         }}
+    //         animate={{
+    //           y: 0,
+    //           opacity: 1,
+    //         }}
+    //         transition={{
+    //           duration: 0.75,
+    //           delay: 0.25,
+    //           ease: 'easeInOut',
+    //         }}
+    //         className='text-4xl font-light mb-2 w-full'
+    //       >
+    //         Make a Request
+    //       </motion.h1>
+    //       <div className='w-full flex justify-center my-4'>
+    //         <motion.div
+    //           initial={{ width: '0%' }}
+    //           whileInView={{ width: 200 }}
+    //           transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.5 }}
+    //           className='w-64 h-[2px] origin-center bg-white'
+    //         />
+    //       </div>
+
+    //       <motion.p
+    //         initial={{
+    //           y: 15,
+    //           opacity: 0,
+    //         }}
+    //         animate={{
+    //           y: 0,
+    //           opacity: 1,
+    //         }}
+    //         transition={{
+    //           duration: 0.75,
+    //           delay: 0.6,
+    //           ease: 'easeInOut',
+    //         }}
+    //         className='text-lg tracking-wide'
+    //       >
+    //         Sailing Dreams into Reality: Your Journey Begins with Us.
+    //       </motion.p>
+    //     </div>
+    //   </div>
+
+    //   <main className='w-full mx-auto px-8 bg-slate-50 relative'>
+    //     <motion.div
+    //       className='flex items-center justify-center -mt-16 z-10'
+    //       initial={{ opacity: 0, y: 15 }}
+    //       animate={{ opacity: 1, y: 0 }}
+    //       exit={{ opacity: 0, y: 15 }}
+    //       transition={{
+    //         duration: 0.5,
+    //         delay: 0.5,
+    //         ease: 'easeInOut',
+    //       }}
+    //     >
+    //       <div className='max-w-2xl w-full p-6 bg-white rounded-sm shadow-lg'>
+    //         {successMessage && (
+    //           <p className='text-green-500 text-center mb-4'>
+    //             {successMessage}
+    //           </p>
+    //         )}
+    //         <form
+    //           onSubmit={handleSubmit(onSubmit)}
+    //           className={`p-8 w-full text-white transition-colors duration-[750ms] ${
+    //             selected === 'company' ? 'bg-indigo-600' : 'bg-white'
+    //           }`}
+    //         >
+    //           <div className='mb-6'>
+    //             <p className='text-2xl mb-2 text-slate-500'>
+    //               Hi 👋! My name is...
+    //             </p>
+    //             <input
+    //               type='text'
+    //               placeholder='Your name...'
+    //               {...register('name', { required: 'Name is required' })}
+    //               className={`${
+    //                 selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
+    //               } transition-colors duration-[750ms] placeholder-slate/70 p-2 rounded-md w-full focus:outline-0 text-slate-900`}
+    //             />
+    //             {errors.name && (
+    //               <p className='text-red-500'>{errors.name.message}</p>
+    //             )}
+    //           </div>
+    //           <div className='mb-6'>
+    //             <p className='text-2xl mb-2 text-slate-500'>
+    //               You can reach me at...
+    //             </p>
+    //             <input
+    //               type='email'
+    //               placeholder='Your email...'
+    //               {...register('email', {
+    //                 required: 'Email is required',
+    //                 pattern: {
+    //                   value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    //                   message: 'Please enter a valid email address.',
+    //                 },
+    //               })}
+    //               className={`${
+    //                 selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
+    //               } transition-colors duration-[750ms] p-2 rounded-md w-full focus:outline-0 text-slate-900`}
+    //             />
+    //             {errors.email && (
+    //               <p className='text-red-500'>{errors.email.message}</p>
+    //             )}
+    //           </div>
+
+    //           <AnimatePresence>
+    //             {selected === 'company' && (
+    //               <motion.div
+    //                 initial={{ marginTop: -104, opacity: 0 }}
+    //                 animate={{ marginTop: 0, opacity: 1 }}
+    //                 exit={{ marginTop: -104, opacity: 0 }}
+    //                 transition={BASE_TRANSITION}
+    //                 className='mb-6'
+    //               >
+    //                 <p className='text-2xl mb-2'>by the name of...</p>
+    //                 <input
+    //                   type='text'
+    //                   placeholder='Your company name...'
+    //                   {...register('companyName', {
+    //                     required: 'Company name is required',
+    //                   })}
+    //                   className={`${
+    //                     selected === 'company'
+    //                       ? 'bg-indigo-700'
+    //                       : 'bg-slate-100'
+    //                   } transition-colors duration-[750ms] p-2 rounded-md w-full focus:outline-0 text-slate-900`}
+    //                 />
+    //                 {errors.companyName && (
+    //                   <p className='text-red-500'>
+    //                     {errors.companyName.message}
+    //                   </p>
+    //                 )}
+    //               </motion.div>
+    //             )}
+    //           </AnimatePresence>
+
+    //           <div className='mb-6'>
+    //             <p className='text-2xl mb-2 text-slate-500'>
+    //               I would like to ask about...
+    //             </p>
+    //             <textarea
+    //               placeholder='Yacht management, yacht charter, etc...'
+    //               {...register('message', { required: 'Message is required' })}
+    //               className={`${
+    //                 selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
+    //               } transition-colors duration-[750ms] min-h-[150px] resize-none p-2 rounded-md w-full focus:outline-0 text-slate-900`}
+    //             />
+    //             {errors.message && (
+    //               <p className='text-red-500'>{errors.message.message}</p>
+    //             )}
+    //           </div>
+
+    //           <motion.button
+    //             whileHover={{ scale: 1.01 }}
+    //             whileTap={{ scale: 0.99 }}
+    //             type='submit'
+    //             className={`${
+    //               selected === 'company'
+    //                 ? 'bg-white text-indigo-600'
+    //                 : 'bg-slate-950 text-slate-100'
+    //             } transition-colors duration-[750ms] text-lg text-center w-full py-3 uppercase tracking-wider`}
+    //           >
+    //             Submit
+    //           </motion.button>
+    //         </form>
+    //       </div>
+    //     </motion.div>
+    //   </main>
+    // </div>
   )
 }
 
-export default ShiftingContactForm
-
-const BASE_TRANSITION = { ease: 'anticipate', duration: 0.75 }
-
-// import { useState } from 'react'
-// import { AnimatePresence, motion } from 'framer-motion'
-// import heroImage from '../assets/images/contact-img.jpeg'
-
-// const ShiftingContactForm = () => {
-//   const [selected, setSelected] = useState('individual')
-//   return (
-//     <section className='p-4 min-h-screen flex justify-center items-center bg-slate-50'>
-//       <div className='w-full max-w-6xl mx-auto shadow-lg flex flex-col-reverse lg:flex-row rounded-lg overflow-hidden'>
-//         <Form selected={selected} setSelected={setSelected} />
-//         <Images selected={selected} />
-//       </div>
-//     </section>
-//   )
-// }
-
-// const Form = ({ selected, setSelected }) => {
-//   const [name, setName] = useState('')
-//   const [email, setEmail] = useState('')
-//   const [message, setMessage] = useState('')
-//   const [emailError, setEmailError] = useState('')
-
-//   const validateEmail = (email) => {
-//     // Simple email regex for validation
-//     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-//     return regex.test(email)
-//   }
-
-//   const handleEmailChange = (e) => {
-//     setEmail(e.target.value)
-//     if (validateEmail(e.target.value)) {
-//       setEmailError('')
-//     } else {
-//       setEmailError('Please enter a valid email address.')
-//     }
-//   }
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault()
-//     if (validateEmail(email)) {
-//       // Submit the form or handle the valid email
-//       console.log('Email is valid:', email)
-//     } else {
-//       setEmailError('Please enter a valid email address.')
-//     }
-//   }
-//   return (
-//     <form
-//       onSubmit={handleSubmit}
-//       className={`p-8 w-full text-white transition-colors duration-[750ms] ${
-//         selected === 'company' ? 'bg-indigo-600' : 'bg-white'
-//       }`}
-//     >
-//       {/* <h3 className='text-4xl font-bold mb-6'>Contact us</h3> */}
-
-//       {/* Name input */}
-//       <div className='mb-6'>
-//         <p className='text-2xl mb-2 text-slate-500'>Hi 👋! My name is...</p>
-//         <input
-//           value={name}
-//           onChange={(e) => setName(e.target.value)}
-//           type='text'
-//           placeholder='Your name...'
-//           className={`${
-//             selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
-//           } transition-colors duration-[750ms] placeholder-slate/70 p-2 rounded-md w-full focus:outline-0 text-slate-900 `}
-//         />
-//       </div>
-//       <div className='mb-6'>
-//         <p className='text-2xl mb-2 text-slate-500'>You can reacht me at...</p>
-//         <input
-//           type='email'
-//           placeholder='Your email...'
-//           className={`${
-//             selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
-//           } transition-colors duration-[750ms]  p-2 rounded-md w-full focus:outline-0 text-slate-900`}
-//           value={email}
-//           onChange={handleEmailChange}
-//         />
-//         {emailError && <p className='text-red-500'>{emailError}</p>}
-//       </div>
-
-//       {/* Company/individual toggle */}
-//       {/* <div className='mb-6'>
-//         <p className='text-2xl mb-2'>and I represent...</p>
-//         <FormSelect selected={selected} setSelected={setSelected} />
-//       </div> */}
-
-//       {/* Company name */}
-//       <AnimatePresence>
-//         {selected === 'company' && (
-//           <motion.div
-//             initial={{
-//               // 104 === height of element + margin
-//               // Alternatively can use mode='popLayout' on AnimatePresence
-//               // and add the "layout" prop to relevant elements to reduce
-//               // distortion
-//               marginTop: -104,
-//               opacity: 0,
-//             }}
-//             animate={{
-//               marginTop: 0,
-//               opacity: 1,
-//             }}
-//             exit={{
-//               marginTop: -104,
-//               opacity: 0,
-//             }}
-//             transition={BASE_TRANSITION}
-//             className='mb-6'
-//           >
-//             <p className='text-2xl mb-2'>by the name of...</p>
-//             <input
-//               type='email'
-//               placeholder='Your company name...'
-//               className={`${
-//                 selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
-//               } transition-colors duration-[750ms]  p-2 rounded-md w-full focus:outline-0 text-slate-900`}
-//             />
-//           </motion.div>
-//         )}
-//       </AnimatePresence>
-
-//       {/* Info */}
-//       <div className='mb-6'>
-//         <p className='text-2xl mb-2 text-slate-500'>
-//           I would like to ask about...
-//         </p>
-//         <textarea
-//           value={message}
-//           onChange={(e) => setMessage(e.target.value)}
-//           placeholder='Yacht management, yacht charter, etc...'
-//           className={`${
-//             selected === 'company' ? 'bg-indigo-700' : 'bg-slate-100'
-//           } transition-colors duration-[750ms] min-h-[150px] resize-none p-2 rounded-md w-full focus:outline-0 text-slate-900`}
-//         />
-//       </div>
-
-//       {/* Submit */}
-//       <motion.button
-//         whileHover={{
-//           scale: 1.01,
-//         }}
-//         whileTap={{
-//           scale: 0.99,
-//         }}
-//         type='submit'
-//         className={`${
-//           selected === 'company'
-//             ? 'bg-white text-indigo-600'
-//             : 'bg-slate-950 text-slate-100'
-//         } transition-colors duration-[750ms] text-lg text-center w-full py-3 uppercase tracking-wider`}
-//       >
-//         Submit
-//       </motion.button>
-//     </form>
-//   )
-// }
-
-// const FormSelect = ({ selected, setSelected }) => {
-//   return (
-//     <div className='border-[1px] rounded border-white overflow-hidden font-medium w-fit'>
-//       <button
-//         className={`${
-//           selected === 'individual' ? 'text-violet-600' : 'text-white'
-//         } text-sm px-3 py-1.5 transition-colors duration-[750ms] relative`}
-//         onClick={() => setSelected('individual')}
-//       >
-//         <span className='relative z-10'>An individual</span>
-//         {selected === 'individual' && (
-//           <motion.div
-//             transition={BASE_TRANSITION}
-//             layoutId='form-tab'
-//             className='absolute inset-0 bg-white z-0'
-//           />
-//         )}
-//       </button>
-//       <button
-//         className={`${
-//           selected === 'company' ? 'text-indigo-600' : 'text-white'
-//         } text-sm px-3 py-1.5 transition-colors duration-[750ms] relative`}
-//         onClick={() => setSelected('company')}
-//       >
-//         <span className='relative z-10'>A company</span>
-//         {selected === 'company' && (
-//           <motion.div
-//             transition={BASE_TRANSITION}
-//             layoutId='form-tab'
-//             className='absolute inset-0 bg-white z-0'
-//           />
-//         )}
-//       </button>
-//     </div>
-//   )
-// }
-
-// const Images = ({ selected }) => {
-//   return (
-//     <div className='bg-white relative overflow-hidden w-full min-h-[100px]'>
-//       <motion.div
-//         initial={false}
-//         animate={{
-//           x: selected === 'individual' ? '0%' : '100%',
-//         }}
-//         transition={BASE_TRANSITION}
-//         className='absolute inset-0 bg-slate-200'
-//         style={{
-//           backgroundImage: `url(${heroImage})`,
-//           backgroundSize: 'cover',
-//           backgroundPosition: 'center',
-//         }}
-//       />
-//       <motion.div
-//         initial={false}
-//         animate={{
-//           x: selected === 'company' ? '0%' : '-100%',
-//         }}
-//         transition={BASE_TRANSITION}
-//         className='absolute inset-0 bg-slate-200'
-//         style={{
-//           backgroundImage:
-//             'url(https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80)',
-//           backgroundSize: 'cover',
-//           backgroundPosition: 'center',
-//         }}
-//       />
-//     </div>
-//   )
-// }
-
-// export default ShiftingContactForm
-
-// const BASE_TRANSITION = { ease: 'anticipate', duration: 0.75 }
+export default Form
