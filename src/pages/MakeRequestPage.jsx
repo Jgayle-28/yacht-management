@@ -13,7 +13,6 @@ const YachtBookingForm = () => {
   const [successMessage, setSuccessMessage] = useState('')
 
   const onSubmit = async (data) => {
-    console.log('data :>> ', data)
     const response = await fetch('https://formspree.io/f/mdknrldn', {
       method: 'POST',
       headers: {
