@@ -8,27 +8,29 @@ const YachtBookingForm = () => {
     register,
     handleSubmit,
     formState: { isSubmitting, isSubmitSuccessful },
+    reset,
   } = useForm()
   const [successMessage, setSuccessMessage] = useState('')
 
   const onSubmit = async (data) => {
     console.log('data :>> ', data)
-    // const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-    //   method: 'POST',
-    //   headers: {
-    //     Accept: 'application/json',
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(data),
-    // })
+    const response = await fetch('https://formspree.io/f/mdknrldn', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
 
-    // if (response.ok) {
-    //   setSuccessMessage('Your booking request has been submitted successfully!')
-    // } else {
-    //   setSuccessMessage(
-    //     'There was an error submitting your request. Please try again.'
-    //   )
-    // }
+    if (response.ok) {
+      setSuccessMessage('Your booking request has been submitted successfully!')
+      reset()
+    } else {
+      setSuccessMessage(
+        'There was an error submitting your request. Please try again.'
+      )
+    }
   }
 
   return (

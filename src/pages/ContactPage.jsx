@@ -21,28 +21,32 @@ const Form = ({ selected, setSelected }) => {
     register,
     handleSubmit,
     formState: { isSubmitting, errors },
+    reset,
   } = useForm()
 
   const [successMessage, setSuccessMessage] = useState('')
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log('Form Data:', data)
-    // const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-    //   method: 'POST',
-    //   headers: {
-    //     Accept: 'application/json',
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(data),
-    // })
+    const response = await fetch('https://formspree.io/f/xjkbqern', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
 
-    // if (response.ok) {
-    //   setSuccessMessage('Your booking request has been submitted successfully!')
-    // } else {
-    //   setSuccessMessage(
-    //     'There was an error submitting your request. Please try again.'
-    //   )
-    // }
+    if (response.ok) {
+      setSuccessMessage(
+        'Submitted successfully! A member of our team will be in touch with you shortly.'
+      )
+      reset()
+    } else {
+      setSuccessMessage(
+        'There was an error submitting your request. Please try again.'
+      )
+    }
   }
 
   return (
