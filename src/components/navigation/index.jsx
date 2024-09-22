@@ -45,7 +45,12 @@ const Navigation = () => {
           ? 'bg-zinc-900 py-3 shadow-xl'
           : 'bg-transparent py-6 shadow-none'
       }
-      ${location.pathname === '/contact' ? 'bg-zinc-900 py-3 shadow-xl' : ''}
+      ${
+        location.pathname === '/contact' ||
+        location.pathname === '/make-request'
+          ? 'bg-zinc-900 py-3 shadow-xl'
+          : ''
+      }
       `}
     >
       <div className='mx-auto flex max-w-7xl items-center justify-between'>
