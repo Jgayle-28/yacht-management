@@ -14,7 +14,7 @@ const BREAKPOINTS = {
   lg: 1024,
 }
 
-const Carousel = ({ items = [] }) => {
+const Carousel = ({ items = [], showGradient = true }) => {
   const [ref, { width }] = useMeasure()
   const [offset, setOffset] = useState(0)
 
@@ -52,7 +52,9 @@ const Carousel = ({ items = [] }) => {
             className='flex'
           >
             {items.map((item) => {
-              return <Card key={item.id} {...item} />
+              return (
+                <Card key={item.id} showGradient={showGradient} {...item} />
+              )
             })}
           </motion.div>
         </div>
@@ -85,11 +87,15 @@ const Carousel = ({ items = [] }) => {
   )
 }
 
-const Card = ({ image, category, title, info, route }) => {
+const Card = ({ image, category, title, info, route, showGradient }) => {
   const router = useRouter()
   return (
     <div
-      onClick={() => router.push(route)}
+      onClick={() => {
+        if (route) {
+          router.push(route)
+        }
+      }}
       className='cursor-pointer relative shrink-0 cursor-pointer rounded-2xl bg-white shadow-md transition-all hover:scale-[1.015] hover:shadow-xl'
       style={{
         width: CARD_WIDTH,
@@ -100,7 +106,13 @@ const Card = ({ image, category, title, info, route }) => {
         backgroundSize: 'cover',
       }}
     >
-      <div className='absolute inset-0 z-20 rounded-2xl bg-gradient-to-b from-slate-800/90 via-slate-800/60 to-black/0 p-6 text-white transition-[backdrop-filter] hover:backdrop-blur-sm'>
+      <div
+        className={`${
+          showGradient
+            ? 'bg-gradient-to-b from-slate-800/90 via-slate-800/60 to-black/0  hover:backdrop-blur-sm '
+            : ''
+        } absolute inset-0 z-20 rounded-2xl text-white transition-[backdrop-filter] p-6`}
+      >
         <span className='text-xs font-semibold uppercase text-slate-300'>
           {category}
         </span>

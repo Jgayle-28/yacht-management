@@ -34,7 +34,7 @@ const DestinationCard = ({ destination, index }) => {
           <p className='text-gray-600 mb-4 text-sm tracking-wider leading-relaxed'>
             {introParagraph}
           </p>
-          <ExpandButton buttonText='View Details' onClick={handleViewDetails} />
+          {/* <ExpandButton buttonText='View Details' onClick={handleViewDetails} /> */}
         </div>
       </div>
     </motion.div>

@@ -98,7 +98,8 @@ export const yachtData = [
     title: 'Nomad',
     info: 'Up to 12 people ',
     category: 'Starts from 18.500 per day',
-    route: '/yachts/nomad',
+    // route: '/yachts/nomad',
+    route: null,
   },
   {
     id: 2,
@@ -106,7 +107,8 @@ export const yachtData = [
     title: 'Hydrus 2',
     info: 'Up to 10 people',
     category: 'Starts from 22.500 per day',
-    route: '/yachts/hydrus-2',
+    // route: '/yachts/hydrus-2',
+    route: null,
   },
   {
     id: 3,
@@ -114,7 +116,8 @@ export const yachtData = [
     title: 'Ice Nomad',
     info: 'Up to 12 people',
     category: 'Starts from 1.000 per day',
-    route: '/yachts/ice-nomad',
+    // route: '/yachts/ice-nomad',
+    route: null,
   },
   {
     id: 4,
@@ -122,7 +125,8 @@ export const yachtData = [
     title: 'Saiga',
     info: 'Up to 10 people',
     category: 'Starts from 18.500 per day',
-    route: '/yachts/saiga',
+    // route: '/yachts/saiga',
+    route: null,
   },
   {
     id: 5,
@@ -130,6 +134,7 @@ export const yachtData = [
     title: 'Nomad Vice',
     info: 'Up to 10 people',
     category: 'Starts from 1.000 per day',
-    route: '/yachts/nomad-vice',
+    // route: '/yachts/nomad-vice',
+    route: null,
   },
 ]

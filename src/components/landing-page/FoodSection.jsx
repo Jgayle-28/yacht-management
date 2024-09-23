@@ -176,7 +176,7 @@ const FoodSection = () => {
             }}
             className='w-full'
           >
-            <Carousel items={foodLandingData} />
+            <Carousel items={foodLandingData} showGradient={false} />
           </motion.div>
           <motion.div
             initial={{

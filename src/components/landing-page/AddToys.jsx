@@ -2,8 +2,18 @@ import { motion } from 'framer-motion'
 import toysIcon from '../../assets/icons/toys.svg'
 import Carousel from '../shared/Carousel'
 import { toysLandingData } from '../../data/toys'
+import ExpandButton from '../shared/ExpandButton'
+import { useRouter } from '../../hooks/use-router'
+import useSmoothScroll from '../../hooks/use-smooth-scroll'
 
 const AddToys = () => {
+  const router = useRouter()
+  const scrollToSection = useSmoothScroll()
+
+  const goToFoodPage = () => {
+    scrollToSection(`top`, 0)
+    setTimeout(router.push(`/toys`), 5000)
+  }
   return (
     <section className='py-8 pt-24 md:pt-48 px-8 md:px-16' id='toys'>
       <div className='container mx-auto max-w-6xl'>
@@ -174,6 +184,24 @@ const AddToys = () => {
         }}
       >
         <Carousel items={toysLandingData} />
+      </motion.div>
+      <motion.div
+        initial={{
+          y: 10,
+          opacity: 0,
+        }}
+        transition={{
+          duration: 0.5,
+          delay: 0.25,
+          ease: 'easeInOut',
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+        }}
+        className='flex justify-center mt-12'
+      >
+        <ExpandButton buttonText='View All Toys' onClick={goToFoodPage} />
       </motion.div>
     </section>
   )
