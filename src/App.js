@@ -32,7 +32,8 @@ function App() {
       <Router>
         <Navigation />
         <Routes>
-          <Route path='/' element={<LandingPage />} />
+          <Route path='/' element={<YachtManagementPage />} />
+          <Route path='/landing' element={<LandingPage />} />
           <Route path='/yachts' element={<YachtsPage />} />
           <Route path='/yachts/:yachtName' element={<FocusYachtPage />} />
           <Route path='/destinations' element={<DestinationsPage />} />
