@@ -4,6 +4,7 @@ import heroImage from '../assets/images/yachts/management-hero-img.jpeg'
 import TabButton from '../components/shared/TabButton'
 import { managementTabs } from '../data/management'
 import SelectDropdown from '../components/shared/SelectDropdown'
+import ExperienceOnBoard from '../components/ExperienceOnBoard'
 
 const YachtManagementPage = () => {
   const [currentTab, setCurrentTab] = useState(managementTabs[0])
@@ -132,16 +133,20 @@ const YachtManagementPage = () => {
                 <h2 className='text-2xl font-semibold text-neutral-900'>
                   {currentTab.tabName}
                 </h2>
-                {currentTab.info.map((info, i) => (
-                  <motion.p
-                    key={i}
-                    variants={fadeIn}
-                    custom={i}
-                    className='text-lg text-neutral-500 mt-4'
-                  >
-                    {info}
-                  </motion.p>
-                ))}
+                {currentTab?.tabName === 'Experience On Board' ? (
+                  <ExperienceOnBoard />
+                ) : (
+                  currentTab.info.map((info, i) => (
+                    <motion.p
+                      key={i}
+                      variants={fadeIn}
+                      custom={i}
+                      className='text-lg text-neutral-500 mt-4'
+                    >
+                      {info}
+                    </motion.p>
+                  ))
+                )}
               </motion.div>
             </AnimatePresence>
           </div>

@@ -8,6 +8,8 @@ import { MdOutlineDirectionsBoatFilled } from 'react-icons/md'
 import { HiOutlinePresentationChartBar } from 'react-icons/hi2'
 import { GoShieldCheck } from 'react-icons/go'
 import { GiGearHammer } from 'react-icons/gi'
+import { FaUsersLine } from 'react-icons/fa6'
+import { FaChampagneGlasses } from 'react-icons/fa6'
 
 export const managementTabs = [
   {
@@ -218,5 +220,17 @@ export const managementTabs = [
 
       'In Summary: Technical management encompasses a wide range of responsibilities related to the maintenance, repairs, modifications, and compliance of the yacht. By implementing proactive programs and ensuring regulatory compliance, technical management is crucial for optimal performance, safety, and longevity.',
     ],
+  },
+  {
+    tabName: 'Experience On Board',
+    icon: <FaChampagneGlasses />,
+    img: '',
+    info: [],
+  },
+  {
+    tabName: 'Crew Training & Development',
+    icon: <FaUsersLine />,
+    img: '',
+    info: [],
   },
 ]
