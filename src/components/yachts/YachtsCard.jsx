@@ -60,7 +60,7 @@ const YachtsCard = ({ boat, index }) => {
           {/* Price */}
           <div className='pt-4'>
             <span className='text-2xl font-semibold text-brandPrimary'>
-              ${boat.price}
+              €{boat.price}
             </span>
             <span className='text-gray-500'>/day</span>
           </div>

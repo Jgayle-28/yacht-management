@@ -17,12 +17,11 @@ export const managementTabs = [
     icon: <PiFiles />,
     img: '',
     info: [
-      `Streamline Your Yacht Ownership Experience with Professional Management Services`,
-      `Yacht ownership is an exciting and rewarding venture, but it also involves significant investment and ongoing maintenance. FX Yachting’s management services ensure your yacht stays in pristine condition while maximizing its usage and value.`,
-      `Our yacht management services offer numerous benefits for owners. With professional maintenance and repair provided by certified marine technicians, your vessel will remain in optimal condition, helping to prevent costly repairs and giving you peace of mind that it's always ready for use. FX Yachting also assists with safety protocols and essential paperwork requirements.`,
-      `Another advantage of our services is the ability to enhance your investment through cost-effective chartering solutions and intelligent asset monitoring systems. Our detailed analytics on vessel performance and usage empower you to make informed decisions about selling or upgrading your yacht.`,
-      `Having experienced professionals at your side means you receive valuable insights on the best investments for your vessel, further enhancing its value.`,
-      `In summary, hiring FX Yachting’s professional management services is a smart way for yacht owners to enrich their ownership experience without the stress of daily tasks or maintenance concerns.`,
+      `At Ethos Yacht Management, we understand that owning a yacht is more than just an investment—it’s a personal journey, filled with adventure and unforgettable moments. Our mission is to make that journey as smooth and rewarding as possible by managing every aspect of your yacht with the same care and passion as if it were our own. `,
+      `We don’t just maintain yachts; we nurture them. Our dedicated team of certified marine technicians works tirelessly to ensure your vessel is always in prime condition, ready for you to create lasting memories on the open water. From routine maintenance to unexpected repairs, we handle it all, so you can focus on enjoying your yacht, worry-free.`,
+      `What truly drives us at Ethos is our commitment to honesty, transparency, and ensuring your yacht is a thriving asset. Whether it’s managing safety protocols, navigating paperwork, or offering cost-effective charter solutions, our goal is to not only take care of your yacht but to help it flourish. We believe in building relationships based on trust, and we make sure you’re kept informed and involved in every decision, so you always know exactly what’s happening with your yacht.`,
+      `Your investment is as important to us as it is to you. With our personalized approach and state-of-the-art monitoring systems, we’re constantly finding ways to optimize your yacht’s performance and profitability, turning your passion into a valuable, long-term asset.`,
+      `At Ethos, we pour our heart and soul into what we do because we care about your experience. We’re here to make sure your yacht ownership is as enjoyable and stress-free as possible, while ensuring your yacht continues to bring you joy—and value—for years to come.`,
     ],
   },
   {
@@ -30,28 +29,41 @@ export const managementTabs = [
     icon: <RiTreasureMapLine />,
     img: '',
     info: [
-      `Simplify Yacht Charter Ownership with Professional Management Services`,
-      `Our charter management services provide yacht owners with a comprehensive solution for seamless yacht operation during charters. We take care of various aspects, including paperwork, regulatory compliance, crew management, maintenance, and marketing. By entrusting these responsibilities to our experienced professionals, yacht owners can enjoy the perks of ownership without the associated stress and time commitment.`,
-      `One of the primary benefits of our charter management services is the maximization of charter revenue. With an in-depth understanding of the market, we effectively market and promote your yacht to potential clients, handling inquiries and bookings to ensure your yacht remains consistently occupied and profitable.`,
-      `Additionally, we maintain your yacht to the highest standards, utilizing our network of trusted professionals for routine maintenance and repairs. From regular inspections to cleaning and necessary upgrades, we ensure your yacht is always in prime condition for guests.`,
-      `We also manage all administrative tasks and regulatory compliance related to yacht chartering. Our team handles the required paperwork, permits, and legal obligations, ensuring your yacht operates in accordance with relevant regulations.`,
-      `By choosing our charter management services, yacht owners can streamline their operations, alleviate administrative burdens, and enjoy peace of mind knowing their yacht is professionally managed. This allows you to focus on enjoying your yacht while still generating income through chartering. If you're considering yacht charter ownership, explore the convenience and benefits that our professional management services can provide.`,
-      `Our expert charter management services are essential for a seamless and profitable yacht charter experience. Contact us today to discover how we can enhance your yacht ownership journey.`,
+      `<b className='font-md'>Q: How can Ethos Yacht Management simplify my yacht charter experience?</b>`,
+      `<p className='mt-2'><b>A:</b> Ethos Yacht Management offers a comprehensive charter service that takes the stress out of running yacht charters. We handle everything from paperwork and regulatory compliance to crew management, maintenance, and marketing, allowing you to enjoy the benefits of yacht ownership without the time-consuming responsibilities.</p>`,
+
+      `<b className='font-md'>Q: How does Ethos help maximize charter revenue?</b>`,
+      `<p className='mt-2'><b>A:</b>  With our deep knowledge of the yacht charter market, we effectively market your yacht, handle inquiries, and manage bookings, ensuring your vessel stays consistently booked and profitable. Our goal is to optimize your yacht’s earning potential while maintaining it to the highest standards.</p>`,
+
+      `<b className='font-md'>Q: Who takes care of yacht maintenance during charters?</b>`,
+      `<p className='mt-2'><b>A:</b> We do! Our network of trusted professionals handles all aspects of yacht care, from regular inspections and cleaning to necessary repairs and upgrades. This ensures your yacht is always in top condition for guests.</p>`,
+
+      `<b className='font-md'>Q: What about legal requirements and paperwork?</b>`,
+      `<p className='mt-2'><b>A:</b> Ethos manages all administrative tasks, permits, and regulatory compliance, so your yacht operates smoothly and in accordance with all legal requirements.</p>`,
+
+      `<b className='font-md'>Q: Why should I choose Ethos for charter management?</b>`,
+      `<p className='mt-2'><b>A:</b> By choosing Ethos, you streamline your charter operations, alleviate administrative burdens, and ensure your yacht is professionally managed. You’ll be able to focus on enjoying your yacht, all while generating income through charters.</p>`,
     ],
   },
   {
-    tabName: 'Yacht Crew Administration',
+    tabName: 'Yacht crew services',
     icon: <MdOutlineAdminPanelSettings />,
     img: '',
     info: [
-      `Optimize Yacht Operations with Professional Crew Administration Services`,
-      `Yacht crew administration involves overseeing every aspect of your yacht’s crew, including recruitment, training, development, and scheduling. A skilled and dedicated crew is essential for seamless operations and an unforgettable onboard experience. Our yacht crew administration services provide comprehensive solutions for efficient crew management, allowing you to focus on enjoying your time on the water.`,
-      `Expert Crew Recruitment: Our experienced recruiters understand the unique demands of the yachting industry. Leveraging extensive networks and proven selection processes, we identify and attract top talent for your crew. From captains and engineers to deckhands and stewardesses, we meticulously screen candidates to ensure they meet your yacht’s specific needs.`,
-      `Comprehensive Crew Training: To maintain the highest service standards, your crew requires ongoing training. We coordinate and deliver comprehensive training programs, covering everything from safety drills and emergency response to hospitality and guest service. This ensures your crew is well-prepared to handle any situation during charters or private voyages.`,
-      `Efficient Payroll and Management: Managing crew payroll and schedules can be time-consuming. Our services handle all aspects of payroll, including accurate calculations, tax deductions, and compliance with local labor laws. We also manage crew schedules, ensuring smooth rotations and compliance with industry regulations, so you can relax while we maintain a harmonious crew environment.`,
-      `Compliance with Industry Regulations: Navigating the regulatory landscape can be challenging. Our team stays updated on the latest regulations, ensuring your yacht and crew meet all compliance standards. From STCW certifications to flag state regulations, we handle all necessary paperwork and documentation for you.`,
-      `Conflict Resolution and Mediation: A harmonious onboard environment is vital for an enjoyable yachting experience. Our crew administration services provide conflict resolution and mediation support, addressing any interpersonal issues that may arise. Our expertise in managing crew dynamics fosters a positive and productive working atmosphere for everyone onboard.`,
-      `By entrusting your crew administration to our professional services, you can optimize your yacht’s operations and enhance the onboard experience for guests. Contact us today to discover how our yacht crew administration services can elevate your yachting experience to new heights.`,
+      `<b className='font-md'>Q: Does Ethos Yacht Management offer crew administration?</b>`,
+      `<p className='mt-2'><b>A:</b> Ethos provides comprehensive yacht crew administration services, overseeing recruitment, training, payroll, and scheduling to ensure your crew operates seamlessly. Our approach, rooted in honesty and transparency allows you to focus on enjoying your time on the water while we handle every aspect of crew management.</p>`,
+
+      `<b className='font-md'>Q: What crew training does Ethos provide?</b>`,
+      `<p className='mt-2'><b>A:</b> We arrange ongoing, comprehensive training programs for your crew, covering essential topics like safety drills, emergency response, and hospitality. This ensures your crew remains well-prepared and highly skilled, delivering a professional and enjoyable onboard experience.</p>`,
+
+      `<b className='font-md'>Q: How does Ethos handle crew payroll and scheduling?</b>`,
+      `<p className='mt-2'><b>A:</b> Ethos manages all aspects of crew payroll, from accurate payment calculations to tax deductions, always ensuring full compliance with labor laws. We also handle crew schedules and rotations, so you can rest assured everything runs smoothly without any hidden surprises, reflecting our commitment to honesty and transparency.</p>`,
+
+      `<b className='font-md'>Q: What about managing crew dynamics and conflict?</b>`,
+      `<p className='mt-2'><b>A:</b> A harmonious crew is key to a positive yachting experience. Ethos provides mediation and conflict resolution services to address any interpersonal issues that may arise, promoting a productive and enjoyable environment for all onboard.</p>`,
+
+      `<b className='font-md'>Q: Why should I trust Ethos with crew administration?</b>`,
+      `<p className='mt-2'><b>A:</b> By entrusting Ethos with your crew management, you gain a partner dedicated to honesty, transparency, and maximizing the efficiency of your yacht’s operations. Our professional services optimize the onboard experience, ensuring both the crew and your yacht perform at their best, while also boosting profitability.</p>`,
     ],
   },
   {
@@ -221,12 +233,12 @@ export const managementTabs = [
       'In Summary: Technical management encompasses a wide range of responsibilities related to the maintenance, repairs, modifications, and compliance of the yacht. By implementing proactive programs and ensuring regulatory compliance, technical management is crucial for optimal performance, safety, and longevity.',
     ],
   },
-  {
-    tabName: 'Experience On Board',
-    icon: <FaChampagneGlasses />,
-    img: '',
-    info: [],
-  },
+  // {
+  //   tabName: 'Experience On Board',
+  //   icon: <FaChampagneGlasses />,
+  //   img: '',
+  //   info: [],
+  // },
   {
     tabName: 'Crew Training & Development',
     icon: <FaUsersLine />,

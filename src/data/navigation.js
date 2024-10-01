@@ -9,6 +9,11 @@ export const LINKS = [
     id: 'yachts',
     href: null,
   },
+  {
+    text: 'Experiences',
+    id: 'experience',
+    href: null,
+  },
   // {
   //   text: 'destinations',
   //   id: 'destinations',

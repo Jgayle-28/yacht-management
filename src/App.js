@@ -15,6 +15,7 @@ import ToysPage from './pages/ToysPage'
 import YachtManagementPage from './pages/YachtManagementPage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
+import ExperienceOnBoard from './components/ExperienceOnBoard'
 
 function App() {
   useEffect(() => {
@@ -34,6 +35,7 @@ function App() {
         <Routes>
           <Route path='/' element={<YachtManagementPage />} />
           <Route path='/landing' element={<LandingPage />} />
+          <Route path='/experience' element={<ExperienceOnBoard />} />
           <Route path='/yachts' element={<YachtsPage />} />
           <Route path='/yachts/:yachtName' element={<FocusYachtPage />} />
           <Route path='/destinations' element={<DestinationsPage />} />

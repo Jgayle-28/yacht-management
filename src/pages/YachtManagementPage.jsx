@@ -97,12 +97,12 @@ const YachtManagementPage = () => {
             }}
             className='text-center text-neutral-500 mt-24'
           >
-            Ethos Yacht Management provides comprehensive yacht management
-            services for yacht owners, operators, and charter companies. We
-            handle yachts of all sizes and types, including motor yachts,
-            sailing yachts, catamarans, and more. Whether you need someone to
-            oversee the daily operations of your yacht or assistance with a
-            specific aspect of management, we're here to help.
+            At Ethos, we provide comprehensive yacht management services for
+            yacht owners and charter companies. We handle yachts of all sizes
+            and types, including sailing yachts, catamarans and motor yachts.
+            Whether you need someone to oversee the daily operations of your
+            yacht or assistance with a specific aspect of management, we're here
+            to help.
           </motion.p>
 
           <div className='items-center justify-center mt-12 space-y-4 space-x-6 flex-wrap hidden md:flex'>
@@ -133,7 +133,7 @@ const YachtManagementPage = () => {
                 <h2 className='text-2xl font-semibold text-neutral-900'>
                   {currentTab.tabName}
                 </h2>
-                {currentTab?.tabName === 'Experience On Board' ? (
+                {/* {currentTab?.tabName === 'Experience On Board' ? (
                   <ExperienceOnBoard />
                 ) : (
                   currentTab.info.map((info, i) => (
@@ -145,6 +145,19 @@ const YachtManagementPage = () => {
                     >
                       {info}
                     </motion.p>
+                  ))
+                )} */}
+                {currentTab?.tabName === 'Experience On Board' ? (
+                  <ExperienceOnBoard />
+                ) : (
+                  currentTab.info.map((info, i) => (
+                    <motion.div
+                      key={i}
+                      variants={fadeIn}
+                      custom={i}
+                      className='text-lg text-neutral-500 mt-4'
+                      dangerouslySetInnerHTML={{ __html: info }}
+                    />
                   ))
                 )}
               </motion.div>

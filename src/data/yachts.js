@@ -4,42 +4,47 @@ import yacht3 from '../assets/images/yachts/yacht-3.webp'
 import yacht4 from '../assets/images/yachts/yacht-4.webp'
 import yacht5 from '../assets/images/yachts/yacht-5.webp'
 
-export const yachtTabs = ['Catamaran', 'Motor Boat']
+import sophia1 from '../assets/images/sophia/sophia-1.jpg'
+
+import mg1 from '../assets/images/mg/mg-1.webp'
+
+export const yachtTabs = ['Catamaran']
 
 export const catamaranTabData = [
   {
     id: 1,
-    previewImage: yacht1,
+    previewImage: sophia1,
     heroImage: 'https://source.unsplash.com/1600x900/?destination',
-    title: 'Nomad',
+    title: 'Sophia',
     tabName: 'Catamaran',
-    introParagraph: `Nomad, our 2019 Lagoon 52F is no ordinary catamaran. Superior on the outside and the inside it is also exquisite in terms of elegance, comfort, safety, user friendliness and it goes without saying, performance under sail.`,
+    introParagraph: `Sophia is a 2020 build Lagoon 50 catamaran. She offers an attractive option to navigators in search of a large “seaworthy and modern” adventurous vacation. With a new visual identity, rigging and hull design, she provides increased performance, comprising a unique brand signature. Indeed, the 50’s elegance seduces thanks to the bevelled shape of her hulls, generous volumes and panoramic views, more than ever enhanced. Sophia can accommodate up to 12 people + 2 crew members.`,
     boatData: {
-      length: 15.85,
+      length: ` 14.75 m / 48’5”`,
       berths: 12,
       cabins: 6,
       wc: 6,
-      cruisingSpeed: 8,
+      cruisingSpeed: 9,
     },
-    price: 1200,
+    price: `2,150`,
   },
   {
     id: 2,
-    previewImage: yacht2,
+    previewImage: mg1,
     heroImage: 'https://source.unsplash.com/1600x900/?destination',
-    title: 'Nomad 2',
+    title: 'Mary Grace II',
     tabName: 'Catamaran',
-    introParagraph: `Our Nomad 2 is a 2020 Lagoon 50 and is quite simply a beauty.`,
+    introParagraph: `The Lagoon 46 reinforces the fundamentals that have made our brand a staple of the catamaran sailing industry, a freeing, gentle lifestyle full of innovation. The 46’s design, while comparable to its larger sisters, is still in a league of her own. Discover the 46, and find your sense of freedom.`,
     boatData: {
-      length: 14.75,
-      berths: 10,
-      cabins: 6,
+      length: 13.99,
+      berths: 12,
+      cabins: `4 double + convertible table in saloon  + 1 berth each bow`,
       wc: 4,
       cruisingSpeed: 8,
     },
-    price: 1200,
+    price: 815,
   },
 ]
+
 export const motorBoatTabData = [
   {
     id: 1,

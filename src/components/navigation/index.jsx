@@ -6,6 +6,7 @@ import {
   useScroll,
   motion,
 } from 'framer-motion'
+import useWindowSize from '../../hooks/use-window-size'
 
 import { Logo } from '../shared/Logo'
 import { useRouter } from '../../hooks/use-router'
@@ -17,9 +18,12 @@ const Navigation = () => {
   const [scrolled, setScrolled] = useState(false)
   const { scrollY } = useScroll()
   const location = useLocation()
+  const { width } = useWindowSize()
+
+  const scrollLength = width > 1024 ? 250 : 50
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
-    setScrolled(latest > 250 ? true : false)
+    setScrolled(latest > scrollLength ? true : false)
   })
 
   return (
@@ -91,7 +95,13 @@ const NavLink = ({ children, FlyoutContent, id }) => {
   const showFlyout = FlyoutContent && open
 
   const handleLinkClick = (e) => {
-    if (id === 'management' || id === 'about' || id === 'contact') {
+    if (
+      id === 'management' ||
+      id === 'about' ||
+      id === 'contact' ||
+      id === 'experience' ||
+      id === 'yachts'
+    ) {
       scrollToSection(`top`, 0)
       setTimeout(() => router.push(`/${id}`), 100)
       return
