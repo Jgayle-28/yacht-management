@@ -101,10 +101,8 @@ const AboutPage = () => {
               }}
               className='text-center text-neutral-500 mb-6'
             >
-              We have a vision at Ethos Yacht Management to approach every
-              charter with the utmost attention and offer a true luxury charter
-              experience. We cater to your wishes and endeavor to fulfill your
-              dreams of an ideal holiday.
+              At Ethos, we believe that owning a yacht should be an experience
+              defined by enjoyment, ease, and financial success.
             </motion.p>
           </section>
           <motion.p
@@ -123,11 +121,10 @@ const AboutPage = () => {
             }}
             className='text-center text-neutral-500 mb-6'
           >
-            With many years of experience in the luxury charter market, we have
-            established ourselves in this realm and are known for our
-            exceptional service and standards. We continue to expand with new
-            and exciting yachts to provide a wide range that caters to various
-            preferences.
+            With over fifteen years of experience in the yachting industry, we
+            have become trusted experts, dedicated to helping yacht owners
+            maximize the profitability of their investments while delivering a
+            seamless, worry-free ownership journey.
           </motion.p>
           <motion.p
             initial={{
@@ -145,11 +142,10 @@ const AboutPage = () => {
             }}
             className='text-center text-neutral-500 mb-6'
           >
-            Our team of dedicated brokers is happy to help you plan the most
-            memorable yacht holiday. Whether you’re interested in a luxury motor
-            yacht cruising along the Amalfi Coast, a gorgeous catamaran
-            exploring the Greek Islands, or sailing away in the tropical sun of
-            the Caribbean, we can bring your charter dreams to life!
+            Our approach is guided by three core values: honesty, transparency,
+            and ethics. We understand the importance of trust when it comes to
+            managing a valuable asset like a yacht, and we are committed to
+            operating with complete integrity in everything we do.
           </motion.p>
           <motion.p
             initial={{
@@ -167,14 +163,9 @@ const AboutPage = () => {
             }}
             className='text-center text-neutral-500 mb-6'
           >
-            We Charter the World!
-            <br />
-            We are also excited to introduce our retail luxury yacht charter
-            brokerage. With 30 years of experience in the charter industry, we
-            have taken our knowledge of yachts, charters, and travel to offer
-            you an exceptional holiday experience anywhere you can dream of
-            voyaging. Through our travels and worldwide contacts, we have sought
-            out beautiful luxury yachts to showcase on our site.
+            Whether it’s through transparent financial reporting, ethical crew
+            management, or navigating complex regulatory landscapes, you can
+            trust that Ethos has your best interests at heart.
           </motion.p>
           <motion.p
             initial={{
@@ -192,16 +183,12 @@ const AboutPage = () => {
             }}
             className='text-center text-neutral-500 mb-6'
           >
-            With style and elegance, these motor yachts, catamarans, sailing
-            yachts, gulets, and motor sailers will provide the ideal escape to
-            relax and rejuvenate. Along with incredible yachts, there are both
-            unique and familiar locations to inspire your travel plans. Whether
-            you yearn to relax in the sun while dipping your toes in the water
-            or experience new sites and cultures on your holiday, we strive to
-            create a tailor-made charter that suits you perfectly. Wherever your
-            dreams take you… we can bring those dreams to life! We are
-            passionate about yacht charters and travel—allow us to help you plan
-            a holiday that you will cherish forever.
+            Our team’s passion for the sea, paired with our deep understanding
+            of the yachting industry, drives us to go above and beyond for our
+            clients. Your yacht is not just a vessel—it’s an investment, a
+            lifestyle, and a source of pleasure. We’re here to protect that
+            investment, enhance its value, and make sure your ownership
+            experience is as enjoyable and rewarding as possible.
           </motion.p>
           <motion.p
             initial={{
@@ -219,12 +206,13 @@ const AboutPage = () => {
             }}
             className='text-center text-neutral-500 mb-6'
           >
-            We are excited to hear from you and to design the perfect luxury
-            yacht holiday with memories to last a lifetime!
+            Let us guide you with expert management, honest communication, and a
+            commitment to your success—because at Ethos, your peace of mind and
+            profitability are always our top priorities.
           </motion.p>
 
           {/* Team Section */}
-          <section className='pt-12'>
+          {/* <section className='pt-12'>
             <motion.h2
               initial={{
                 y: 10,
@@ -269,7 +257,7 @@ const AboutPage = () => {
                 </motion.div>
               ))}
             </div>
-          </section>
+          </section> */}
         </main>
       </div>
     </>

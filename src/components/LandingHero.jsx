@@ -49,7 +49,7 @@ const LandingHero = () => {
         />
 
         <div>
-          <h1 className='overflow-hidden mt-6 uppercase font-light  text-xl md:text-3xl tracking-wider text-white text-center'>
+          {/* <h1 className='overflow-hidden mt-6 uppercase font-light  text-xl md:text-3xl tracking-wider text-white text-center'>
             <motion.span
               variants={{
                 hidden: { opacity: 0, y: 75 },
@@ -86,7 +86,44 @@ const LandingHero = () => {
             >
               Profitable
             </motion.span>
-          </h1>
+          </h1> */}
+          {/* ------- */}
+          {/* <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial='hidden'
+            animate={mainControls}
+            transition={{ duration: 0.4, delay: 0.45, ease: 'easeIn' }}
+            className='tracking-wider mt-6 uppercase font-light  text-xl md:text-3xl tracking-wider text-white text-center'
+          >
+            Honest
+          </motion.p>
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial='hidden'
+            animate={mainControls}
+            transition={{ duration: 0.4, delay: 0.65, ease: 'easeIn' }}
+            className='tracking-wider mt-6 uppercase font-light  text-xl md:text-3xl tracking-wider text-white text-center'
+          >
+            Personal
+          </motion.p>
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial='hidden'
+            animate={mainControls}
+            transition={{ duration: 0.4, delay: 0.85, ease: 'easeIn' }}
+            className='tracking-wider mt-6 uppercase font-light  text-xl md:text-3xl tracking-wider text-white text-center'
+          >
+            Profitable
+          </motion.p>
           <motion.p
             variants={{
               hidden: { opacity: 0, y: 5 },
@@ -95,10 +132,67 @@ const LandingHero = () => {
             initial='hidden'
             animate={mainControls}
             transition={{ duration: 0.5, delay: 0.95, ease: 'easeIn' }}
-            className='mt-3 uppercase font-light text-xl md:text-2xl tracking-wider text-white text-center'
+            className='mt-3 uppercase font-light text-xl md:text-3xl tracking-wider text-white text-center'
           >
             Yacht Management
-          </motion.p>
+          </motion.p> */}
+          <motion.div
+            initial='hidden'
+            animate='visible'
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.2, // Adjust this value to stagger more or less
+                },
+              },
+            }}
+            className='flex flex-col items-center justify-center h-full'
+          >
+            <motion.h3
+              variants={{
+                hidden: { opacity: 0, y: 5 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.4, delay: 0.45, ease: 'easeIn' }}
+              className='tracking-wider mt-6 uppercase font-light text-xl md:text-3xl text-white text-center'
+            >
+              Honest
+            </motion.h3>
+
+            <motion.h3
+              variants={{
+                hidden: { opacity: 0, y: 5 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.4, delay: 0.65, ease: 'easeIn' }}
+              className='tracking-wider mt-6 uppercase font-light text-xl md:text-3xl text-white text-center'
+            >
+              Personal
+            </motion.h3>
+
+            <motion.h3
+              variants={{
+                hidden: { opacity: 0, y: 5 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.4, delay: 0.85, ease: 'easeIn' }}
+              className='tracking-wider mt-6 uppercase font-light text-xl md:text-3xl text-white text-center'
+            >
+              Profitable
+            </motion.h3>
+
+            <motion.h3
+              variants={{
+                hidden: { opacity: 0, y: 5 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5, delay: 0.95, ease: 'easeIn' }}
+              className='mt-6 uppercase font-light text-xl md:text-3xl tracking-wider text-white text-center'
+            >
+              Yacht Management
+            </motion.h3>
+          </motion.div>
         </div>
 
         {/* <div className='pt-2 flex flex-col md:flex-row mt-auto'>

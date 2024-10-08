@@ -132,7 +132,7 @@ const YachtManagementPage = () => {
                 custom={0}
                 className='mt-8'
               >
-                <h2 className='text-2xl font-semibold text-neutral-900'>
+                <h2 className='text-3xl font-semibold text-brandPrimary pb-4'>
                   {currentTab.tabName}
                 </h2>
                 {/* {currentTab?.tabName === 'Experience On Board' ? (
@@ -157,7 +157,7 @@ const YachtManagementPage = () => {
                       key={i}
                       variants={fadeIn}
                       custom={i}
-                      className='text-lg text-neutral-500 mt-4'
+                      className='text-lg text-neutral-700/90 mt-4'
                       dangerouslySetInnerHTML={{ __html: info }}
                     />
                   ))

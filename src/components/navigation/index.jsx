@@ -58,7 +58,8 @@ const Navigation = () => {
       `}
     >
       <div className='mx-auto flex max-w-7xl items-center justify-between'>
-        <Logo />
+        {scrolled ? <Logo /> : <div />}
+
         <div className='hidden gap-6 lg:flex'>
           <Links />
           <CTAs />
