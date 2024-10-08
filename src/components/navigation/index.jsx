@@ -166,7 +166,13 @@ const MobileMenuLink = ({ children, setMenuOpen, id }) => {
   const router = useRouter()
 
   const handleLinkClick = (e) => {
-    if (id === 'management' || id === 'about' || id === 'contact') {
+    if (
+      id === 'management' ||
+      id === 'about' ||
+      id === 'contact' ||
+      id === 'experience' ||
+      id === 'yachts'
+    ) {
       setMenuOpen(false)
       scrollToSection(`top`, 0)
       setTimeout(() => router.push(`/${id}`), 100)

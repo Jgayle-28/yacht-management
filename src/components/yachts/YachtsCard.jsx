@@ -3,7 +3,7 @@ import ExpandButton from '../shared/ExpandButton'
 import { useRouter } from '../../hooks/use-router'
 import { motion } from 'framer-motion'
 
-const YachtsCard = ({ boat, index }) => {
+const YachtsCard = ({ boat, onClick, index }) => {
   const { id, previewImage, title, tabName, introParagraph, boatData } = boat
   const router = useRouter()
 
@@ -58,13 +58,15 @@ const YachtsCard = ({ boat, index }) => {
             </div>
           </div>
           {/* Price */}
-          <div className='pt-4'>
-            <span className='text-2xl font-semibold text-brandPrimary'>
-              €{boat.price}
-            </span>
-            <span className='text-gray-500'>/day</span>
+          <div className='flex items-center justify-between'>
+            <div className='pt-4'>
+              <span className='text-2xl font-semibold text-brandPrimary'>
+                €{boat.price}
+              </span>
+              <span className='text-gray-500'>/day</span>
+            </div>
+            {/* <ExpandButton buttonText='View Details' onClick={onClick} /> */}
           </div>
-          {/* <ExpandButton buttonText='View Details' onClick={handleViewDetails} /> */}
         </div>
       </div>
     </motion.div>

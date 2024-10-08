@@ -7,7 +7,7 @@ import { Logo } from '../shared/Logo'
 const Footer = () => {
   return (
     <footer className='relative overflow-hidden py-12 bg-slate-900'>
-      <MaxWidthWrapper className='relative z-20 grid grid-cols-12 gap-x-1.5 gap-y-6'>
+      <MaxWidthWrapper className='relative grid grid-cols-12 gap-x-1.5 gap-y-6'>
         <LogoColumn />
         <GenericColumn
           title='Product'

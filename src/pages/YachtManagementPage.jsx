@@ -5,6 +5,7 @@ import TabButton from '../components/shared/TabButton'
 import { managementTabs } from '../data/management'
 import SelectDropdown from '../components/shared/SelectDropdown'
 import ExperienceOnBoard from '../components/ExperienceOnBoard'
+import LandingHero from '../components/LandingHero'
 
 const YachtManagementPage = () => {
   const [currentTab, setCurrentTab] = useState(managementTabs[0])
@@ -25,7 +26,7 @@ const YachtManagementPage = () => {
     <>
       <div className='flex flex-col min-h-screen' id='destination-top'>
         {/* Top Div with Background Image */}
-        <div
+        {/* <div
           className='relative bg-cover bg-center h-[500px]'
           style={{
             backgroundImage: `linear-gradient(rgba(23, 37, 84, .4), rgba(23, 37, 84, .4)),url(${heroImage})`,
@@ -78,7 +79,8 @@ const YachtManagementPage = () => {
               Elevating Your Voyage to Perfection.
             </motion.p>
           </div>
-        </div>
+        </div> */}
+        <LandingHero />
 
         <main className='flex-grow max-w-7xl mx-auto px-8'>
           <motion.p
@@ -97,12 +99,12 @@ const YachtManagementPage = () => {
             }}
             className='text-center text-neutral-500 mt-24'
           >
-            At Ethos, we provide comprehensive yacht management services for
-            yacht owners and charter companies. We handle yachts of all sizes
-            and types, including sailing yachts, catamarans and motor yachts.
-            Whether you need someone to oversee the daily operations of your
-            yacht or assistance with a specific aspect of management, we're here
-            to help.
+            At Ethos, we offer complete yacht management services tailored for
+            yacht owners. Our expertise covers yachts of all sizes and types.
+            Whether you’re looking for full oversight of your yacht’s daily
+            operations or support with specific management tasks, we’re ready to
+            assist. We believe that small details can make a big difference, and
+            our attention to these details ensures the best care for your yacht.
           </motion.p>
 
           <div className='items-center justify-center mt-12 space-y-4 space-x-6 flex-wrap hidden md:flex'>

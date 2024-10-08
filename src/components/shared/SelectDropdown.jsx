@@ -35,7 +35,7 @@ const SelectDropdown = ({ options, onChange }) => {
       </div>
       {isOpen && (
         <motion.div
-          className='absolute z-10 w-full mt-1 bg-white border rounded shadow-lg'
+          className='absolute z-30 w-full mt-1 bg-white border rounded shadow-lg'
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
