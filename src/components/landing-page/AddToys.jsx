@@ -61,15 +61,17 @@ const AddToys = () => {
               }}
               className='text-neutral-500 mb-3 text-neutral-500'
             >
-              To elevate your onboard experience, we highly recommend choosing
-              one or more of the exciting toys from our exclusive collection.
-              They're guaranteed to provide endless fun for all! Our selection
-              includes Bamboo GTX series electric skateboards for effortless
-              cruising all day, Fliteboards, Seabobs F5 S, Mavic 2 Pro drones,
-              Stand-Up Paddle boards, Yamaha SeaWing II sea scooters designed
-              for power and performance, and Kaabo high-speed electric scooters
-              built for the ultimate on or off-road adventure. These top-rated
-              toys offer something for everyone!
+              To enhance your onboard experience, we invite you to explore our
+              exclusive collection of exciting toys, each designed to deliver
+              endless entertainment for all ages. Whether you’re after
+              effortless cruising or thrilling adventures, our selection has
+              something for everyone. Choose from electric skateboards/ electric
+              bikes for all-day gliding, Fliteboards for exhilarating water
+              rides, high-performance Seabobs, or capture stunning aerial views
+              with Mavic 2 Pro drones. For more water fun, we offer Stand-Up
+              Paddle boards, water skis and Yamaha SeaWing sea scooters for a
+              powerful underwater experience, while high-speed electric scooters
+              are perfect for an adrenaline-packed adventure on or off the road.
             </motion.p>
           </div>
           {/* Right Section (Text + Images) */}
@@ -108,7 +110,7 @@ const AddToys = () => {
               }}
               className='mt-4 text-center text-4xl md:text-5xl font-normal md:font-light text-brandPrimary'
             >
-              Toys
+              Time
             </motion.h6>
             <motion.h6
               initial={{
@@ -126,7 +128,7 @@ const AddToys = () => {
               }}
               className='ml-20 text-center text-4xl md:text-5xl font-normal md:font-light text-brandPrimary'
             >
-              Water
+              For
             </motion.h6>
             <motion.h6
               initial={{
@@ -144,7 +146,7 @@ const AddToys = () => {
               }}
               className='mr-12 mb-1 text-center text-4xl md:text-5xl font-normal md:font-light text-brandPrimary'
             >
-              Splash
+              Water toys
             </motion.h6>
             <motion.img
               initial={{

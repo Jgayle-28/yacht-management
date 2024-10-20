@@ -7,81 +7,9 @@ import { Logo } from '../shared/Logo'
 const Footer = () => {
   return (
     <footer className='relative overflow-hidden py-12 bg-slate-900'>
-      <MaxWidthWrapper className='relative grid grid-cols-12 gap-x-1.5 gap-y-6'>
+      <div className='px-4 md:px-8 flex justify-center'>
         <LogoColumn />
-        <GenericColumn
-          title='Product'
-          links={[
-            {
-              title: 'Features',
-              href: '/#features',
-            },
-            {
-              title: 'Testimonials',
-              href: '/#testimonials',
-            },
-            {
-              title: 'Pricing',
-              href: '/#pricing',
-            },
-          ]}
-        />
-        <GenericColumn
-          title='Company'
-          links={[
-            {
-              title: 'Careers',
-              href: '/#',
-            },
-            {
-              title: 'Team',
-              href: '/#',
-            },
-            {
-              title: 'Contact',
-              href: '/#',
-            },
-          ]}
-        />
-        <GenericColumn
-          title='Legal'
-          links={[
-            {
-              title: 'Terms & Conditions',
-              href: '/#',
-            },
-            {
-              title: 'Privacy Policy',
-              href: '/#',
-            },
-            {
-              title: 'Refund Policy',
-              href: '/#',
-            },
-          ]}
-        />
-
-        <GenericColumn
-          title='Socials'
-          links={[
-            {
-              title: 'Twitter',
-              href: '/#',
-              Icon: SiX,
-            },
-            {
-              title: 'Instagram',
-              href: '/#',
-              Icon: SiInstagram,
-            },
-            {
-              title: 'Youtube',
-              href: '/#',
-              Icon: SiYoutube,
-            },
-          ]}
-        />
-      </MaxWidthWrapper>
+      </div>
     </footer>
   )
 }
@@ -90,29 +18,23 @@ export default Footer
 
 const LogoColumn = () => {
   return (
-    <div className='col-span-6 md:col-span-4'>
+    <div className='flex flex-col items-center'>
       <Logo />
-      <span className='mt-3 inline-block text-xs text-zinc-400'>
+      <div className='flex flex-col items-center'>
+        <span className='mt-3 inline-block text-xs text-zinc-400 '>
+          In partnership with{' '}
+          <a
+            href='https://kottero.com/'
+            target='_blank'
+            className='text-white/75 hover:text-white underline ease duration-200'
+          >
+            KOTTERO
+          </a>
+        </span>
+      </div>
+      <span className='mt-3 inline-block text-xs text-zinc-400 '>
         © Ethos Yachting - All rights reserved.
       </span>
-    </div>
-  )
-}
-
-const GenericColumn = ({ title, links }) => {
-  return (
-    <div className='col-span-6 space-y-2 text-sm md:col-span-2'>
-      <span className='block text-zinc-50'>{title}</span>
-      {links.map((l) => (
-        <a
-          key={l.title}
-          href={l.href}
-          className='flex items-center gap-1.5 text-zinc-400 transition-colors hover:text-zinc-200 hover:underline'
-        >
-          {l.Icon && <l.Icon />}
-          {l.title}
-        </a>
-      ))}
     </div>
   )
 }

@@ -84,7 +84,25 @@ const AboutPage = () => {
         </div>
 
         <main className='flex-grow max-w-7xl mx-auto px-8'>
-          <section className='flex flex-col items-center justify-center px-8 pt-32 space-y-6'>
+          <section className='flex flex-col items-center justify-center px-8 pt-16 space-y-6'>
+            <motion.h4
+              initial={{
+                y: 10,
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: 0.6,
+                ease: 'easeInOut',
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              className='text-center text-brandPrimary mb-6 text-3xl font-semibold '
+            >
+              Why settle for less, when you can get so much more?
+            </motion.h4>
             <motion.p
               initial={{
                 y: 10,
@@ -142,10 +160,11 @@ const AboutPage = () => {
             }}
             className='text-center text-neutral-500 mb-6'
           >
-            Our approach is guided by three core values: honesty, transparency,
-            and ethics. We understand the importance of trust when it comes to
-            managing a valuable asset like a yacht, and we are committed to
-            operating with complete integrity in everything we do.
+            Our approach is guided by three core values:{' '}
+            <b>honesty, transparency, and ethics</b>. We understand the
+            importance of trust when it comes to managing a valuable asset like
+            a yacht, and we are committed to operating with complete integrity
+            in everything we do.
           </motion.p>
           <motion.p
             initial={{
@@ -165,7 +184,7 @@ const AboutPage = () => {
           >
             Whether it’s through transparent financial reporting, ethical crew
             management, or navigating complex regulatory landscapes, you can
-            trust that Ethos has your best interests at heart.
+            trust that<b> Ethos has your best interests at heart</b>.
           </motion.p>
           <motion.p
             initial={{

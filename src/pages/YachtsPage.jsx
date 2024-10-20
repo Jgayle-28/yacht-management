@@ -159,7 +159,7 @@ const YachtsPage = () => {
           </section>
         </main>
       </div>
-      <YachtDetailModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
+      {/* <YachtDetailModal modalOpen={modalOpen} setModalOpen={setModalOpen} /> */}
     </>
   )
 }

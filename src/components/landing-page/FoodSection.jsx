@@ -59,7 +59,7 @@ const FoodSection = () => {
             }}
             className='mt-4 text-center text-4xl md:text-5xl font-normal md:font-light text-brandPrimary'
           >
-            Ready for
+            It is more than just
           </motion.h6>
           <motion.h6
             initial={{
@@ -77,7 +77,7 @@ const FoodSection = () => {
             }}
             className='ml-10 text-center text-4xl md:text-5xl font-normal md:font-light text-brandPrimary'
           >
-            A
+            Food
           </motion.h6>
           <motion.h6
             initial={{
@@ -95,7 +95,7 @@ const FoodSection = () => {
             }}
             className='mr-12 mb-1 text-center text-4xl md:text-5xl font-normal md:font-light text-brandPrimary'
           >
-            Greek Meal
+            It's an Experience{' '}
           </motion.h6>
           <motion.img
             initial={{
@@ -213,7 +213,8 @@ const FoodSection = () => {
               }}
               className='text-3xl font-semibold text-center text-brandPrimary'
             >
-              “Kali Orexi!” ( Enjoy Your Meal! )
+              Discover Greece on Your Plate: Fresh Ingredients, Delicious
+              Creations
             </motion.h2>
             <motion.div
               initial={{ width: '0%' }}
@@ -237,11 +238,12 @@ const FoodSection = () => {
               }}
               className='max-w-5xl pb-12 text-center text-neutral-500'
             >
-              We take great pride in the exceptional quality of our local Greek
-              produce. Our highly skilled onboard chefs are eager to prepare
-              fresh, sumptuous, and mouth-watering culinary delights just for
-              you. Paired with a selection of fine wines and beverages, you're
-              guaranteed a true feast for your taste buds.
+              We are passionate about the exceptional quality of our locally
+              sourced Greek ingredients. Every dish is lovingly crafted by our
+              expert chefs, using the freshest produce to create delicious,
+              unforgettable meals just for you. Paired with a curated selection
+              of fine wines and beverages, each bite promises an incredible
+              culinary experience, made with love and care.
             </motion.p>
           </div>
         </div>

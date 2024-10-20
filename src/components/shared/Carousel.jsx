@@ -93,7 +93,7 @@ const Card = ({ image, category, title, info, route, showGradient }) => {
     <div
       onClick={() => {
         if (route) {
-          router.push(route)
+          router.push('/toys')
         }
       }}
       className='cursor-pointer relative shrink-0 cursor-pointer rounded-2xl bg-white shadow-md transition-all hover:scale-[1.015] hover:shadow-xl'
@@ -124,62 +124,3 @@ const Card = ({ image, category, title, info, route, showGradient }) => {
 }
 
 export default Carousel
-
-// const items = [
-//   {
-//     id: 1,
-//     url: '/imgs/computer/mouse.png',
-//     category: 'Mice',
-//     title: 'Just feels right',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.',
-//   },
-//   {
-//     id: 2,
-//     url: '/imgs/computer/keyboard.png',
-//     category: 'Keyboards',
-//     title: 'Type in style',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.',
-//   },
-//   {
-//     id: 3,
-//     url: '/imgs/computer/monitor.png',
-//     category: 'Monitors',
-//     title: 'Looks like a win',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.',
-//   },
-//   {
-//     id: 4,
-//     url: '/imgs/computer/chair.png',
-//     category: 'Chairs',
-//     title: 'Back feels great',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.',
-//   },
-//   {
-//     id: 5,
-//     url: '/imgs/computer/lights.png',
-//     category: 'Lights',
-//     title: "It's lit",
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.',
-//   },
-//   {
-//     id: 6,
-//     url: '/imgs/computer/desk.png',
-//     category: 'Desks',
-//     title: 'Stand up straight',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.',
-//   },
-//   {
-//     id: 7,
-//     url: '/imgs/computer/headphones.png',
-//     category: 'Headphones',
-//     title: 'Sounds good',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.',
-//   },
-// ]

@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 
 const SelectDropdown = ({ options, onChange }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [selectedOption, setSelectedOption] = useState(null)
+  const dropdownRef = useRef(null)
 
   const handleOptionClick = (option) => {
     setSelectedOption(option)
@@ -11,8 +12,22 @@ const SelectDropdown = ({ options, onChange }) => {
     setIsOpen(false)
   }
 
+  // Click away listener
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [])
+
   return (
-    <div className='relative'>
+    <div className='relative' ref={dropdownRef}>
       <div
         className='flex items-center justify-between p-2 border rounded cursor-pointer'
         onClick={() => setIsOpen((prev) => !prev)}

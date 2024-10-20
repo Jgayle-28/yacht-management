@@ -1,6 +1,6 @@
 import { useRouter } from '../../hooks/use-router'
 
-export const Logo = ({ color = 'white' }) => {
+export const Logo = ({ color = 'white', callback = null }) => {
   const router = useRouter()
 
   return (
@@ -8,7 +8,10 @@ export const Logo = ({ color = 'white' }) => {
       <h2
         className='text-2xl font-light cursor-pointer'
         style={{ color }}
-        onClick={() => router.push('/')}
+        onClick={() => {
+          router.push('/')
+          if (callback) callback()
+        }}
       >
         Ethos Yachting
       </h2>

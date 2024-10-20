@@ -31,7 +31,7 @@ const ExperienceOnBoard = () => {
             }}
             className='text-4xl font-light mb-2 w-full'
           >
-            Experience On Board
+            Experiences On Board
           </motion.h1>
           <div className='w-full flex justify-center my-4'>
             <motion.div
@@ -58,7 +58,7 @@ const ExperienceOnBoard = () => {
             }}
             className='text-lg tracking-wide'
           >
-            Elevating Your Voyage to Perfection.
+            Gastronomy, Water activities and Destinations
           </motion.p>
         </div>
       </div>

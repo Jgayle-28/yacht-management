@@ -147,7 +147,7 @@ const LandingHero = () => {
                 },
               },
             }}
-            className='flex flex-col items-center justify-center h-full'
+            className='flex items-center justify-center h-full'
           >
             <motion.h3
               variants={{
@@ -166,7 +166,7 @@ const LandingHero = () => {
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.4, delay: 0.65, ease: 'easeIn' }}
-              className='tracking-wider mt-6 uppercase font-light text-xl md:text-3xl text-white text-center'
+              className='tracking-wider mt-6 uppercase font-light text-xl md:text-3xl text-white text-center mx-8'
             >
               Personal
             </motion.h3>
@@ -181,18 +181,17 @@ const LandingHero = () => {
             >
               Profitable
             </motion.h3>
-
-            <motion.h3
-              variants={{
-                hidden: { opacity: 0, y: 5 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.5, delay: 0.95, ease: 'easeIn' }}
-              className='mt-6 uppercase font-light text-xl md:text-3xl tracking-wider text-white text-center'
-            >
-              Yacht Management
-            </motion.h3>
           </motion.div>
+          <motion.h3
+            variants={{
+              hidden: { opacity: 0, y: 5 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.5, delay: 0.95, ease: 'easeIn' }}
+            className='mt-6 uppercase font-light text-2xl md:text-4xl tracking-wider text-white text-center'
+          >
+            Yacht Management
+          </motion.h3>
         </div>
 
         {/* <div className='pt-2 flex flex-col md:flex-row mt-auto'>

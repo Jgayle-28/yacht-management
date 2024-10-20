@@ -268,7 +268,23 @@ export const managementTabs = [
     img: '',
     info: [
       `At Ethos, we take crew development seriously by offering comprehensive seminars for all our crew members. These seminars cover essential areas such as culinary excellence for chefs, cocktail preparation, top-tier hospitality, and advanced nautical knowledge. Led by industry experts with years of yachting experience, our training ensures that every crew member is up-to-date with the latest skills and standards. With a strong commitment to continuous improvement, our dedicated and focused crews are fully prepared to provide exceptional, personalized service, creating unforgettable experiences for guests on every voyage.`,
-      ,
+
+      `<p class='font-semibold text-brandPrimary'>Q: How does Ethos ensure the crew is highly trained and qualified?</p>`,
+      `<p class='mt-2'><span class='font-semibold'>A:</span> At Ethos, we go beyond just hiring crew members. We carefully handpick and filter each individual to create the perfect combination of captain, stew, chef, and more. Our crew members undergo rigorous selection and are then provided with comprehensive training seminars. These seminars cover key areas such as culinary excellence, professional cocktail preparation, five-star hospitality, and advanced nautical skills. Led by seasoned industry experts, our training ensures that every crew member is not only highly skilled but also up-to-date with the latest industry standards.</p>`,
+
+      `<p class='font-semibold text-brandPrimary'>Q: What makes Ethos crew training stand out?</p>`,
+      `<p class='mt-2'><span class='font-semibold'>A:</span> We don’t just provide basic training – we are dedicated to continuous improvement. Our crew development program is designed to ensure that every member of the team is constantly honing their skills. Whether it’s enhancing their knowledge of nautical operations or perfecting their culinary and service expertise, our training is all about delivering the finest, personalized service on every yacht. We believe that a well-trained, focused crew creates unforgettable experiences for guests, turning every voyage into something truly special.</p>`,
+
+      `<p class='font-semibold text-brandPrimary'>Q: How does Ethos find the right crew for each yacht?</p>`,
+      `<p class='mt-2'><span class='font-semibold'>A:</span> At Ethos, we take pride in matching the perfect crew with each yacht, ensuring smooth operations and exceptional guest experiences. Every crew member is meticulously selected through multiple levels of filtering, taking into account their expertise, personality, and ability to work seamlessly with others. We ensure that the captain, steward, and chef form a cohesive team, providing guests with flawless service and an unforgettable journey. By taking the time to get the right mix of skills and personalities, we guarantee that your crew will elevate the entire yachting experience.</p>`,
+
+      `<p class='font-semibold text-brandPrimary'>Q: How does Ethos ensure crew members stay current with industry standards?</p>`,
+      `<p class='mt-2'><span class='font-semibold'>A:</span> Our commitment to excellence doesn’t stop with hiring and initial training. We offer continuous education and professional development for our crews, ensuring they stay updated with the latest advancements in yachting, hospitality, and safety. This means that your yacht is always staffed with a team that is prepared, professional, and passionate about delivering top-tier service every time.</p>`,
+
+      `<p class='font-semibold text-brandPrimary'>Q: What kind of experiences can guests expect from an Ethos-trained crew?</p>`,
+      `<p class='mt-2'><span class='font-semibold'>A:</span> With an Ethos crew, guests can expect nothing less than five-star service. Whether it's a perfectly prepared cocktail, a gourmet meal by a skilled chef, or a seamless sailing experience led by an expert captain, every detail is designed to make the journey extraordinary. Our crews are trained to anticipate guests' needs and create personalized experiences, ensuring that every moment on board feels luxurious and effortless.</p>`,
+
+      `By selecting and developing crews with such care and precision, Ethos guarantees that each voyage is not just a trip – it’s an unforgettable yachting experience.`,
     ],
   },
 ]

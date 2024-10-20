@@ -194,7 +194,9 @@ const MobileMenuLink = ({ children, setMenuOpen, id }) => {
         onClick={handleLinkClick}
         className='group flex w-full cursor-pointer items-center justify-between border-b border-neutral-300 py-6 text-start text-2xl font-semibold'
       >
-        <span>{children}</span>
+        <span className='capitalize'>
+          {children === 'Experiences' ? 'On Board Experiences' : children}
+        </span>
         <FiArrowRight className='mr-8 group-hover:mr-2 transition-all duration-200' />
       </a>
     </div>
@@ -218,7 +220,7 @@ const MobileMenu = () => {
             className='fixed left-0 top-0 flex h-screen w-full flex-col bg-white'
           >
             <div className='flex items-center justify-between p-6'>
-              <Logo color='black' />
+              <Logo color='black' callback={() => setOpen(false)} />
               <button onClick={() => setOpen(false)}>
                 <FiX className='text-3xl text-neutral-950' />
               </button>
