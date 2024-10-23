@@ -85,7 +85,7 @@ const FoodPage = () => {
         <main className='flex-grow max-w-7xl mx-auto px-8'>
           {/* Quote Section */}
           <section className='px-8 py-24 text-center text-brandPrimary'>
-            <blockquote>
+            {/* <blockquote>
               <motion.h5
                 initial={{
                   y: 15,
@@ -123,18 +123,18 @@ const FoodPage = () => {
               >
                 — Auguste Escoffier
               </motion.p>
-            </blockquote>
+            </blockquote> */}
           </section>
 
           {/* Video */}
           <section
-            className='relative min-w- cursor-pointer h-[450px] bg-cover bg-center bg-no-repeat flex items-center justify-center'
-            onClick={() => setIsOpen(true)}
+            className='relative min-w- h-[450px] bg-cover bg-center bg-no-repeat flex items-center justify-center'
+            // onClick={() => setIsOpen(true)}
             style={{
               backgroundImage: `linear-gradient(rgba(23, 37, 84, .4), rgba(23, 37, 84, .4)), url(${videoPreview})`,
             }}
           >
-            <PlayButton />
+            {/* <PlayButton /> */}
           </section>
 
           {/* Cards Section */}
@@ -199,12 +199,25 @@ const FoodPage = () => {
               }}
               className='text-center text-neutral-500'
             >
-              For the ultimate taste of summer, you’ve chosen the perfect
-              destination and the ideal yacht—what’s next? Ah, yes! Let’s dive
-              into the culinary delights awaiting you. At Nomad Yachting, we
-              understand that enjoying exceptional food on board is paramount.
-              Not just any food, but appetizing, delicious, mouth-watering
-              creations that will elevate your experience.
+              At Ethos Yachting, we know that food is personal, and behind every
+              dish is the story of a passionate chef, carefully crafting each
+              meal to perfection.
+              <br />
+              Whether you’re joining us for a day trip or a weekly charter, our
+              chefs will ensure your culinary experience is nothing short of
+              extraordinary.
+              <br />
+              Each meal is prepared with top-quality, fresh ingredients,
+              ensuring every bite is a celebration of flavor.
+              <br />
+              We cater to all dietary needs, taking care to accommodate any food
+              intolerances, allergies, or special requests, so your dining
+              experience is as personal as it is delicious. Special occasions on
+              board? We’ll make sure they’re unforgettable with tailored menus
+              and exceptional service.
+              <br />
+              We’re ready to welcome you aboard and create the perfect culinary
+              experience for your next yachting adventure.
             </motion.p>
             <motion.p
               initial={{

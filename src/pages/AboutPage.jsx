@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import heroImage from '../assets/images/about-hero-.jpeg'
+import pandelis from '../assets/images/pandelis.jpg'
 
 const AboutPage = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,10 +19,9 @@ const AboutPage = () => {
   }
 
   const images = [
-    // Add your image URLs here
-    'https://via.placeholder.com/300',
-    'https://via.placeholder.com/300',
-    'https://via.placeholder.com/300',
+    { name: 'Pandelis', image: pandelis },
+    { name: 'Jordan', image: 'https://via.placeholder.com/300' },
+    { name: 'Megan', image: 'https://via.placeholder.com/300' },
   ]
 
   return (
@@ -103,26 +103,145 @@ const AboutPage = () => {
             >
               Why settle for less, when you can get so much more?
             </motion.h4>
-            <motion.p
-              initial={{
-                y: 10,
-                opacity: 0,
-              }}
-              transition={{
-                duration: 0.5,
-                delay: 0.15,
-                ease: 'easeInOut',
-              }}
-              whileInView={{
-                y: 0,
-                opacity: 1,
-              }}
-              className='text-center text-neutral-500 mb-6'
-            >
-              At Ethos, we believe that owning a yacht should be an experience
-              defined by enjoyment, ease, and financial success.
-            </motion.p>
           </section>
+          <motion.p
+            initial={{
+              y: 10,
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.15,
+              ease: 'easeInOut',
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            className='text-center text-neutral-500 mb-6'
+          >
+            Ethos Yachting was founded on the principles of transparency, trust,
+            and passion for the yachting world. As lifelong friends and business
+            partners, Jordan Arzoglou and Pandelis Dadadopoulos bring over 20
+            years of combined experience in the industry, offering a fresh
+            approach to yacht management that prioritizes honest, personal, and
+            profitable service for owners.
+          </motion.p>
+          <motion.p
+            initial={{
+              y: 10,
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.15,
+              ease: 'easeInOut',
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            className='text-center text-neutral-500 mb-6'
+          >
+            Jordan Arzoglou, at just 27, has already gained vast experience
+            managing yachts and delivering unforgettable experiences for over
+            10,000 guests. His keen insight into what makes yacht operations
+            successful means he’s focused on optimizing every aspect of yacht
+            ownership—ensuring your asset is both well-maintained and
+            profitable. For Jordan, it’s about elevating the standard of yacht
+            management with innovative solutions, while always putting the
+            owner’s needs first.
+          </motion.p>
+          <motion.p
+            initial={{
+              y: 10,
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.15,
+              ease: 'easeInOut',
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            className='text-center text-neutral-500 mb-6'
+          >
+            Pandelis Dadadopoulos, a seasoned Captain with 18 years of
+            experience, brings his deep love for the sea and a hands-on approach
+            to every vessel he manages. His role goes far beyond navigation;
+            Pandelis is deeply involved in ensuring smooth operations, from
+            maintaining the highest standards of care for the yacht to ensuring
+            exceptional crew management. His leadership on board reflects his
+            commitment to delivering unmatched service for owners who want their
+            yachts in expert hands.
+          </motion.p>
+          <motion.p
+            initial={{
+              y: 10,
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.15,
+              ease: 'easeInOut',
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            className='text-center text-neutral-500 mb-6'
+          >
+            At Ethos Yachting, we offer a tailored, comprehensive approach to
+            yacht management that’s focused on maximizing the potential of your
+            investment. Whether it’s ensuring top-tier maintenance, managing
+            charters to drive revenue, or curating a highly skilled crew, we
+            take care of every detail—so you can enjoy the benefits of ownership
+            without the stress.
+          </motion.p>
+          <motion.p
+            initial={{
+              y: 10,
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.15,
+              ease: 'easeInOut',
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            className='text-center text-neutral-500 mb-6'
+          >
+            We are dedicated to running your yacht as efficiently and profitably
+            as possible, with complete transparency and a personal touch. With
+            us, your yacht isn’t just another asset—it’s managed with the care
+            and attention it deserves.
+          </motion.p>
+
+          {/* OLD ABOUT TEXT ------------------------ */}
+          {/* <motion.p
+            initial={{
+              y: 10,
+              opacity: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.15,
+              ease: 'easeInOut',
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            className='text-center text-neutral-500 mb-6'
+          >
+            At Ethos, we believe that owning a yacht should be an experience
+            defined by enjoyment, ease, and financial success.
+          </motion.p>
           <motion.p
             initial={{
               y: 10,
@@ -228,10 +347,10 @@ const AboutPage = () => {
             Let us guide you with expert management, honest communication, and a
             commitment to your success—because at Ethos, your peace of mind and
             profitability are always our top priorities.
-          </motion.p>
+          </motion.p> */}
 
-          {/* Team Section */}
-          {/* <section className='pt-12'>
+          {/* Team Section ---------------------------------------- */}
+          <section className='pt-12'>
             <motion.h2
               initial={{
                 y: 10,
@@ -268,15 +387,18 @@ const AboutPage = () => {
                 >
                   <div className='overflow-hidden rounded-lg shadow-lg'>
                     <img
-                      src={image}
+                      src={image.image}
                       alt={`Gallery item ${index + 1}`}
                       className='w-full h-auto'
                     />
                   </div>
+                  <h4 className='text-center mt-2 text-brandPrimary font-semibold text-2xl'>
+                    {image.name}
+                  </h4>
                 </motion.div>
               ))}
             </div>
-          </section> */}
+          </section>
         </main>
       </div>
     </>

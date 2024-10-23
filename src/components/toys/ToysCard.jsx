@@ -37,10 +37,10 @@ const ToysCard = ({ toy, index }) => {
 
           {/* Price */}
           <div className='pt-4'>
-            <span className='text-2xl font-semibold text-brandPrimary'>
+            {/* <span className='text-2xl font-semibold text-brandPrimary'>
               ${price}
             </span>
-            <span className='text-gray-500'>/day</span>
+            <span className='text-gray-500'>/day</span> */}
           </div>
           {/* <ExpandButton buttonText='View Details' onClick={handleViewDetails} /> */}
         </div>

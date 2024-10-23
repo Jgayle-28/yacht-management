@@ -93,7 +93,7 @@ const DestinationsPage = () => {
             }}
             className='text-lg tracking-wide'
           >
-            Unlimited treasures for you inner Nomad to discover
+            Where the sea meets the soul and every sunset tells a story
           </motion.p>
         </div>
       </div>
@@ -101,7 +101,7 @@ const DestinationsPage = () => {
       <main className='flex-grow max-w-7xl mx-auto px-8'>
         {/* Quote Section */}
         <section className='px-8 py-24 text-center text-brandPrimary'>
-          <blockquote>
+          {/* <blockquote>
             <motion.h5
               initial={{
                 y: 15,
@@ -140,7 +140,7 @@ const DestinationsPage = () => {
             >
               - Isabelle Eberhardt
             </motion.p>
-          </blockquote>
+          </blockquote> */}
         </section>
 
         {/* Tabs Section */}

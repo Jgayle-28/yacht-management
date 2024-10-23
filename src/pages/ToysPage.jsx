@@ -85,7 +85,7 @@ const ToysPage = () => {
         <main className='flex-grow max-w-7xl mx-auto px-8'>
           {/* Quote Section */}
           <section className='px-8 py-24 text-center text-brandPrimary'>
-            <blockquote>
+            {/* <blockquote>
               <motion.h5
                 initial={{
                   y: 15,
@@ -123,11 +123,11 @@ const ToysPage = () => {
               >
                 — Pluto
               </motion.p>
-            </blockquote>
+            </blockquote> */}
           </section>
 
           {/* Video */}
-          <section
+          {/* <section
             className='relative min-w- cursor-pointer h-[450px] bg-cover bg-center bg-no-repeat flex items-center justify-center'
             onClick={() => setIsOpen(true)}
             style={{
@@ -135,7 +135,7 @@ const ToysPage = () => {
             }}
           >
             <PlayButton />
-          </section>
+          </section> */}
 
           {/* Cards Section */}
           <section className='flex flex-col items-center justify-center px-8 pt-32 space-y-6 pb-20'>

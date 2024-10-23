@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import Carousel from '../shared/Carousel'
 import Modal from '../shared/Modal'
-import foodImage from '../../assets/images/sections/food.webp'
+import foodImage from '../../assets/images/sections/food-shrimp.jpeg'
 import yachtVideo from '../../assets/videos/yacht.mp4'
 import foodIcon from '../../assets/icons/food.svg'
 import PlayButton from '../shared/PlayButton'
@@ -150,13 +150,13 @@ const FoodSection = () => {
               y: 0,
               opacity: 1,
             }}
-            className='mb-8 relative w-full cursor-pointer h-[450px] bg-cover bg-center bg-no-repeat flex items-center justify-center'
-            onClick={() => setIsOpen(true)}
+            className='mb-8 relative w-full h-[450px] bg-cover bg-center bg-no-repeat flex items-center justify-center'
+            // onClick={() => setIsOpen(true)}
             style={{
               backgroundImage: `linear-gradient(rgba(23, 37, 84, .4), rgba(23, 37, 84, .4)), url(${foodImage})`,
             }}
           >
-            <PlayButton />
+            {/* <PlayButton /> */}
           </motion.div>
 
           {/* Carousel Section */}
