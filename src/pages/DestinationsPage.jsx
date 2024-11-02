@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import heroImage from '../assets/images/destinations/destinations-hero.jpeg'
+import heroImage from '../assets/images/island-section-min.jpeg'
 import {
   destinationTabs,
   cycladesTabData,

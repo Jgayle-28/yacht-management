@@ -219,7 +219,7 @@ const FoodPage = () => {
               We’re ready to welcome you aboard and create the perfect culinary
               experience for your next yachting adventure.
             </motion.p>
-            <motion.p
+            {/* <motion.p
               initial={{
                 y: 10,
                 opacity: 0,
@@ -348,7 +348,7 @@ const FoodPage = () => {
               className='text-center text-neutral-500'
             >
               We can’t wait to welcome you aboard one of our charters soon!
-            </motion.p>
+            </motion.p> */}
           </section>
 
           {/* Image gallery */}
