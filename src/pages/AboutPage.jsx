@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import heroImage from '../assets/images/about-hero-.jpeg'
 import pandelis from '../assets/images/pandelis.jpg'
+import jordan from '../assets/images/jordan.jpg'
 
 const AboutPage = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,8 +21,7 @@ const AboutPage = () => {
 
   const images = [
     { name: 'Pandelis', image: pandelis },
-    { name: 'Jordan', image: 'https://via.placeholder.com/300' },
-    { name: 'Megan', image: 'https://via.placeholder.com/300' },
+    { name: 'Jordan', image: jordan },
   ]
 
   return (
@@ -78,7 +78,7 @@ const AboutPage = () => {
               }}
               className='text-lg tracking-wide'
             >
-              Sailing Dreams into Reality: Your Journey Begins with Us.
+              It all starts with a solid team and a vision
             </motion.p>
           </div>
         </div>
@@ -122,10 +122,10 @@ const AboutPage = () => {
           >
             Ethos Yachting was founded on the principles of transparency, trust,
             and passion for the yachting world. As lifelong friends and business
-            partners, Jordan Arzoglou and Pandelis Dadadopoulos bring over 20
-            years of combined experience in the industry, offering a fresh
-            approach to yacht management that prioritizes honest, personal, and
-            profitable service for owners.
+            partners, <b>Jordan Arzoglou</b> and <b>Pandelis Dadadopoulos</b>{' '}
+            bring over 20 years of combined experience in the industry, offering
+            a fresh approach to yacht management that prioritizes honest,
+            personal, and profitable service for owners.
           </motion.p>
           <motion.p
             initial={{
@@ -143,13 +143,13 @@ const AboutPage = () => {
             }}
             className='text-center text-neutral-500 mb-6'
           >
-            Jordan Arzoglou, at just 27, has already gained vast experience
-            managing yachts and delivering unforgettable experiences for over
-            10,000 guests. His keen insight into what makes yacht operations
-            successful means he’s focused on optimizing every aspect of yacht
-            ownership—ensuring your asset is both well-maintained and
-            profitable. For Jordan, it’s about elevating the standard of yacht
-            management with innovative solutions, while always putting the
+            <b>Jordan Arzoglou</b>, at just 27, has already gained vast
+            experience managing yachts and delivering unforgettable experiences
+            for over 10,000 guests. His keen insight into what makes yacht
+            operations successful means he’s focused on optimizing every aspect
+            of yacht ownership—ensuring your asset is both well-maintained and
+            profitable. For <b>Jordan</b>, it’s about elevating the standard of
+            yacht management with innovative solutions, while always putting the
             owner’s needs first.
           </motion.p>
           <motion.p
@@ -168,14 +168,14 @@ const AboutPage = () => {
             }}
             className='text-center text-neutral-500 mb-6'
           >
-            Pandelis Dadadopoulos, a seasoned Captain with 18 years of
+            <b>Pandelis Dadadopoulos</b>, a seasoned Captain with 18 years of
             experience, brings his deep love for the sea and a hands-on approach
             to every vessel he manages. His role goes far beyond navigation;
-            Pandelis is deeply involved in ensuring smooth operations, from
-            maintaining the highest standards of care for the yacht to ensuring
-            exceptional crew management. His leadership on board reflects his
-            commitment to delivering unmatched service for owners who want their
-            yachts in expert hands.
+            <b> Pandelis</b> is deeply involved in ensuring smooth operations,
+            from maintaining the highest standards of care for the yacht to
+            ensuring exceptional crew management. His leadership on board
+            reflects his commitment to delivering unmatched service for owners
+            who want their yachts in expert hands.
           </motion.p>
           <motion.p
             initial={{
@@ -379,7 +379,7 @@ const AboutPage = () => {
               {images.map((image, index) => (
                 <motion.div
                   key={index}
-                  className='m-2 w-1/3 sm:w-1/2 lg:w-1/4'
+                  className='m-2  lg:w-1/4'
                   initial='hidden'
                   whileInView='visible'
                   custom={index}
@@ -389,7 +389,7 @@ const AboutPage = () => {
                     <img
                       src={image.image}
                       alt={`Gallery item ${index + 1}`}
-                      className='w-full h-auto'
+                      className='w-[295px]  h-[430px] object-cover'
                     />
                   </div>
                   <h4 className='text-center mt-2 text-brandPrimary font-semibold text-2xl'>

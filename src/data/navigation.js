@@ -5,6 +5,11 @@ export const LINKS = [
   //   href: '/management',
   // },
   {
+    text: 'home',
+    id: 'home',
+    href: '/',
+  },
+  {
     text: 'yachts',
     id: 'yachts',
     href: null,

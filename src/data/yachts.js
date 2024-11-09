@@ -5,6 +5,7 @@ import yacht4 from '../assets/images/yachts/yacht-4.webp'
 import yacht5 from '../assets/images/yachts/yacht-5.webp'
 
 import sophia1 from '../assets/images/sophia/sophia-1.jpg'
+import lagoon from '../assets/images/lagoon.jpg'
 
 import mg1 from '../assets/images/mg/mg-1.webp'
 
@@ -38,6 +39,22 @@ export const catamaranTabData = [
       length: 13.99,
       berths: 12,
       cabins: `4 double + convertible table in saloon  + 1 berth each bow`,
+      wc: 4,
+      cruisingSpeed: 8,
+    },
+    price: 815,
+  },
+  {
+    id: 3,
+    previewImage: lagoon,
+    heroImage: 'https://source.unsplash.com/1600x900/?destination',
+    title: 'Lagoon 40',
+    tabName: 'Catamaran',
+    introParagraph: `A breeze of freedom blows over the Lagoon 40. Live in harmony with the sea and explore the world in complete safety. Your dream destinations have never been so close.`,
+    boatData: {
+      length: 12.75,
+      berths: 12,
+      cabins: 6,
       wc: 4,
       cruisingSpeed: 8,
     },

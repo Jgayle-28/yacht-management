@@ -91,8 +91,8 @@ const YachtsPage = () => {
 
         <main className='flex-grow max-w-7xl mx-auto px-8'>
           {/* Quote Section */}
-          <section className='px-8 py-24 text-center text-brandPrimary'>
-            <blockquote>
+          <section className='px-8 py-12 text-center text-brandPrimary'>
+            {/* <blockquote>
               <motion.h5
                 initial={{
                   y: 15,
@@ -130,7 +130,7 @@ const YachtsPage = () => {
               >
                 - Rumi
               </motion.p>
-            </blockquote>
+            </blockquote> */}
           </section>
 
           {/* Tabs Section */}

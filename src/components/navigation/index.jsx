@@ -101,10 +101,11 @@ const NavLink = ({ children, FlyoutContent, id }) => {
       id === 'about' ||
       id === 'contact' ||
       id === 'experience' ||
-      id === 'yachts'
+      id === 'yachts' ||
+      id === 'home'
     ) {
       scrollToSection(`top`, 0)
-      setTimeout(() => router.push(`/${id}`), 100)
+      setTimeout(() => router.push(id === 'home' ? '/' : `/${id}`), 100)
       return
     }
     if (location.pathname === '/') {
@@ -172,11 +173,12 @@ const MobileMenuLink = ({ children, setMenuOpen, id }) => {
       id === 'about' ||
       id === 'contact' ||
       id === 'experience' ||
-      id === 'yachts'
+      id === 'yachts' ||
+      id === 'home'
     ) {
       setMenuOpen(false)
       scrollToSection(`top`, 0)
-      setTimeout(() => router.push(`/${id}`), 100)
+      setTimeout(() => router.push(id === 'home' ? '/' : `/${id}`), 100)
       return
     }
     if (location.pathname === '/') {

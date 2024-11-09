@@ -106,9 +106,17 @@ const Form = ({ selected, setSelected }) => {
           }}
         >
           <div className='max-w-2xl w-full p-6 bg-white rounded-sm shadow-lg'>
-            {successMessage && (
+            {successMessage ? (
               <p className='text-green-500 text-center mb-4'>
                 {successMessage}
+              </p>
+            ) : (
+              <p className='text-slate-500 text-center mb-4'>
+                Get in touch with us to explore how partnering with us can{' '}
+                <b>enhance</b>
+                your experience as a yacht owner. <b>Discover</b> our approach,
+                and learn how our expertise can maximize the value of your yacht
+                investment.
               </p>
             )}
             <form
