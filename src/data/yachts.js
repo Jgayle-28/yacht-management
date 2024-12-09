@@ -37,7 +37,7 @@ export const catamaranTabData = [
     introParagraph: `The Lagoon 46 reinforces the fundamentals that have made our brand a staple of the catamaran sailing industry, a freeing, gentle lifestyle full of innovation. The 46’s design, while comparable to its larger sisters, is still in a league of her own. Discover the 46, and find your sense of freedom.`,
     boatData: {
       length: 13.99,
-      berths: 12,
+      berths: 10,
       cabins: `4 double + convertible table in saloon  + 1 berth each bow`,
       wc: 4,
       cruisingSpeed: 8,
@@ -53,8 +53,8 @@ export const catamaranTabData = [
     introParagraph: `A breeze of freedom blows over the Lagoon 40. Live in harmony with the sea and explore the world in complete safety. Your dream destinations have never been so close.`,
     boatData: {
       length: 12.75,
-      berths: 12,
-      cabins: 6,
+      berths: 8,
+      cabins: 4,
       wc: 4,
       cruisingSpeed: 8,
     },

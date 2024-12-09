@@ -379,7 +379,7 @@ const AboutPage = () => {
               {images.map((image, index) => (
                 <motion.div
                   key={index}
-                  className='m-2  lg:w-1/4'
+                  className='m-2  '
                   initial='hidden'
                   whileInView='visible'
                   custom={index}
